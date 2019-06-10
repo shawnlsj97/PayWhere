@@ -142,7 +142,7 @@ Wireframing and Prototypes
 
 -   Storyboarding
 
-<img src="./READMEMEDIA/media/image14.png" width="602"
+<img src="./READMEMEDIA/media/image14.jpg" width="602"
 height="434.66666667">
 
 -   Paper Sketches
@@ -159,33 +159,33 @@ height="407.50005249">
 
 -   Prototypes on Adobe XD
 
-<img src="./READMEMEDIA/media/image23.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image21.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image16.jpg" width="186.96734908"
+<img src="./READMEMEDIA/media/image23.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image21.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image16.png" width="186.96734908"
 height="250.50005249">
 
-<img src="./READMEMEDIA/media/image15.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image22.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image20.jpg" width="186.96734908"
+<img src="./READMEMEDIA/media/image15.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image22.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image20.png" width="186.96734908"
 height="250.50005249">
 
-<img src="./READMEMEDIA/media/image17.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image19.jpg" width="186.96734908"
+<img src="./READMEMEDIA/media/image17.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image19.png" width="186.96734908"
 height="250.50005249">
 
-<img src="./READMEMEDIA/media/image18.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image24.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image3.jpg" width="186.96734908"
+<img src="./READMEMEDIA/media/image18.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image24.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image3.png" width="186.96734908"
 height="250.50005249">
 
-<img src="./READMEMEDIA/media/image7.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image1.jpg" width="186.96734908"
+<img src="./READMEMEDIA/media/image7.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image1.png" width="186.96734908"
 height="250.50005249">
 
-<img src="./READMEMEDIA/media/image9.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image2.jpg" width="186.96734908"
+<img src="./READMEMEDIA/media/image9.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image2.png" width="186.96734908"
 height="250.50005249">
 
-<img src="./READMEMEDIA/media/image11.jpg" width="186.96734908"
-height="250.50005249"><img src="./READMEMEDIA/media/image5.jpg" width="186.96734908"
+<img src="./READMEMEDIA/media/image11.png" width="186.96734908"
+height="250.50005249"><img src="./READMEMEDIA/media/image5.png" width="186.96734908"
 height="250.50005249">
