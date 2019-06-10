@@ -6,8 +6,8 @@
 
 **Proposed Level of Achievement:** Gemini
 
-<img src="./READMEMEDIA/media/image6.png" width="6.270833333333333in"
-height="3.5277777777777777in">
+<img src="./READMEMEDIA/media/image6.png" width="602"
+height="338.66666667">
 
 Motivation
 ==========
