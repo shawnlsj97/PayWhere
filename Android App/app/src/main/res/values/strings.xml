@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PayWhere</string>
+    <string name="main_activity_message">Where would you like to eat today?</string>
+</resources>
