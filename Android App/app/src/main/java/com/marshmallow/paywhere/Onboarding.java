@@ -77,7 +77,7 @@ public class Onboarding extends AppCompatActivity {
             mDots[position].setTextColor(getColor(R.color.colorPrimary));
         }
 
-        if(position == 3) {
+        if(position == mDots.length - 1) {
             get_started_btn.setVisibility(View.VISIBLE);
         }
     }
