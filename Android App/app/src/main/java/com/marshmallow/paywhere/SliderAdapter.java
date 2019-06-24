@@ -20,10 +20,17 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.app_icon,
+            R.drawable.onboard_logo,
             R.drawable.pin_drop,
             R.drawable.filter_tool,
             R.drawable.thumbs_up
+    };
+
+    public String[] step_headings = {
+            "",
+            "Step 1",
+            "Step 2",
+            "Step 3"
     };
 
     public String[] slide_headings = {
@@ -35,9 +42,9 @@ public class SliderAdapter extends PagerAdapter {
 
     public String[] slide_desc = {
             "Swipe to learn how to use our app.",
-            "Swipe to learn how to use our app.",
-            "Swipe to learn how to use our app.",
-            "Swipe to learn how to use our app."
+            "",
+            "",
+            ""
     };
 
     @Override
@@ -56,10 +63,12 @@ public class SliderAdapter extends PagerAdapter {
         View view = layoutInflater.inflate(R.layout.slide_layout, container, false);
 
         ImageView slideImageView = view.findViewById(R.id.slideImageView);
+        TextView stepHeading = view.findViewById(R.id.stepHeading);
         TextView slideHeading = view.findViewById(R.id.slideHeading);
         TextView slideDesc = view.findViewById(R.id.slideDesc);
 
         slideImageView.setImageResource(slide_images[position]);
+        stepHeading.setText(step_headings[position]);
         slideHeading.setText(slide_headings[position]);
         slideDesc.setText(slide_desc[position]);
 
