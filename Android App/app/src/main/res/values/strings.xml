@@ -4,4 +4,5 @@
     <string name="onboard_message_1">Thank you for choosing PayWhere!</string>
     <string name="onboard_message_1_2">Swipe to learn how to use our app.</string>
     <string name="step_number_blank"></string>
+    <string name="get_started">Get Started</string>
 </resources>

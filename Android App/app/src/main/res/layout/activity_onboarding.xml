@@ -23,12 +23,27 @@
     <LinearLayout
         android:id="@+id/dotsLayout"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slideViewPager"></LinearLayout>
+
+    <Button
+        android:id="@+id/get_started_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/get_started_btn_style"
+        android:padding="10sp"
+        android:text="@string/get_started"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dotsLayout" />
 
 </android.support.constraint.ConstraintLayout>
