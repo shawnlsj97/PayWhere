@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchActivity"></activity>
-        <activity android:name=".Onboarding"></activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".Onboarding" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">

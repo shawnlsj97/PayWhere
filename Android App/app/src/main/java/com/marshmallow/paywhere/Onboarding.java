@@ -110,6 +110,6 @@ public class Onboarding extends AppCompatActivity {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putBoolean("isOnboardingDone", true);
-        editor.commit();
+        editor.apply();
     }
 }
