@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnSearchClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                searchView.clearFocus();
                 Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(searchActivity);
                 finish();
