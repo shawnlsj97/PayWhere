@@ -32,6 +32,22 @@ public class SearchActivity extends AppCompatActivity {
         });
         searchView = findViewById(R.id.searchView);
         searchView.requestFocus();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intent = new Intent(getApplicationContext(), SearchResults.class);
+                intent.putExtra("input", query);
+                startActivity(intent);
+                searchView.clearFocus();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
    }
 }
 

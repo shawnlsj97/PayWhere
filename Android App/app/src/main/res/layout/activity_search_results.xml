@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchResults">
+    tools:context=".SearchResults"
+    android:focusableInTouchMode="true">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/successToolbar"
@@ -26,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="true"
-            android:focusedByDefault="true"
+            android:focusedByDefault="false"
             android:focusableInTouchMode="true"
             app:searchIcon="@null"
             app:iconifiedByDefault="false"
@@ -39,6 +40,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/successToolbar"
-        tools:layout_editor_absoluteX="13dp" />
+        tools:layout_editor_absoluteX="13dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
     
 </androidx.constraintlayout.widget.ConstraintLayout>
