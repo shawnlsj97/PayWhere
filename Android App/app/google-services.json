@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "936221966549",
+    "firebase_url": "https://paywhere2019.firebaseio.com",
+    "project_id": "paywhere2019",
+    "storage_bucket": "paywhere2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936221966549:android:58958178a259df01",
+        "android_client_info": {
+          "package_name": "com.marshmallow.paywhere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936221966549-kllt9kfamlmr3jgvplqo1p5maft0vip6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.marshmallow.paywhere",
+            "certificate_hash": "b0508b19de8b930ce0079ec12302dfc925b7b6d8"
+          }
+        },
+        {
+          "client_id": "936221966549-catfrs7q6arluga27e4ioqbuip28rmi0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp_sjwFNh4vt_lFJqPp0icuuUAH4JZ89M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936221966549-catfrs7q6arluga27e4ioqbuip28rmi0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
