@@ -6,4 +6,6 @@
     <string name="get_started">Get Started</string>
     <string name="search_text">search by mall or restaurant name</string>
     <string name="search_hint">mall or restaurant</string>
+    <string name="error_text_1">no results found :(</string>
+    <string name="error_text_2">try searching something else!</string>
 </resources>
