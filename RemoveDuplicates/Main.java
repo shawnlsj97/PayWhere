@@ -12,7 +12,13 @@ public class Main {
         
         while (sc.hasNext()) {
             String currName = sc.nextLine();
-            if (!nameArray.contains(currName)) {
+            Boolean duplicateFlag = false;
+            for (String name : nameArray) {
+                if (currName.compareToIgnoreCase(name) == 0) {
+                    duplicateFlag = true;
+                }
+            }
+            if (!duplicateFlag) {
                 nameArray.add(currName);
             }
         }
