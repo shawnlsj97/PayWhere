@@ -93,7 +93,7 @@ public class SearchResults extends AppCompatActivity {
 
             storeName.setText(name);
             storeAddress.setText(address);
-            if (payment.contains("dash")) {
+            if (payment.contains("Dash")) {
                 storePayment.setVisibility(View.VISIBLE);
             } else {
                 storePayment.setVisibility(View.GONE);
