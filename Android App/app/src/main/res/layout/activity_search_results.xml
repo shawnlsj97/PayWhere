@@ -38,9 +38,10 @@
         android:id="@+id/successRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/successToolbar"
         tools:layout_editor_absoluteX="13dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     
 </androidx.constraintlayout.widget.ConstraintLayout>

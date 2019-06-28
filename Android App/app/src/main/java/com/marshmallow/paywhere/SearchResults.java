@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +26,11 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class SearchResults extends AppCompatActivity {
 
@@ -83,7 +86,7 @@ public class SearchResults extends AppCompatActivity {
             view = itemView;
         }
 
-        public void setDetails(String name, String address, String payment){
+        public void setDetails(String name, String address, String payment) {
             TextView storeName = view.findViewById(R.id.storeName);
             TextView storeAddress = view.findViewById(R.id.storeAddress);
             ImageView storePayment = view.findViewById(R.id.storePayment);
@@ -98,49 +101,60 @@ public class SearchResults extends AppCompatActivity {
         }
     }
 
-    private void firebaseSearch(String input) {
-        Query query = FirebaseDatabase.getInstance()
+    private void firebaseSearch(final String input) {
+        final Query query = FirebaseDatabase.getInstance()
                 .getReference()
                 .child(input);
-        FirebaseRecyclerOptions<Store> options = new FirebaseRecyclerOptions.Builder<Store>()
-                .setQuery(query, new SnapshotParser<Store>() {
-                    @NonNull
-                    @Override
-                    public Store parseSnapshot(@NonNull DataSnapshot snapshot) {
-                        return new Store(snapshot.child("name").getValue().toString(),
-                                snapshot.child("payment").getValue().toString(),
-                                snapshot.child("address").getValue().toString());
-                    }
-                })
-                .build();
-        adapter = new FirebaseRecyclerAdapter<Store, StoreViewHolder>(options) {
-           @Override
-           protected void onBindViewHolder(@NonNull StoreViewHolder viewHolder, int i, @NonNull Store s) {
-               viewHolder.setDetails(s.getName(), s.getAddress(), s.getPayment());
-           }
 
-           @NonNull
-           @Override
-           public StoreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    FirebaseRecyclerOptions<Store> options = new FirebaseRecyclerOptions.Builder<Store>()
+                            .setQuery(query, new SnapshotParser<Store>() {
+                                @NonNull
+                                @Override
+                                public Store parseSnapshot(@NonNull DataSnapshot snapshot) {
+                                    return new Store(snapshot.child("name").getValue().toString(),
+                                            snapshot.child("payment").getValue().toString(),
+                                            snapshot.child("address").getValue().toString());
+                                }
+                            })
+                            .build();
+                    adapter = new FirebaseRecyclerAdapter<Store, StoreViewHolder>(options) {
+                        @Override
+                        protected void onBindViewHolder(@NonNull StoreViewHolder viewHolder, int i, @NonNull Store s) {
+                            viewHolder.setDetails(s.getName(), s.getAddress(), s.getPayment());
+                        }
 
-               View view = LayoutInflater.from(parent.getContext())
-                       .inflate(R.layout.recycler_item_layout, parent, false);
-               return new StoreViewHolder(view);
-           }
-        };
+                        @NonNull
+                        @Override
+                        public StoreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        recyclerView.setAdapter(adapter);
-    }
+                            View view = LayoutInflater.from(parent.getContext())
+                                    .inflate(R.layout.recycler_item_layout, parent, false);
+                            return new StoreViewHolder(view);
+                        }
+                    };
+                    adapter.startListening();
+                    recyclerView.setAdapter(adapter);
+                } else {
+                    Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
+                    errorIntent.putExtra("input", input);
+                    startActivity(errorIntent);
+                }
+            }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        adapter.startListening();
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        adapter.stopListening();
+        if (adapter != null) adapter.stopListening();
     }
 }
