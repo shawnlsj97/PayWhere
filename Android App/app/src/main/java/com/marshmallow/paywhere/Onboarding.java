@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,6 +22,8 @@ public class Onboarding extends AppCompatActivity {
 
     private SliderAdapter sliderAdapter;
     private Button get_started_btn;
+
+    private Animation btn_anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class Onboarding extends AppCompatActivity {
         mSlideViewPager = findViewById(R.id.slideViewPager);
         mDotLayout = findViewById(R.id.dotsLayout);
         get_started_btn = findViewById(R.id.get_started_btn);
+        btn_anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.get_started_btn_anim);
 
         sliderAdapter = new SliderAdapter(this);
 
@@ -79,6 +84,7 @@ public class Onboarding extends AppCompatActivity {
 
         if(position == mDots.length - 1) {
             get_started_btn.setVisibility(View.VISIBLE);
+            get_started_btn.setAnimation(btn_anim);
         }
     }
 
