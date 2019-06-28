@@ -1,15 +1,13 @@
-
 /*
-Assume data is given in the format: 
+Input format:
+# num of malls
 mall name
-restaurant name, unit number
-restaurant name, unit number
-restaurant name, unit number
-.
-.
-.
-restaurant name, unit number
-restaurant name, unit number
+# num of restaurants
+restaurant names...
+mall name
+# num of restaurants
+restaurant names...
+...
 */
 
 import java.util.*;
@@ -17,27 +15,32 @@ import java.util.*;
 public class Main {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
-        String mallName = sc.nextLine();
         System.out.println("{");
-        System.out.println("    " + "\"" + mallName + "\" : {");
-        ArrayList<Restaurant> restArray = new ArrayList<>();
+        int numMalls = Integer.parseInt(sc.nextLine());
+        Mall.mallArray = new Mall[numMalls];
 
-        while (sc.hasNext()) {
-            String currLine = sc.nextLine();
-            String[] currArray = currLine.split(", ");
-            Restaurant currRest = new Restaurant(currArray[0], currArray[1]);
-            restArray.add(currRest);
-        }
+        for (int i = 0; i < numMalls; i++) {
+            String mallName = sc.nextLine();
+            System.out.println("    \"" + mallName + "\" : {");
+            int numRest = Integer.parseInt(sc.nextLine());
+            Mall.mallArray[i] = new Mall(mallName, numRest);
 
-        for (int i = 0; i < restArray.size(); i++) {
-            if (i == (restArray.size() - 1)) {
-                restArray.get(i).printRestLast();
+            for (int j = 0; j < numRest; j++) {
+                String currLine = sc.nextLine();
+                String[] currArray = currLine.split(", ");
+                Mall.mallArray[i].restArray[j] = new Restaurant(currArray[0], currArray[1]);
+                if (j == numRest - 1) {
+                    Mall.mallArray[i].restArray[j].printRestLast();
+                } else {
+                    Mall.mallArray[i].restArray[j].printRest();
+                }
+            }
+            if (i == numMalls - 1) {
+                Mall.printMallCloseLast();
             } else {
-                restArray.get(i).printRest();
+                Mall.printMallClose();
             }
         }
-
-        System.out.println("    }");
         System.out.println("}");
     }
 }
