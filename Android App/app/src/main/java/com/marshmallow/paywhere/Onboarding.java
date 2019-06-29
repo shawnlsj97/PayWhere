@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class Onboarding extends AppCompatActivity {
     private Button get_started_btn;
 
     private Animation btn_anim;
+
+    private ImageView paymentOptions, exampleSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,8 @@ public class Onboarding extends AppCompatActivity {
         mDotLayout = findViewById(R.id.dotsLayout);
         get_started_btn = findViewById(R.id.get_started_btn);
         btn_anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.get_started_btn_anim);
+        paymentOptions = findViewById(R.id.payment_imageView);
+        exampleSearch = findViewById(R.id.searchExample_imageView);
 
         sliderAdapter = new SliderAdapter(this);
 
@@ -85,6 +90,18 @@ public class Onboarding extends AppCompatActivity {
         if(position == mDots.length - 1) {
             get_started_btn.setVisibility(View.VISIBLE);
             get_started_btn.setAnimation(btn_anim);
+        }
+
+        if (position ==  mDots.length - 2) {
+            paymentOptions.setVisibility(View.VISIBLE);
+        } else {
+            paymentOptions.setVisibility(View.INVISIBLE);
+        }
+
+        if (position == mDots.length - 3) {
+            exampleSearch.setVisibility(View.VISIBLE);
+        } else {
+            exampleSearch.setVisibility(View.INVISIBLE);
         }
     }
 
