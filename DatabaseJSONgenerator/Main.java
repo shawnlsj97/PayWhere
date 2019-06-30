@@ -1,5 +1,7 @@
 /*
 Input format:
+# num of Dash merchants
+dash merchants...
 # num of malls
 mall name
 # num of restaurants
@@ -13,8 +15,17 @@ restaurant names...
 import java.util.*;
 
 public class Main {
+
+    public static String[] dashArray;
+
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
+        int numDash = Integer.parseInt(sc.nextLine());
+        dashArray = new String[numDash];
+        for (int i = 0; i < numDash; i++) {
+            String currMerchant = sc.nextLine();
+            dashArray[i] = currMerchant;
+        }
         System.out.println("{");
         int numMalls = Integer.parseInt(sc.nextLine());
         Mall.mallArray = new Mall[numMalls];
