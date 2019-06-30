@@ -29,6 +29,7 @@
             android:focusable="true"
             android:focusedByDefault="false"
             android:focusableInTouchMode="true"
+            android:inputType="textAutoComplete"
             app:searchIcon="@null"
             app:iconifiedByDefault="false"
             app:queryHint="@string/search_hint" />

@@ -8,4 +8,10 @@
     <string name="search_hint">enter a mall here</string>
     <string name="error_text_1">no results found :(</string>
     <string name="error_text_2">try searching something else!</string>
+    <string-array name="search_suggestions">
+        <item>Nex</item>
+        <item>Ngee Ann City</item>
+        <item>Orchard Gateway</item>
+        <item>Tampines Mall</item>
+    </string-array>
 </resources>

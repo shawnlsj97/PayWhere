@@ -19,6 +19,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,7 +39,6 @@ public class SearchResults extends AppCompatActivity {
     private Toolbar toolBar;
     private SearchView searchView;
     private RecyclerView recyclerView;
-    private FirebaseDatabase db;
     private FirebaseRecyclerAdapter adapter;
 
     @Override
@@ -65,7 +66,33 @@ public class SearchResults extends AppCompatActivity {
         searchView.setQuery(input, false);
         searchView.clearFocus();
 
-        db = FirebaseDatabase.getInstance();
+        final SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
+        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item, R.id.suggestion, getResources().getStringArray(R.array.search_suggestions));
+        searchAutoComplete.setAdapter(suggestionAdapter);
+        searchAutoComplete.setThreshold(1);
+        searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = (String) parent.getAdapter().getItem(position);
+                searchView.setQuery(item, true);
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intent = new Intent(getApplicationContext(), SearchResults.class);
+                intent.putExtra("input", query);
+                startActivity(intent);
+                searchView.clearFocus();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
 
         recyclerView = findViewById(R.id.successRecyclerView);
         recyclerView.setHasFixedSize(true);
@@ -73,7 +100,7 @@ public class SearchResults extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(),
                 DividerItemDecoration.VERTICAL));
 
-        firebaseSearch(input);
+        firebaseSearch(input.toLowerCase());
 
     }
 
@@ -102,6 +129,7 @@ public class SearchResults extends AppCompatActivity {
     }
 
     private void firebaseSearch(final String input) {
+        // search by mall
         final Query query = FirebaseDatabase.getInstance()
                 .getReference()
                 .child(input);

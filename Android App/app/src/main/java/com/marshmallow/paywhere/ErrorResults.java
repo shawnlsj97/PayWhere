@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 public class ErrorResults extends AppCompatActivity {
@@ -37,6 +39,34 @@ public class ErrorResults extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String input = bundle.getString("input");
         searchView.setQuery(input, false);
+
+        final SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
+        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item, R.id.suggestion, getResources().getStringArray(R.array.search_suggestions));
+        searchAutoComplete.setAdapter(suggestionAdapter);
+        searchAutoComplete.setThreshold(1);
+        searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = (String) parent.getAdapter().getItem(position);
+                searchView.setQuery(item, true);
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intent = new Intent(getApplicationContext(), SearchResults.class);
+                intent.putExtra("input", query);
+                startActivity(intent);
+                searchView.clearFocus();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
 
         textView = findViewById(R.id.errorTextView);
         String errorMsg1 = getResources().getString(R.string.error_text_1);
