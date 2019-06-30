@@ -11,21 +11,35 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OnboardingSecondary"></activity>
-        <activity android:name=".SearchResults" />
-        <activity android:name=".ErrorResults" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".Onboarding" />
+        <activity android:name=".OnboardingSecondary"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity android:name=".SearchResults"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity android:name=".ErrorResults"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity android:name=".SearchActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity android:name=".Onboarding"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
     </application>
 
 </manifest>
