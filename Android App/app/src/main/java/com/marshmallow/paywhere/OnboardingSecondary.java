@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class Onboarding extends AppCompatActivity {
+public class OnboardingSecondary extends AppCompatActivity {
 
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
@@ -31,13 +31,6 @@ public class Onboarding extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //check if tutorial completed
-        if (restorePrefData()) {
-            Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(mainActivity);
-            finish();
-        }
 
         setContentView(R.layout.activity_onboarding);
 
@@ -61,9 +54,6 @@ public class Onboarding extends AppCompatActivity {
             public void onClick(View v) {
                 Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mainActivity);
-
-                //boolean to keep track whether user has completed tutorial
-                savePrefsData();
                 finish();
             }
         });
@@ -72,6 +62,11 @@ public class Onboarding extends AppCompatActivity {
     public void addDotsIndicator(int position) {
         mDots = new TextView[sliderAdapter.getCount()];
         mDotLayout.removeAllViews();
+
+        if (position == 0) {
+            get_started_btn.setVisibility(View.VISIBLE);
+            get_started_btn.setAnimation(btn_anim);
+        }
 
         for (int i = 0; i < mDots.length; i++) {
             mDots[i] = new TextView(this);
@@ -84,11 +79,6 @@ public class Onboarding extends AppCompatActivity {
 
         if(mDots.length > 0) {
             mDots[position].setTextColor(getColor(R.color.colorPrimary));
-        }
-
-        if(position == mDots.length - 1) {
-            get_started_btn.setVisibility(View.VISIBLE);
-            get_started_btn.setAnimation(btn_anim);
         }
 
         if (position ==  mDots.length - 2) {
@@ -121,17 +111,4 @@ public class Onboarding extends AppCompatActivity {
 
         }
     };
-
-    private boolean restorePrefData() {
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs", MODE_PRIVATE);
-        boolean isOnboardingDone = pref.getBoolean("isOnboardingDone", false);
-        return isOnboardingDone;
-    }
-
-    public void savePrefsData() {
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean("isOnboardingDone", true);
-        editor.apply();
-    }
 }

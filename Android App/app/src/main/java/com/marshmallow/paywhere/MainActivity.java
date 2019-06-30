@@ -4,11 +4,13 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
 
     private SearchView searchView;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(searchActivity);
+                finish();
+            }
+        });
+
+        imageView = findViewById(R.id.infoImageView);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent onboardingActivity = new Intent(getApplicationContext(), OnboardingSecondary.class);
+                startActivity(onboardingActivity);
                 finish();
             }
         });
