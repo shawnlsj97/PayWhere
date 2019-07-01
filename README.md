@@ -40,8 +40,8 @@ When users open our app, they will be greeted with a simple splash
 screen displaying our app’s logo. This is programmed to last as long as
 it takes to load the main home page.
 
-<img src="./READMEmedia/media/image4.png" width="120"
-height="212">
+<img src="./READMEmedia/media/image4.png" width="180"
+height="318">
 
 ## 2.2  User On-boarding
 
@@ -54,11 +54,11 @@ clear and concise manner. We make use of relevant icons to convey the
 aim of every step. At the last step, users will click ‘Get Started’ and
 be directed to the search activity.
 
-<img src="./READMEmedia/media/image6.png" width="120"
-height="212"><img src="./READMEmedia/media/image10.png" width="120"
-height="212"><img src="./READMEmedia/media/image12.png" width="120"
-height="212"><img src="./READMEmedia/media/image1.png" width="120"
-height="212">
+<img src="./READMEmedia/media/image6.png" width="180"
+height="318"><img src="./READMEmedia/media/image10.png" width="180"
+height="318"><img src="./READMEmedia/media/image12.png" width="180"
+height="318"><img src="./READMEmedia/media/image1.png" width="180"
+height="318">
 
 After completing the user onboarding, on subsequent app launches, users
 will be directed to the home page immediately after viewing the splash
@@ -73,10 +73,10 @@ filtered as they continue to enter their text. Upon tapping the
 suggestion that matches their mall of interest, search will immediately
 commence and the results will populate the page.
 
-<img src="./READMEmedia/media/image16.png" width="120"
-height="212"><img src="./READMEmedia/media/image5.png" width="120"
-height="212"><img src="./READMEmedia/media/image8.png" width="120"
-height="212">
+<img src="./READMEmedia/media/image16.png" width="180"
+height="318"><img src="./READMEmedia/media/image5.png" width="180"
+height="318"><img src="./READMEmedia/media/image8.png" width="180"
+height="318">
 
 Users can also type the name of the mall themselves and hit the search
 button. Upon inputting a valid query, users will be directed to a page
@@ -92,8 +92,8 @@ a page informing them to try using another search term. Users will be
 allowed to search immediately using the search bar on this page without
 having to go back to the previous search page.
 
-<img src="./READMEmedia/media/image3.png" width="120"
-height="212">
+<img src="./READMEmedia/media/image3.png" width="180"
+height="318">
 
 We have made our search function more user-friendly by implementing
 search suggestions as well as case-insensitive search.
@@ -118,15 +118,15 @@ directory:
 
 -   Snacks & Specialties
 
-<img src="./READMEmedia/media/image31.png" width="602"
-height="289.33333333">
+<img src="./READMEmedia/media/image31.png" width="782.6"
+height="376.133333329">
 
 This is compared to other malls that group their dining outlets by a
 broad ‘Food & Beverage’ category first, before allowing users to filter
 by the dining type.
 
-<img src="./READMEmedia/media/image26.png" width="602"
-height="273.33333333">
+<img src="./READMEmedia/media/image26.png" width="782.6"
+height="355.333333329">
 
 ### 3.1.2   Difficulty in Retrieving Unit Numbers
 
@@ -139,17 +139,17 @@ City](https://www.capitaland.com/sg/malls/rafflescity/en/stores.html?category=fo
 have their dining outlets listed in a way such that the user has to
 click on the individual outlet to get the unit number.
 
-<img src="./READMEmedia/media/image23.png" width="269.33333333"
-height="180"><img src="./READMEmedia/media/image30.png" width="269.33333333"
-height="180">
+<img src="./READMEmedia/media/image23.png" width="403.999999995"
+height="270"><img src="./READMEmedia/media/image30.png" width="403.999999995"
+height="270">
 
 Other malls have the unit number listed alongside the store name which
 makes for easier for us to get the information we need. An example of
 the [Ngee Ann City](http://www.ngeeanncity.com.sg/shopdirectory/)
 website is shown below.
 
-<img src="./READMEmedia/media/image25.png" width="269.33333333"
-height="180">
+<img src="./READMEmedia/media/image25.png" width="403.999999995"
+height="270">
 
 ### 3.1.3   Hidden Data on Page
 
@@ -167,8 +167,8 @@ clicking “Load More”. Given that our webscrapers extract data by
 searching HTML tags, we had to find a way to click on multiple “Load
 More” buttons until all list items are displayed.
 
-<img src="./READMEmedia/media/image27.png" width="602"
-height="249.33333333">
+<img src="./READMEmedia/media/image27.png" width="782.6"
+height="324.133333329">
 
 The issue here was that the “Load More” button was constantly hidden
 behind a spinner icon. We eventually overcame this by making our code
@@ -478,8 +478,8 @@ payment platforms.
 
 # 6 Program Flow
 
-<img src="./READMEmedia/media/image11.png" width="602"
-height="338.66666667">
+<img src="./READMEmedia/media/image11.png" width="782.6"
+height="440.266666671">
 
 > Note: for stores that do not accept mobile payment, they will still be
 > displayed in our app but we indicate that they do not do so in order to
