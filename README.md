@@ -159,8 +159,8 @@ website below, only 16 list items can be found in the HTML code
 initially. We are required to click on the “Load More” button in order
 to populate the HTML code with more items.
 
-<img src="./READMEmedia/media/image28.png" width="602"
-height="284">
+<img src="./READMEmedia/media/image28.png" width="782.6"
+height="369.2">
 
 As seen, the number of list items have increased in the HTML code after
 clicking “Load More”. Given that our webscrapers extract data by
