@@ -10,7 +10,7 @@ Milestone 2: Prototype
 **Proposed Level of Achievement:** Gemini
 
 <img src="./READMEmedia/media/image7.png" width="602"
-height="338.66666667">
+height="338.66666667" />
 
 # 1    Reflection on Milestone 1 Feedback
 
