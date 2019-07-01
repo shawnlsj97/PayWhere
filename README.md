@@ -9,8 +9,8 @@ Milestone 2: Prototype
 
 **Proposed Level of Achievement:** Gemini
 
-<img src="./READMEmedia/media/image7.png" width="602"
-height="338.66666667" />
+<img src="./READMEmedia/media/image41.png" width="960"
+height="540" />
 
 # 1    Reflection on Milestone 1 Feedback
 
@@ -399,6 +399,9 @@ and produces the following output:
 After which, we import the .json file into Firebase’s Realtime Database.
 
 # Milestone 1: Ideation
+
+<img src="./READMEmedia/media/image7.png" width="602"
+height="338.66666667" />
 
 # 1 Motivation
 
