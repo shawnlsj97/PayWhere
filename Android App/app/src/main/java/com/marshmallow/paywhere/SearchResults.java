@@ -1,5 +1,6 @@
 package com.marshmallow.paywhere;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 
@@ -8,6 +9,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +24,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -34,18 +37,23 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Arrays;
+
 public class SearchResults extends AppCompatActivity {
 
     private Toolbar toolBar;
     private SearchView searchView;
     private RecyclerView recyclerView;
     private FirebaseRecyclerAdapter adapter;
+    private ContentLoadingProgressBar pb;
 
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
+        pb = findViewById(R.id.progress_bar);
         toolBar = findViewById(R.id.successToolbar);
         setSupportActionBar(toolBar);
         ActionBar ab = getSupportActionBar();
@@ -54,6 +62,7 @@ public class SearchResults extends AppCompatActivity {
         toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                adapter.stopListening();
                 Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(searchActivity);
                 finish();
@@ -63,7 +72,7 @@ public class SearchResults extends AppCompatActivity {
         searchView = findViewById(R.id.successSearchView);
         Bundle bundle = getIntent().getExtras();
         String input = bundle.getString("input");
-        searchView.setQuery(input, false);
+        searchView.setQuery(toTitleCase(input), false);
         searchView.clearFocus();
 
         final SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
@@ -81,11 +90,21 @@ public class SearchResults extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Intent intent = new Intent(getApplicationContext(), SearchResults.class);
-                intent.putExtra("input", query);
-                startActivity(intent);
-                searchView.clearFocus();
-                return true;
+                String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
+                    adapter.stopListening();
+                    Intent intent = new Intent(getApplicationContext(), SearchResults.class);
+                    intent.putExtra("input", query);
+                    startActivity(intent);
+                    searchView.clearFocus();
+                    return true;
+                } else {
+                    adapter.stopListening();
+                    Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
+                    errorIntent.putExtra("input", query);
+                    startActivity(errorIntent);
+                    return false;
+                }
             }
 
             @Override
@@ -95,13 +114,13 @@ public class SearchResults extends AppCompatActivity {
         });
 
         recyclerView = findViewById(R.id.successRecyclerView);
+        recyclerView.setVisibility(View.INVISIBLE);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(),
                 DividerItemDecoration.VERTICAL));
 
         firebaseSearch(input.toLowerCase());
-
     }
 
     public static class StoreViewHolder extends RecyclerView.ViewHolder {
@@ -137,40 +156,36 @@ public class SearchResults extends AppCompatActivity {
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    FirebaseRecyclerOptions<Store> options = new FirebaseRecyclerOptions.Builder<Store>()
-                            .setQuery(query, new SnapshotParser<Store>() {
-                                @NonNull
-                                @Override
-                                public Store parseSnapshot(@NonNull DataSnapshot snapshot) {
-                                    return new Store(snapshot.child("name").getValue().toString(),
-                                            snapshot.child("payment").getValue().toString(),
-                                            snapshot.child("address").getValue().toString());
-                                }
-                            })
-                            .build();
-                    adapter = new FirebaseRecyclerAdapter<Store, StoreViewHolder>(options) {
-                        @Override
-                        protected void onBindViewHolder(@NonNull StoreViewHolder viewHolder, int i, @NonNull Store s) {
-                            viewHolder.setDetails(s.getName(), s.getAddress(), s.getPayment());
-                        }
+                FirebaseRecyclerOptions<Store> options = new FirebaseRecyclerOptions.Builder<Store>()
+                        .setQuery(query, new SnapshotParser<Store>() {
+                            @NonNull
+                            @Override
+                            public Store parseSnapshot(@NonNull DataSnapshot snapshot) {
+                                return new Store(snapshot.child("name").getValue().toString(),
+                                        snapshot.child("payment").getValue().toString(),
+                                        snapshot.child("address").getValue().toString());
+                            }
+                        })
+                        .build();
+                adapter = new FirebaseRecyclerAdapter<Store, StoreViewHolder>(options) {
+                    @Override
+                    protected void onBindViewHolder(@NonNull StoreViewHolder viewHolder, int i, @NonNull Store s) {
+                        viewHolder.setDetails(s.getName(), s.getAddress(), s.getPayment());
+                    }
 
-                        @NonNull
-                        @Override
-                        public StoreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                    @NonNull
+                    @Override
+                    public StoreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-                            View view = LayoutInflater.from(parent.getContext())
-                                    .inflate(R.layout.recycler_item_layout, parent, false);
-                            return new StoreViewHolder(view);
-                        }
-                    };
-                    adapter.startListening();
-                    recyclerView.setAdapter(adapter);
-                } else {
-                    Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
-                    errorIntent.putExtra("input", input);
-                    startActivity(errorIntent);
-                }
+                        View view = LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.recycler_item_layout, parent, false);
+                        return new StoreViewHolder(view);
+                    }
+                };
+                adapter.startListening();
+                recyclerView.setAdapter(adapter);
+                recyclerView.setVisibility(View.VISIBLE);
+                pb.setVisibility(View.GONE);
             }
 
             @Override
@@ -184,5 +199,24 @@ public class SearchResults extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         if (adapter != null) adapter.stopListening();
+    }
+
+    public String toTitleCase(String input) {
+
+        StringBuilder output = new StringBuilder();
+        boolean convertNext = true;
+        for (char ch : input.toCharArray()) {
+            if (Character.isSpaceChar(ch)) {
+                convertNext = true;
+            } else if (convertNext) {
+                ch = Character.toTitleCase(ch);
+                convertNext = false;
+            } else {
+                ch = Character.toLowerCase(ch);
+            }
+            output.append(ch);
+        }
+
+        return output.toString();
     }
 }

@@ -1,5 +1,6 @@
 package com.marshmallow.paywhere;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import androidx.appcompat.app.ActionBar;
@@ -19,11 +20,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CursorAdapter;
 
+import java.util.Arrays;
+
 public class SearchActivity extends AppCompatActivity {
 
     private Toolbar toolBar;
     private SearchView searchView;
 
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,11 +63,19 @@ public class SearchActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Intent intent = new Intent(getApplicationContext(), SearchResults.class);
-                intent.putExtra("input", query);
-                startActivity(intent);
-                searchView.clearFocus();
-                return true;
+                String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
+                    Intent intent = new Intent(getApplicationContext(), SearchResults.class);
+                    intent.putExtra("input", query);
+                    startActivity(intent);
+                    searchView.clearFocus();
+                    return true;
+                } else {
+                    Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
+                    errorIntent.putExtra("input", query);
+                    startActivity(errorIntent);
+                    return true;
+                }
             }
 
             @Override
@@ -71,7 +83,26 @@ public class SearchActivity extends AppCompatActivity {
                 return false;
             }
         });
-   }
+    }
+
+    public String toTitleCase(String input) {
+
+        StringBuilder output = new StringBuilder();
+        boolean convertNext = true;
+        for (char ch : input.toCharArray()) {
+            if (Character.isSpaceChar(ch)) {
+                convertNext = true;
+            } else if (convertNext) {
+                ch = Character.toTitleCase(ch);
+                convertNext = false;
+            } else {
+                ch = Character.toLowerCase(ch);
+            }
+            output.append(ch);
+        }
+
+        return output.toString();
+    }
 }
 
 
