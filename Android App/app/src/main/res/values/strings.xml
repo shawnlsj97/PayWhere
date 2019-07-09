@@ -9,9 +9,33 @@
     <string name="error_text_1">no results found :(</string>
     <string name="error_text_2">try searching something else!</string>
     <string-array name="search_suggestions">
+        <item>Bedok Mall</item>
+        <item>Bugis Junction</item>
+        <item>Bugis+</item>
+        <item>Bukit Panjang Plaza</item>
+        <item>Century Square</item>
+        <item>Clarke Quay</item>
+        <item>Funan</item>
+        <item>Hougang Mall</item>
+        <item>Imm</item>
+        <item>Ion Orchard</item>
+        <item>Jcube</item>
+        <item>Jewel Changi Airport</item>
+        <item>Junction 8</item>
+        <item>Lot One</item>
         <item>Nex</item>
         <item>Ngee Ann City</item>
         <item>Orchard Gateway</item>
+        <item>Plaza Singapura</item>
+        <item>Raffles City</item>
+        <item>Robertson Walk Shopping Mall</item>
         <item>Tampines Mall</item>
+        <item>The Centrepoint</item>
+        <item>The Star Vista</item>
+        <item>Tiong Bahru Plaza</item>
+        <item>Valley Point</item>
+        <item>Westgate</item>
+        <item>White Sands</item>
+        <item>Yewtee Point</item>
     </string-array>
 </resources>
