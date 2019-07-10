@@ -17,6 +17,7 @@ import java.util.*;
 public class Main {
 
     public static String[] dashArray;
+    public static String[] grabArray;
     public static String[] netsArray;
 
     public static void main (String[] args) {
@@ -27,6 +28,13 @@ public class Main {
         for (int i = 0; i < numDash; i++) {
             String currMerchant = sc.nextLine();
             dashArray[i] = currMerchant;
+        }
+
+        int numGrab = Integer.parseInt(sc.nextLine());
+        grabArray = new String[numGrab];
+        for (int i = 0; i < numGrab; i++) {
+            String currMerchant = sc.nextLine();
+            grabArray[i] = currMerchant;
         }
 
         int numNets = Integer.parseInt(sc.nextLine());
