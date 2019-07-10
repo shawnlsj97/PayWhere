@@ -17,11 +17,25 @@ class Restaurant {
         return containsFlag;
     }
 
+    public boolean hasNets() {
+        Boolean containsFlag = false;
+        for (String merchant : Main.netsArray) {
+            if (name.compareToIgnoreCase(merchant) == 0) {
+                containsFlag = true;
+            }
+        }
+        return containsFlag;
+    }
+
     public void printRest() {
         System.out.println("        \"" + name + "\" : {");
         System.out.println("            \"name\" : " + "\"" + name + "\",");
         System.out.println("            \"address\" : " + "\"" + unitNumber+ "\",");
-        if (hasDash()) {
+        if (hasDash() && hasNets()) {
+            System.out.println("            \"payment\" : " + "\"Dash, NetsQR\"");
+        } else if (hasNets()) {
+            System.out.println("            \"payment\" : " + "\"NetsQR\"");
+        } else if (hasDash()) {
             System.out.println("            \"payment\" : " + "\"Dash\"");
         } else {
             System.out.println("            \"payment\" : " + "\"" + "\"");
@@ -33,7 +47,11 @@ class Restaurant {
         System.out.println("        \"" + name + "\" : {");
         System.out.println("            \"name\" : " + "\"" + name + "\",");
         System.out.println("            \"address\" : " + "\"" + unitNumber + "\",");
-        if (hasDash()) {
+        if (hasDash() && hasNets()) {
+            System.out.println("            \"payment\" : " + "\"Dash, NetsQR\"");
+        } else if (hasNets()) {
+            System.out.println("            \"payment\" : " + "\"NetsQR\"");
+        } else if (hasDash()) {
             System.out.println("            \"payment\" : " + "\"Dash\"");
         } else {
             System.out.println("            \"payment\" : " + "\"" + "\"");
