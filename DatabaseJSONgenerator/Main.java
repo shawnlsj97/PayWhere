@@ -17,15 +17,26 @@ import java.util.*;
 public class Main {
 
     public static String[] dashArray;
+    public static String[] netsArray;
 
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
+
         int numDash = Integer.parseInt(sc.nextLine());
         dashArray = new String[numDash];
         for (int i = 0; i < numDash; i++) {
             String currMerchant = sc.nextLine();
             dashArray[i] = currMerchant;
         }
+
+        int numNets = Integer.parseInt(sc.nextLine());
+        netsArray = new String[numNets];
+        for (int i = 0; i < numNets; i++) {
+            String currMerchant = sc.nextLine();
+            netsArray[i] = currMerchant;
+        }
+
+
         System.out.println("{");
         int numMalls = Integer.parseInt(sc.nextLine());
         Mall.mallArray = new Mall[numMalls];
