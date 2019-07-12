@@ -135,14 +135,56 @@ public class SearchResults extends AppCompatActivity {
         public void setDetails(String name, String address, String payment) {
             TextView storeName = view.findViewById(R.id.storeName);
             TextView storeAddress = view.findViewById(R.id.storeAddress);
-            ImageView storePayment = view.findViewById(R.id.storePayment);
+            ImageView storePayment1 = view.findViewById(R.id.storePayment1);
+            ImageView storePayment2 = view.findViewById(R.id.storePayment2);
+            ImageView storePayment3 = view.findViewById(R.id.storePayment3);
 
             storeName.setText(name);
             storeAddress.setText(address);
-            if (payment.contains("Dash")) {
-                storePayment.setVisibility(View.VISIBLE);
-            } else {
-                storePayment.setVisibility(View.GONE);
+
+            String[] platforms = payment.split(",");
+            int count = platforms.length;
+            switch(count) {
+                case 1:
+                    storePayment1.setVisibility(View.VISIBLE);
+                    storePayment2.setVisibility(View.GONE);
+                    storePayment3.setVisibility(View.GONE);
+
+                    if (payment.contains("Dash")) {
+                        storePayment1.setImageResource(R.drawable.singteldash);
+                    } else if (payment.contains("GrabPay")) {
+                        storePayment1.setImageResource(R.drawable.grabpay);
+                    } else if (payment.contains("NetsQR")) {
+                        storePayment1.setImageResource(R.drawable.netsqr);
+                    } else {
+                        // array contains empty string
+                        storePayment1.setVisibility(View.GONE);
+                    }
+                    break;
+
+                case 2:
+                    storePayment1.setVisibility(View.VISIBLE);
+                    storePayment2.setVisibility(View.VISIBLE);
+                    storePayment3.setVisibility(View.GONE);
+
+                    if (payment.contains("Dash")) {
+                        storePayment1.setImageResource(R.drawable.singteldash);
+                        if (payment.contains("GrabPay")) {
+                            storePayment2.setImageResource(R.drawable.grabpay);
+                        } else {
+                            storePayment2.setImageResource(R.drawable.netsqr);
+                        }
+                    } else {
+                        storePayment1.setImageResource(R.drawable.grabpay);
+                        storePayment2.setImageResource(R.drawable.netsqr);
+                    }
+                    break;
+
+                case 3:
+                    storePayment1.setVisibility(View.VISIBLE);
+                    storePayment2.setVisibility(View.VISIBLE);
+                    storePayment3.setVisibility(View.VISIBLE);
+                    break;
             }
         }
     }
