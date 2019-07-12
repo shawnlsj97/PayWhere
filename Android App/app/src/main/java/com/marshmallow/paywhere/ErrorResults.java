@@ -19,6 +19,7 @@ public class ErrorResults extends AppCompatActivity {
     private Toolbar toolBar;
     private SearchView searchView;
     private TextView textView;
+    private String originalText;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -33,15 +34,14 @@ public class ErrorResults extends AppCompatActivity {
         toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
-                startActivity(searchActivity);
-                finish();
+                onBackPressed();
             }
         });
 
         searchView = findViewById(R.id.errorSearchView);
         Bundle bundle = getIntent().getExtras();
         String input = bundle.getString("input");
+        originalText = input;
         searchView.setQuery(input, false);
 
         final SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
@@ -72,6 +72,7 @@ public class ErrorResults extends AppCompatActivity {
                     errorIntent.putExtra("input", query);
                     startActivity(errorIntent);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    searchView.clearFocus();
                     return false;
                 }
             }
@@ -111,5 +112,11 @@ public class ErrorResults extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        searchView.setQuery(originalText,false);
     }
 }

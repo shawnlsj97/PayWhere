@@ -41,9 +41,7 @@ public class SearchActivity extends AppCompatActivity {
         toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(mainActivity);
-                finish();
+                onBackPressed();
             }
         });
         searchView = findViewById(R.id.searchView);
@@ -104,6 +102,13 @@ public class SearchActivity extends AppCompatActivity {
         }
 
         return output.toString();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        searchView.setQuery("",false);
+        searchView.requestFocus();
     }
 
     @Override

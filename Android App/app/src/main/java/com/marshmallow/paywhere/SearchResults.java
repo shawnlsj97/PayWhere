@@ -46,6 +46,7 @@ public class SearchResults extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FirebaseRecyclerAdapter adapter;
     private ContentLoadingProgressBar pb;
+    private String originalText;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -62,16 +63,14 @@ public class SearchResults extends AppCompatActivity {
         toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adapter.stopListening();
-                Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
-                startActivity(searchActivity);
-                finish();
+                onBackPressed();
             }
         });
 
         searchView = findViewById(R.id.successSearchView);
         Bundle bundle = getIntent().getExtras();
         String input = bundle.getString("input");
+        originalText = input;
         searchView.setQuery(toTitleCase(input), false);
         searchView.clearFocus();
 
@@ -92,7 +91,6 @@ public class SearchResults extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
                 if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
-                    adapter.stopListening();
                     Intent intent = new Intent(getApplicationContext(), SearchResults.class);
                     intent.putExtra("input", query);
                     startActivity(intent);
@@ -100,11 +98,11 @@ public class SearchResults extends AppCompatActivity {
                     searchView.clearFocus();
                     return true;
                 } else {
-                    adapter.stopListening();
                     Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
                     errorIntent.putExtra("input", query);
                     startActivity(errorIntent);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    searchView.clearFocus();
                     return false;
                 }
             }
@@ -197,12 +195,6 @@ public class SearchResults extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (adapter != null) adapter.stopListening();
-    }
-
     public String toTitleCase(String input) {
 
         StringBuilder output = new StringBuilder();
@@ -226,5 +218,11 @@ public class SearchResults extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        searchView.setQuery(originalText,false);
     }
 }
