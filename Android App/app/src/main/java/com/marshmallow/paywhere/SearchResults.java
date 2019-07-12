@@ -96,6 +96,7 @@ public class SearchResults extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), SearchResults.class);
                     intent.putExtra("input", query);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     searchView.clearFocus();
                     return true;
                 } else {
@@ -103,6 +104,7 @@ public class SearchResults extends AppCompatActivity {
                     Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
                     errorIntent.putExtra("input", query);
                     startActivity(errorIntent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     return false;
                 }
             }
@@ -218,5 +220,11 @@ public class SearchResults extends AppCompatActivity {
         }
 
         return output.toString();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

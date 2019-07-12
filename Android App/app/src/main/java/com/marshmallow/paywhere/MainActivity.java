@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 searchView.clearFocus();
                 Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(searchActivity);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
         searchView.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(searchActivity);
-                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent onboardingActivity = new Intent(getApplicationContext(), OnboardingSecondary.class);
                 startActivity(onboardingActivity);
-                finish();
             }
         });
     }
