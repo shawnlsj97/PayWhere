@@ -8,6 +8,10 @@
     <string name="search_hint">enter a mall here</string>
     <string name="error_text_1">no results found :(</string>
     <string name="error_text_2">try searching something else!</string>
+    <string name="no_connection">No Connection</string>
+    <string name="connect_internet">Connect to the Internet</string>
+    <string name="check_connection"> You\'re offline. Check your connection.</string>
+    <string name="retry">RETRY</string>
     <string-array name="search_suggestions">
         <item>Anchorpoint</item>
         <item>Bedok Mall</item>

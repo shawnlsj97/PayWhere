@@ -20,4 +20,8 @@
         <item name="android:navigationBarColor">@color/white</item>
     </style>
 
+    <style name="blue" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/bluePeterriver</item>
+    </style>
+
 </resources>
