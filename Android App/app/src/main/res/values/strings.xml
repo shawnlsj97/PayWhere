@@ -12,6 +12,8 @@
     <string name="connect_internet">Connect to the Internet</string>
     <string name="check_connection"> You\'re offline. Check your connection.</string>
     <string name="retry">RETRY</string>
+    <string name="offline_toast_text">No Connection :(</string>
+    <string name="online_toast_text">Back Online! :)</string>
     <string-array name="search_suggestions">
         <item>Anchorpoint</item>
         <item>Bedok Mall</item>

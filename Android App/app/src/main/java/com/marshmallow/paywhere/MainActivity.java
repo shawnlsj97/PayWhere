@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(searchActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 } else {
+                    showOfflineToast();
                     Intent noInternetActivity = new Intent(getApplicationContext(), NoInternetActivity.class);
                     startActivity(noInternetActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -44,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(searchActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 } else {
+                    showOfflineToast();
                     Intent noInternetActivity = new Intent(getApplicationContext(), NoInternetActivity.class);
+                    noInternetActivity.putExtra("activity", "main");
                     startActivity(noInternetActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
@@ -76,5 +81,14 @@ public class MainActivity extends AppCompatActivity {
                     haveConnectedMobile = true;
         }
         return haveConnectedWifi || haveConnectedMobile;
+    }
+
+    public void showOfflineToast() {
+        View toastView = getLayoutInflater().inflate(R.layout.offline_toast, null);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "No Connection :(", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
+        toast.setView(toastView);
+        toast.show();
     }
 }

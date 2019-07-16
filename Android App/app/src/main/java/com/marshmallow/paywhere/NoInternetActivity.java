@@ -4,21 +4,29 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.ContentLoadingProgressBar;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
+
+import java.util.Arrays;
 
 public class NoInternetActivity extends AppCompatActivity {
 
@@ -36,6 +44,7 @@ public class NoInternetActivity extends AppCompatActivity {
 
         pb = findViewById(R.id.noInternetPB);
         pb.setVisibility(View.GONE);
+
         toolBar = findViewById(R.id.toolbar);
         setSupportActionBar(toolBar);
         ActionBar ab = getSupportActionBar();
@@ -84,6 +93,9 @@ public class NoInternetActivity extends AppCompatActivity {
             }
         });
 
+        final Bundle bundle = getIntent().getExtras();
+        final String activity = bundle.getString("activity");
+
         networkChangeReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -96,16 +108,33 @@ public class NoInternetActivity extends AppCompatActivity {
                             if (info[i].getState() == NetworkInfo.State.CONNECTED) {
                                 if (!isConnected) {
                                     isConnected = true;
-                                    Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
-                                    startActivity(searchActivity);
-                                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                                    finish();
+                                    showOnlineToast();
+                                    if (activity.equals("main")) {
+                                        Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
+                                        startActivity(searchActivity);
+                                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                                        finish();
+                                    } else if (activity.equals("search") | activity.equals("results") | activity.equals("error")) {
+                                        String query = bundle.getString("input");
+                                        String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                                        if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
+                                            Intent searchResults = new Intent(getApplicationContext(), SearchResults.class);
+                                            searchResults.putExtra("input", query);
+                                            startActivity(searchResults);
+                                            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                                            finish();
+                                        } else {
+                                            Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
+                                            errorIntent.putExtra("input", query);
+                                            startActivity(errorIntent);
+                                            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                                            finish();
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
-                } else {
-                    isConnected = false;
                 }
             }
         };
@@ -130,6 +159,15 @@ public class NoInternetActivity extends AppCompatActivity {
                     haveConnectedMobile = true;
         }
         return haveConnectedWifi || haveConnectedMobile;
+    }
+
+    public void showOnlineToast() {
+        View toastView = getLayoutInflater().inflate(R.layout.online_toast, null);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "Back Online!", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
+        toast.setView(toastView);
+        toast.show();
     }
 
     @Override
@@ -185,4 +223,23 @@ public class NoInternetActivity extends AppCompatActivity {
             registered = false;
         }
     }
-}
+
+    public String toTitleCase(String input) {
+
+        StringBuilder output = new StringBuilder();
+        boolean convertNext = true;
+        for (char ch : input.toCharArray()) {
+            if (Character.isSpaceChar(ch)) {
+                convertNext = true;
+            } else if (convertNext) {
+                ch = Character.toTitleCase(ch);
+                convertNext = false;
+            } else {
+                ch = Character.toLowerCase(ch);
+            }
+            output.append(ch);
+        }
+
+        return output.toString();
+    }
+    }

@@ -1,16 +1,23 @@
 package com.marshmallow.paywhere;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 
@@ -59,20 +66,29 @@ public class ErrorResults extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
-                if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
-                    Intent intent = new Intent(getApplicationContext(), SearchResults.class);
-                    intent.putExtra("input", query);
-                    startActivity(intent);
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    searchView.clearFocus();
-                    return true;
+                if (haveNetworkConnection()) {
+                    String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                    if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
+                        Intent intent = new Intent(getApplicationContext(), SearchResults.class);
+                        intent.putExtra("input", query);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                        searchView.clearFocus();
+                        return true;
+                    } else {
+                        Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
+                        errorIntent.putExtra("input", query);
+                        startActivity(errorIntent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                        return true;
+                    }
                 } else {
-                    Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
-                    errorIntent.putExtra("input", query);
-                    startActivity(errorIntent);
+                    showOfflineToast();
+                    Intent noInternetActivity = new Intent(getApplicationContext(), NoInternetActivity.class);
+                    noInternetActivity.putExtra("activity", "error");
+                    noInternetActivity.putExtra("input", query);
+                    startActivity(noInternetActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    searchView.clearFocus();
                     return false;
                 }
             }
@@ -118,5 +134,31 @@ public class ErrorResults extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         searchView.setQuery(originalText,false);
+    }
+
+    private boolean haveNetworkConnection() {
+        boolean haveConnectedWifi = false;
+        boolean haveConnectedMobile = false;
+
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        for (NetworkInfo ni : netInfo) {
+            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+                if (ni.isConnected())
+                    haveConnectedWifi = true;
+            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (ni.isConnected())
+                    haveConnectedMobile = true;
+        }
+        return haveConnectedWifi || haveConnectedMobile;
+    }
+
+    public void showOfflineToast() {
+        View toastView = getLayoutInflater().inflate(R.layout.offline_toast, null);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "No Connection :(", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
+        toast.setView(toastView);
+        toast.show();
     }
 }
