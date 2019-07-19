@@ -10,15 +10,35 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * Adapter for our slide viewpager on the onboarding page.
+ * The 'SliderAdapter' class supports methods which include:
+ * (i) Getting the total number of pages.
+ * (ii) Setting the content on the current page based on page number.
+ */
 public class SliderAdapter extends PagerAdapter {
 
+    /**
+     * Application context.
+     */
     Context context;
+    /**
+     * Inflates layout we have created in slide_layout.xml.
+     */
     LayoutInflater layoutInflater;
 
+    /**
+     * Constructor that creates an instance of the SliderAdapter class and assigns the
+     * application context to the instance.
+     * @param context Application context.
+     */
     public SliderAdapter(Context context) {
         this.context = context;
     }
 
+    /**
+     * Integer array containing title icons on each page.
+     */
     public int[] slide_images = {
             R.drawable.onboard_logo,
             R.drawable.pin_drop,
@@ -26,6 +46,9 @@ public class SliderAdapter extends PagerAdapter {
             R.drawable.thumbs_up
     };
 
+    /**
+     * String array containing step headings on each page.
+     */
     public String[] step_headings = {
             "",
             "Step 1",
@@ -33,6 +56,9 @@ public class SliderAdapter extends PagerAdapter {
             "Step 3"
     };
 
+    /**
+     * String array containing titles on each page.
+     */
     public String[] slide_headings = {
             "Thank you for choosing PayWhere!",
             "Choose a shopping mall.",
@@ -40,6 +66,9 @@ public class SliderAdapter extends PagerAdapter {
             "Enjoy your meal along with easy payment!"
     };
 
+    /**
+     * String array containing descriptions on each page.
+     */
     public String[] slide_desc = {
             "Swipe to learn how to use our app.",
             "",
@@ -47,6 +76,10 @@ public class SliderAdapter extends PagerAdapter {
             ""
     };
 
+    /**
+     * Method that returns number of pages in the slider.
+     * @return Integer representing total number of pages.
+     */
     @Override
     public int getCount() {
         return slide_headings.length;
@@ -57,6 +90,13 @@ public class SliderAdapter extends PagerAdapter {
         return view == o;
     }
 
+    /**
+     * Sets the content on each page using the position of each page to retrieve the appropriate
+     * objects from the arrays above.
+     * @param container ViewGroup containing all our objects on the page.
+     * @param position Page number.
+     * @return Object that represents our page layout.
+     */
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);

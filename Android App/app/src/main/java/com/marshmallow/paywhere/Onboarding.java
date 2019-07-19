@@ -14,20 +14,30 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * This is the onboarding page that users view when they launch PayWhere for the very first time.
+ * The 'Onboarding' class supports methods which include:
+ * (i) Setting the view of the activity as designed in R.layout.onboarding.
+ * (ii) Adding dots indicator which inform users which page their they currently viewing.
+ */
 public class Onboarding extends AppCompatActivity {
 
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
-
     private TextView[] mDots;
-
     private SliderAdapter sliderAdapter;
     private Button get_started_btn;
-
     private Animation btn_anim;
-
     private ImageView paymentOptions, exampleSearch;
 
+    /**
+     * Method that initialises the view of our onboarding activity.
+     * Assigns onClickListener to get started button.
+     * On click, get started button will lead to the main page of our app.
+     * Checks whether user has completed onboarding. If done, user will automatically be
+     * redirected to main page.
+     * @param savedInstanceState Data passed from previous activity (if any).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +79,10 @@ public class Onboarding extends AppCompatActivity {
         });
     }
 
+    /**
+     * Adds dots indicator based on page number.
+     * @param position Page number of slide view.
+     */
     public void addDotsIndicator(int position) {
         mDots = new TextView[sliderAdapter.getCount()];
         mDotLayout.removeAllViews();
@@ -104,6 +118,9 @@ public class Onboarding extends AppCompatActivity {
         }
     }
 
+    /**
+     * Listener that adds the dots indicated based on page number.
+     */
     ViewPager.OnPageChangeListener viewListener= new ViewPager.OnPageChangeListener() {
 
         @Override
@@ -122,12 +139,19 @@ public class Onboarding extends AppCompatActivity {
         }
     };
 
+    /**
+     * Retrieve info if user has completed onboarding.
+     * @return True if onboarding completed, false otherwise.
+     */
     private boolean restorePrefData() {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs", MODE_PRIVATE);
         boolean isOnboardingDone = pref.getBoolean("isOnboardingDone", false);
         return isOnboardingDone;
     }
 
+    /**
+     * Saves info that user has completed onboarding.
+     */
     public void savePrefsData() {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();

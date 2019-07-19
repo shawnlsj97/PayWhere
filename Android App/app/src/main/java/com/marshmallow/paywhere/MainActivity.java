@@ -13,16 +13,38 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+/**
+ * This is the home page that users first see when they launch PayWhere.
+ * The 'MainActivity' class supports methods which include:
+ * (i) Setting the view of the activity as designed in R.layout.activity_main.
+ * (ii) Checking for internet connectivity.
+ * (iii) Showing a custom toast message if there is no internet connection.
+ */
 public class MainActivity extends AppCompatActivity {
-
+    /**
+     * Variable that refers to the SearchView on this layout.
+     */
     private SearchView searchView;
+    /**
+     * Variable that refers to the ImageView on this layout.
+     * This ImageView will be used to allow users to navigate to the app's onboarding page.
+     */
     private ImageView imageView;
 
+    /**
+     * Method that initialises the view of our main activity.
+     * Assigns onClickListeners to searchView and imageView.
+     * On click, searchView will lead to the search page for us to input our query.
+     * On click, imageView will lead to our app's onboarding page for users to learn how to use our app.
+     * @param savedInstanceState Data passed from previous activity (if any).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         searchView = findViewById(R.id.searchView);
+        // If have internet connection, proceed to search page, otherwise go to error page. This
+        // function dictates action of the search icon only.
         searchView.setOnSearchClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // Same as above. This function dictates action of the rest of the search bar.
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         imageView = findViewById(R.id.infoImageView);
+        // Lead to app onboarding when users click on image.
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Checks if there is internet connectivity. Both wifi and mobile data are checked to determine if there is internet connectivity.
+     * @return True if internet connectivity exists, false otherwise.
+     */
     private boolean haveNetworkConnection() {
         boolean haveConnectedWifi = false;
         boolean haveConnectedMobile = false;
@@ -83,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
         return haveConnectedWifi || haveConnectedMobile;
     }
 
+    /**
+     * Displays toast message informing user that there is no network connection.
+     */
     public void showOfflineToast() {
         View toastView = getLayoutInflater().inflate(R.layout.offline_toast, null);
 

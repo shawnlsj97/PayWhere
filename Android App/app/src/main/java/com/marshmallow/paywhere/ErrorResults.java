@@ -23,11 +23,28 @@ import java.util.Arrays;
 
 public class ErrorResults extends AppCompatActivity {
 
+    /**
+     * Variable for toolbar at top of the page.
+     */
     private Toolbar toolBar;
+    /**
+     * Variable for searchview embedded in toolbar.
+     */
     private SearchView searchView;
+    /**
+     * Variable for error message.
+     */
     private TextView textView;
+    /**
+     * Variable for input from user.
+     */
     private String originalText;
 
+    /**
+     * Method that initialises view of our ErrorResults activity.
+     * Assigns onClickListeners to our up button and searchview.
+     * @param savedInstanceState Data passed from previous activity (if any).
+     */
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +122,11 @@ public class ErrorResults extends AppCompatActivity {
         textView.setText(errorMsg1 + '\n' + errorMsg2);
     }
 
+    /**
+     * Converts input query to title case.
+     * @param input Input string from user.
+     * @return String that is converted from user input to title case.
+     */
     public String toTitleCase(String input) {
 
         StringBuilder output = new StringBuilder();
@@ -136,6 +158,10 @@ public class ErrorResults extends AppCompatActivity {
         searchView.setQuery(originalText,false);
     }
 
+    /**
+     * Checks if there is internet connectivity. Both wifi and mobile data are checked to determine if there is internet connectivity.
+     * @return True if internet connectivity exists, false otherwise.
+     */
     private boolean haveNetworkConnection() {
         boolean haveConnectedWifi = false;
         boolean haveConnectedMobile = false;
@@ -153,6 +179,9 @@ public class ErrorResults extends AppCompatActivity {
         return haveConnectedWifi || haveConnectedMobile;
     }
 
+    /**
+     * Displays toast message informing user that there is no network connection.
+     */
     public void showOfflineToast() {
         View toastView = getLayoutInflater().inflate(R.layout.offline_toast, null);
 

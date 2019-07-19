@@ -12,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,16 +20,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
-import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,22 +35,60 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 
+/**
+ * This is the page where the list of dining outlets in a particular mall selected by the user is
+ * displayed..
+ * The 'SearchResults' class supports methods which include:
+ * (i) Setting the view of the activity as designed in R.layout.activity_search_results.
+ * (ii) Converting input query to title case.
+ * (iii) Performing data retrieval on firebase for valid inputs.
+ * (iv) Checking for internet connectivity.
+ * (v) Showing a custom toast message if there is no internet connection.
+ */
 public class SearchResults extends AppCompatActivity {
 
+    /**
+     * Variable for toolbar at top of the page.
+     */
     private Toolbar toolBar;
+    /**
+     * Variable for searchview embedded in toolbar.
+     */
     private SearchView searchView;
+    /**
+     * Variable for recyclerview containing all the mall data.
+     */
     private RecyclerView recyclerView;
+    /**
+     * Variable for adapter for recyclerview that attaches data to the view.
+     */
     private FirebaseRecyclerAdapter adapter;
+    /**
+     * Variable for the progressbar shown while data is fetched from firebase.
+     */
     private ContentLoadingProgressBar pb;
+    /**
+     * Variable for input from user.
+     */
     private String originalText;
+    /**
+     * Variable for the bar containing filter button.
+     */
+    private ConstraintLayout filterBar;
 
+    /**
+     * Method that initialises the view of our SearchResults activity.
+     * Assigns onClickListeners to our up button and searchview.
+     * Also initialises the recyclerview and calls the method firebaseSearch to retrieve data
+     * from the database.
+     * @param savedInstanceState
+     */
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +163,14 @@ public class SearchResults extends AppCompatActivity {
             }
         });
 
+//        filterBar.findViewById(R.id.filterBar);
+//        filterBar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+
         recyclerView = findViewById(R.id.successRecyclerView);
         recyclerView.setVisibility(View.INVISIBLE);
         recyclerView.setHasFixedSize(true);
@@ -137,72 +181,10 @@ public class SearchResults extends AppCompatActivity {
         firebaseSearch(input.toLowerCase());
     }
 
-    public static class StoreViewHolder extends RecyclerView.ViewHolder {
-
-        View view;
-
-        public StoreViewHolder(@NonNull View itemView) {
-            super(itemView);
-            view = itemView;
-        }
-
-        public void setDetails(String name, String address, String payment) {
-            TextView storeName = view.findViewById(R.id.storeName);
-            TextView storeAddress = view.findViewById(R.id.storeAddress);
-            ImageView storePayment1 = view.findViewById(R.id.storePayment1);
-            ImageView storePayment2 = view.findViewById(R.id.storePayment2);
-            ImageView storePayment3 = view.findViewById(R.id.storePayment3);
-
-            storeName.setText(name);
-            storeAddress.setText(address);
-
-            String[] platforms = payment.split(",");
-            int count = platforms.length;
-            switch(count) {
-                case 1:
-                    storePayment1.setVisibility(View.VISIBLE);
-                    storePayment2.setVisibility(View.GONE);
-                    storePayment3.setVisibility(View.GONE);
-
-                    if (payment.contains("Dash")) {
-                        storePayment1.setImageResource(R.drawable.singteldash);
-                    } else if (payment.contains("GrabPay")) {
-                        storePayment1.setImageResource(R.drawable.grabpay);
-                    } else if (payment.contains("NetsQR")) {
-                        storePayment1.setImageResource(R.drawable.netsqr);
-                    } else {
-                        // array contains empty string
-                        storePayment1.setVisibility(View.GONE);
-                    }
-                    break;
-
-                case 2:
-                    storePayment1.setVisibility(View.VISIBLE);
-                    storePayment2.setVisibility(View.VISIBLE);
-                    storePayment3.setVisibility(View.GONE);
-
-                    if (payment.contains("Dash")) {
-                        storePayment1.setImageResource(R.drawable.singteldash);
-                        if (payment.contains("GrabPay")) {
-                            storePayment2.setImageResource(R.drawable.grabpay);
-                        } else {
-                            storePayment2.setImageResource(R.drawable.netsqr);
-                        }
-                    } else {
-                        storePayment1.setImageResource(R.drawable.grabpay);
-                        storePayment2.setImageResource(R.drawable.netsqr);
-                    }
-                    break;
-
-                case 3:
-                    storePayment1.setVisibility(View.VISIBLE);
-                    storePayment2.setVisibility(View.VISIBLE);
-                    storePayment3.setVisibility(View.VISIBLE);
-                    break;
-            }
-        }
-    }
-
+    /**
+     * Perform search on firebase using input string from user.
+     * @param input User input in lower case.
+     */
     private void firebaseSearch(final String input) {
         // search by mall
         final Query query = FirebaseDatabase.getInstance()
@@ -251,6 +233,11 @@ public class SearchResults extends AppCompatActivity {
         });
     }
 
+    /**
+     * Converts input query to title case.
+     * @param input Input string from user.
+     * @return String that is converted from user input to title case.
+     */
     public String toTitleCase(String input) {
 
         StringBuilder output = new StringBuilder();
@@ -282,6 +269,10 @@ public class SearchResults extends AppCompatActivity {
         searchView.setQuery(originalText,false);
     }
 
+    /**
+     * Checks if there is internet connectivity. Both wifi and mobile data are checked to determine if there is internet connectivity.
+     * @return True if internet connectivity exists, false otherwise.
+     */
     private boolean haveNetworkConnection() {
         boolean haveConnectedWifi = false;
         boolean haveConnectedMobile = false;
@@ -299,6 +290,9 @@ public class SearchResults extends AppCompatActivity {
         return haveConnectedWifi || haveConnectedMobile;
     }
 
+    /**
+     * Displays toast message informing user that there is no network connection.
+     */
     public void showOfflineToast() {
         View toastView = getLayoutInflater().inflate(R.layout.offline_toast, null);
 

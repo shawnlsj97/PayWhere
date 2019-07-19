@@ -2,41 +2,66 @@ package com.marshmallow.paywhere;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.ContentLoadingProgressBar;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import java.util.Arrays;
 
+/**
+ * This is the page where users are directed to when there is loss in internet connectivity.
+ * The 'NoInternetActivity' supports methods which include:
+ * (i) Setting the view of the activity as designed in R.layout.activity_no_internet.
+ * (ii) Checking for internet connectivity.
+ * (iii) Showing a custom toast message if there is no internet connection.
+ */
 public class NoInternetActivity extends AppCompatActivity {
 
+    /**
+     * Variable containing 'retry' text that allows users to click on once they have turned on
+     * their internet.
+     */
     private TextView retry;
+    /**
+     * Variable for toolbar at top of the page.
+     */
     private Toolbar toolBar;
+    /**
+     * Variable for progress bar after clicking retry.
+     */
     private ContentLoadingProgressBar pb;
+    /**
+     * Variable for connectivity manager that helps us to check for internet connectivity.
+     */
     private ConnectivityManager cm;
+    /**
+     * Variable for broadcast receiver that listens for changes in internet connectivity.
+     */
     private BroadcastReceiver networkChangeReceiver;
+    /**
+     * Variable for boolean that indicates whether the broadcast receiver is registered or not.
+     */
     private boolean registered;
 
+    /**
+     * Method that initialises the view of our no internet activity.
+     * Assigns onClickListener to retry textview.
+     * Also instantiates instance of broadcast manager to listen for changes in internet
+     * connectivity. Users will be automatically directed to respective page that they would have
+     * accessed previously if there was internet connection.
+     * @param savedInstanceState Data passed from previous activity (if any).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,6 +169,10 @@ public class NoInternetActivity extends AppCompatActivity {
         registered = true;
     }
 
+    /**
+     * Checks if there is internet connectivity. Both wifi and mobile data are checked to determine if there is internet connectivity.
+     * @return True if internet connectivity exists, false otherwise.
+     */
     private boolean haveNetworkConnection() {
         boolean haveConnectedWifi = false;
         boolean haveConnectedMobile = false;
@@ -161,6 +190,9 @@ public class NoInternetActivity extends AppCompatActivity {
         return haveConnectedWifi || haveConnectedMobile;
     }
 
+    /**
+     * Displays toast message when internet connection is restored.
+     */
     public void showOnlineToast() {
         View toastView = getLayoutInflater().inflate(R.layout.online_toast, null);
 
@@ -224,6 +256,11 @@ public class NoInternetActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Converts input query to title case.
+     * @param input Input string from user.
+     * @return String that is converted from user input to title case.
+     */
     public String toTitleCase(String input) {
 
         StringBuilder output = new StringBuilder();

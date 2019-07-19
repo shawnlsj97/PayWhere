@@ -1,7 +1,6 @@
 package com.marshmallow.paywhere;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +13,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * This is the secondary onboarding page that users view when they click on the info icon on the
+ * main page. Unlike the original onboarding page, users immediately have access to the get
+ * started button to return to the home page immediately without having to go through the entire
+ * onboarding process.
+ * The 'OnboardingSecondary' class supports methods which include:
+ * (i) Setting the view of the activity as designed in R.layout.onboarding.
+ * (ii) Adding dots indicator which inform users which page their they currently viewing.
+ */
 public class OnboardingSecondary extends AppCompatActivity {
 
     private ViewPager mSlideViewPager;
@@ -28,6 +36,12 @@ public class OnboardingSecondary extends AppCompatActivity {
 
     private ImageView paymentOptions, exampleSearch;
 
+    /**
+     * Method that initialises the view of our onboarding activity.
+     * Assigns onClickListener to get started button.
+     * On click, get started button will lead to the main page of our app.
+     * @param savedInstanceState Data passed from previous activity (if any).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +73,10 @@ public class OnboardingSecondary extends AppCompatActivity {
         });
     }
 
+    /**
+     * Adds dots indicator based on page number.
+     * @param position Page number of slide view.
+     */
     public void addDotsIndicator(int position) {
         mDots = new TextView[sliderAdapter.getCount()];
         mDotLayout.removeAllViews();
@@ -94,6 +112,9 @@ public class OnboardingSecondary extends AppCompatActivity {
         }
     }
 
+    /**
+     * Listener that adds the dots indicated based on page number.
+     */
     ViewPager.OnPageChangeListener viewListener= new ViewPager.OnPageChangeListener() {
 
         @Override
