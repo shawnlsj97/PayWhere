@@ -1,6 +1,7 @@
 package com.marshmallow.paywhere;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 
@@ -26,6 +27,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,10 +38,12 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -68,7 +73,7 @@ public class SearchResults extends AppCompatActivity {
     /**
      * Variable for adapter for recyclerview that attaches data to the view.
      */
-    private FirebaseRecyclerAdapter adapter;
+    private RecyclerAdapter adapter;
     /**
      * Variable for the progressbar shown while data is fetched from firebase.
      */
@@ -81,6 +86,11 @@ public class SearchResults extends AppCompatActivity {
      * Variable for the bar containing filter button.
      */
     private ConstraintLayout filterBar;
+    private Dialog filterDialog;
+    private CheckedTextView dash;
+    private CheckedTextView grab;
+    private CheckedTextView nets;
+    private ArrayList<Store> stores;
 
     /**
      * Method that initialises the view of our SearchResults activity.
@@ -163,13 +173,114 @@ public class SearchResults extends AppCompatActivity {
             }
         });
 
-//        filterBar.findViewById(R.id.filterBar);
-//        filterBar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        filterDialog = new Dialog(this);
+        filterDialog.setContentView(R.layout.filter_dialog);
+        dash = filterDialog.findViewById(R.id.dialog_dash);
+        grab = filterDialog.findViewById(R.id.dialog_grab);
+        nets = filterDialog.findViewById(R.id.dialog_nets);
+
+        Button cancel_btn = filterDialog.findViewById(R.id.cancel_btn);
+        cancel_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                filterDialog.dismiss();
+                dash.setCheckMarkDrawable(null);
+                dash.setChecked(false);
+                dash.setTextColor(getColor(R.color.textColor));
+                grab.setCheckMarkDrawable(null);
+                grab.setChecked(false);
+                grab.setTextColor(getColor(R.color.textColor));
+                nets.setCheckMarkDrawable(null);
+                nets.setChecked(false);
+                nets.setTextColor(getColor(R.color.textColor));
+            }
+        });
+
+        dash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (dash.isChecked()) {
+                    dash.setTextColor(getColor(R.color.textColor));
+                    dash.setCheckMarkDrawable(null);
+                    dash.setChecked(false);
+                } else {
+                    dash.setTextColor(getColor(R.color.colorPrimary));
+                    dash.setCheckMarkDrawable(R.drawable.dialog_tick);
+                    dash.setChecked(true);
+                }
+            }
+        });
+
+        grab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (grab.isChecked()) {
+                    grab.setTextColor(getColor(R.color.textColor));
+                    grab.setCheckMarkDrawable(null);
+                    grab.setChecked(false);
+                } else {
+                    grab.setTextColor(getColor(R.color.colorPrimary));
+                    grab.setCheckMarkDrawable(R.drawable.dialog_tick);
+                    grab.setChecked(true);
+                }
+            }
+        });
+
+        nets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (nets.isChecked()) {
+                    nets.setTextColor(getColor(R.color.textColor));
+                    nets.setCheckMarkDrawable(null);
+                    nets.setChecked(false);
+                } else {
+                    nets.setTextColor(getColor(R.color.colorPrimary));
+                    nets.setCheckMarkDrawable(R.drawable.dialog_tick);
+                    nets.setChecked(true);
+                }
+            }
+        });
+
+        filterBar = findViewById(R.id.filterBar);
+        filterBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                filterDialog.show();
+            }
+        });
+
+        Button apply_btn = filterDialog.findViewById(R.id.apply_btn);
+        apply_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean dash_checked = dash.isChecked();
+                boolean grab_checked = grab.isChecked();
+                boolean nets_checked = nets.isChecked();
+
+                if (!dash_checked && !grab_checked && !nets_checked) {
+                    // none of the options are checked
+                    recyclerView.setAdapter(adapter);
+                    filterDialog.dismiss();
+                } else {
+                    ArrayList<Store> filteredList = new ArrayList<>();
+                    for (Store s : stores) {
+                        String payment = s.getPayment();
+                        if (dash_checked) {
+                            if (payment.contains("Dash")) filteredList.add(s);
+                        }
+                        if (grab_checked) {
+                            if (payment.contains("GrabPay")) filteredList.add(s);
+                        }
+                        if (nets_checked) {
+                            if (payment.contains("NetsQR")) filteredList.add(s);
+                        }
+                    }
+                    RecyclerAdapter recyclerAdapter = new RecyclerAdapter(filteredList);
+                    recyclerView.setAdapter(recyclerAdapter);
+                    filterDialog.dismiss();
+                }
+            }
+        });
 
         recyclerView = findViewById(R.id.successRecyclerView);
         recyclerView.setVisibility(View.INVISIBLE);
@@ -187,40 +298,19 @@ public class SearchResults extends AppCompatActivity {
      */
     private void firebaseSearch(final String input) {
         // search by mall
-        final Query query = FirebaseDatabase.getInstance()
-                .getReference()
-                .child(input);
+        DatabaseReference ref = FirebaseDatabase.getInstance()
+                .getReference(input);
 
-        query.addValueEventListener(new ValueEventListener() {
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                FirebaseRecyclerOptions<Store> options = new FirebaseRecyclerOptions.Builder<Store>()
-                        .setQuery(query, new SnapshotParser<Store>() {
-                            @NonNull
-                            @Override
-                            public Store parseSnapshot(@NonNull DataSnapshot snapshot) {
-                                return new Store(snapshot.child("name").getValue().toString(),
-                                        snapshot.child("payment").getValue().toString(),
-                                        snapshot.child("address").getValue().toString());
-                            }
-                        })
-                        .build();
-                adapter = new FirebaseRecyclerAdapter<Store, StoreViewHolder>(options) {
-                    @Override
-                    protected void onBindViewHolder(@NonNull StoreViewHolder viewHolder, int i, @NonNull Store s) {
-                        viewHolder.setDetails(s.getName(), s.getAddress(), s.getPayment());
-                    }
-
-                    @NonNull
-                    @Override
-                    public StoreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-                        View view = LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.recycler_item_layout, parent, false);
-                        return new StoreViewHolder(view);
-                    }
-                };
-                adapter.startListening();
+                stores = new ArrayList<>();
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    stores.add(new Store(ds.child("name").getValue().toString(),
+                                        ds.child("payment").getValue().toString(),
+                                        ds.child("address").getValue().toString()));
+                }
+                adapter = new RecyclerAdapter(stores);
                 recyclerView.setAdapter(adapter);
                 recyclerView.setVisibility(View.VISIBLE);
                 pb.setVisibility(View.GONE);

@@ -41,11 +41,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/connect_internet"
+        android:layout_marginTop="30dp"
+        android:text="@string/offline"
         android:textColor="@color/darkTextColor"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -68,13 +67,12 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/sad_emoji" />
+        app:srcCompat="@drawable/wifi_icon" />
 
     <TextView
         android:id="@+id/reset_tv"

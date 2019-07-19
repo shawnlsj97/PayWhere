@@ -48,16 +48,17 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnSearchClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchView.clearFocus();
                 if (haveNetworkConnection()) {
                     Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
                     startActivity(searchActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    searchView.setIconified(true);
                 } else {
                     showOfflineToast();
                     Intent noInternetActivity = new Intent(getApplicationContext(), NoInternetActivity.class);
                     startActivity(noInternetActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    searchView.setIconified(true);
                 }
             }
         });

@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Store Name"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
@@ -27,13 +28,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Address"
-        android:textSize="20sp"
         android:textColor="@color/textColor"
-        app:layout_constraintHorizontal_bias="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/storeName" />
+        app:layout_constraintTop_toBottomOf="@+id/storeName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/storePayment1"
@@ -42,10 +46,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/storeAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/singteldash" />
 
     <ImageView
@@ -55,10 +61,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/storePayment1"
         app:layout_constraintTop_toBottomOf="@+id/storeAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/grabpay" />
 
     <ImageView
@@ -68,9 +76,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/storePayment2"
         app:layout_constraintTop_toBottomOf="@+id/storeAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/netsqr" />
 </androidx.constraintlayout.widget.ConstraintLayout>

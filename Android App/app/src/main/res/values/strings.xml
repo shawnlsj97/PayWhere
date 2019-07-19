@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PayWhere</string>
-    <string name="main_activity_message">Where would you like to eat today?</string>
+    <string name="main_activity_message">Which mall are you eating at today?</string>
     <string name="onboard_message_1">Thank you for choosing PayWhere!</string>
     <string name="onboard_message_1_2">Swipe to learn how to use our app.</string>
     <string name="get_started">Get Started</string>
@@ -9,11 +9,12 @@
     <string name="error_text_1">no results found :(</string>
     <string name="error_text_2">try searching something else!</string>
     <string name="no_connection">No Connection</string>
-    <string name="connect_internet">Connect to the Internet</string>
-    <string name="check_connection"> You\'re offline. Check your connection.</string>
+    <string name="offline">you\'re offline.</string>
+    <string name="check_connection"> check your connection!</string>
     <string name="retry">RETRY</string>
     <string name="offline_toast_text">No Connection :(</string>
     <string name="online_toast_text">Back Online! :)</string>
+    <string name="filter_text">Filter by mobile payment option</string>
     <string-array name="search_suggestions">
         <item>Anchorpoint</item>
         <item>Bedok Mall</item>
