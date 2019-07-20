@@ -32,6 +32,11 @@ dependencies {
     // FirebaseUI for Firebase Realtime Database
     implementation 'com.firebaseui:firebase-ui-database:5.0.0'
     implementation 'com.google.android.material:material:1.0.0'
+    // Glide for image support
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    // Circular imageview
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

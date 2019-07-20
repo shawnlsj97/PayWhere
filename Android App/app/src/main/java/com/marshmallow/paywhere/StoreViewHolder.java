@@ -42,6 +42,7 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
         storeName.setText(name);
         storeAddress.setText(address);
 
+        // initialise imageviews for mobile payment options (3 cases)
         String[] platforms = payment.split(",");
         int count = platforms.length;
         switch(count) {

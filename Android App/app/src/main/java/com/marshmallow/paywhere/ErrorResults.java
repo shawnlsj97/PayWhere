@@ -50,6 +50,8 @@ public class ErrorResults extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_error_results);
+
+        // initialise toolbar to function as actionbar
         toolBar = findViewById(R.id.errorToolbar);
         setSupportActionBar(toolBar);
         ActionBar ab = getSupportActionBar();
@@ -62,6 +64,7 @@ public class ErrorResults extends AppCompatActivity {
             }
         });
 
+        // initialise searchview, put user input into searchview, make searchview functional
         searchView = findViewById(R.id.errorSearchView);
         Bundle bundle = getIntent().getExtras();
         String input = bundle.getString("input");
@@ -116,6 +119,7 @@ public class ErrorResults extends AppCompatActivity {
             }
         });
 
+        // error message on page
         textView = findViewById(R.id.errorTextView);
         String errorMsg1 = getResources().getString(R.string.error_text_1);
         String errorMsg2 = getResources().getString(R.string.error_text_2);

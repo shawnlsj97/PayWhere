@@ -117,6 +117,12 @@ public class SliderAdapter extends PagerAdapter {
         return view;
     }
 
+    /**
+     * Remove page once it is out of view.
+     * @param container Container containing layout.
+     * @param position Page number.
+     * @param object  Layout containing data.
+     */
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((ConstraintLayout)object);

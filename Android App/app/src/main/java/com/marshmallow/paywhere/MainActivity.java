@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
      * Variable that refers to the ImageView on this layout.
      * This ImageView will be used to allow users to navigate to the app's onboarding page.
      */
-    private ImageView imageView;
+    private ImageView onboarding;
 
     /**
      * Method that initialises the view of our main activity.
@@ -80,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        imageView = findViewById(R.id.infoImageView);
+        onboarding = findViewById(R.id.infoImageView);
         // Lead to app onboarding when users click on image.
-        imageView.setOnClickListener(new View.OnClickListener() {
+        onboarding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent onboardingActivity = new Intent(getApplicationContext(), OnboardingSecondary.class);

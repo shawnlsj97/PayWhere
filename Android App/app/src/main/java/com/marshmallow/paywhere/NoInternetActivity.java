@@ -82,6 +82,7 @@ public class NoInternetActivity extends AppCompatActivity {
             }
         });
 
+        // retry button for users to click on when they have turned on their internet connection
         retry = findViewById(R.id.reset_tv);
         retry.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,6 +119,8 @@ public class NoInternetActivity extends AppCompatActivity {
             }
         });
 
+        // checks which activity users were on before being directed to this page, enables us to
+        // automatically redirect them once internet connection is re-established
         final Bundle bundle = getIntent().getExtras();
         final String activity = bundle.getString("activity");
 

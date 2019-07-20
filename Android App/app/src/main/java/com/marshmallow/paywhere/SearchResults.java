@@ -25,6 +25,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -86,10 +88,25 @@ public class SearchResults extends AppCompatActivity {
      * Variable for the bar containing filter button.
      */
     private ConstraintLayout filterBar;
+    /**
+     * Variable for filter dialog.
+     */
     private Dialog filterDialog;
+    /**
+     * Variable for dash checkbox in the filter dialog.
+     */
     private CheckedTextView dash;
+    /**
+     * Variable for grab checkbox in the filter dialog.
+     */
     private CheckedTextView grab;
+    /**
+     * Variable for nets checkbox in the filter dialog.
+     */
     private CheckedTextView nets;
+    /**
+     * Variable for list of all stores in the mall that user has input.
+     */
     private ArrayList<Store> stores;
 
     /**
@@ -179,6 +196,7 @@ public class SearchResults extends AppCompatActivity {
         grab = filterDialog.findViewById(R.id.dialog_grab);
         nets = filterDialog.findViewById(R.id.dialog_nets);
 
+        // after clicking cancel, all check boxes reset to unchecked state
         Button cancel_btn = filterDialog.findViewById(R.id.cancel_btn);
         cancel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -249,6 +267,8 @@ public class SearchResults extends AppCompatActivity {
             }
         });
 
+        // perform filtering based on what is checked by users after they click on apply btn
+        // create new list of stores and use it to create new adapter for the recyclerview to use
         Button apply_btn = filterDialog.findViewById(R.id.apply_btn);
         apply_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -277,6 +297,7 @@ public class SearchResults extends AppCompatActivity {
                     }
                     RecyclerAdapter recyclerAdapter = new RecyclerAdapter(filteredList);
                     recyclerView.setAdapter(recyclerAdapter);
+                    runLayoutAnimation(recyclerView);
                     filterDialog.dismiss();
                 }
             }
@@ -390,5 +411,20 @@ public class SearchResults extends AppCompatActivity {
         toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
         toast.setView(toastView);
         toast.show();
+    }
+
+    /**
+     * Rerun animation when data set change (e.g. when user filters data).
+     * @param recyclerView Recyclerview containing all store data.
+     */
+    public void runLayoutAnimation(RecyclerView recyclerView) {
+
+        Context context = recyclerView.getContext();
+        LayoutAnimationController layoutAnimationController =
+                AnimationUtils.loadLayoutAnimation(context, R.anim.recyclerview_layout_anim);
+
+        recyclerView.setLayoutAnimation(layoutAnimationController);
+        recyclerView.getAdapter().notifyDataSetChanged();
+        recyclerView.scheduleLayoutAnimation();
     }
 }

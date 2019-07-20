@@ -10,6 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class SplashActivity extends AppCompatActivity {
 
+    /**
+     * Immediately starts and attempts to proceed to Onboarding activity (so splash is for time
+     * needed to load Onboarding only).
+     * @param savedInstanceState Data passed from previous activity (if any).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
