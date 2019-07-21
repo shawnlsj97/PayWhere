@@ -47,6 +47,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * This is the page where the list of dining outlets in a particular mall selected by the user is
@@ -280,22 +281,31 @@ public class SearchResults extends AppCompatActivity {
                 if (!dash_checked && !grab_checked && !nets_checked) {
                     // none of the options are checked
                     recyclerView.setAdapter(adapter);
+                    runLayoutAnimation(recyclerView);
                     filterDialog.dismiss();
                 } else {
                     ArrayList<Store> filteredList = new ArrayList<>();
                     for (Store s : stores) {
                         String payment = s.getPayment();
                         if (dash_checked) {
-                            if (payment.contains("Dash")) filteredList.add(s);
+                            if (payment.contains("Dash")) {
+                                if (!filteredList.contains(s)) filteredList.add(s);
+                            }
                         }
                         if (grab_checked) {
-                            if (payment.contains("GrabPay")) filteredList.add(s);
+                            if (payment.contains("GrabPay")) {
+                                if (!filteredList.contains(s)) filteredList.add(s);
+                            }
                         }
                         if (nets_checked) {
-                            if (payment.contains("NetsQR")) filteredList.add(s);
+                            if (payment.contains("NetsQR")) {
+                                if (!filteredList.contains(s)) filteredList.add(s);
+                            }
                         }
                     }
-                    RecyclerAdapter recyclerAdapter = new RecyclerAdapter(filteredList);
+                    // sort stores based on name lexicographically ignoring case
+                    Collections.sort(filteredList, new StoreComparator());
+                    RecyclerAdapter recyclerAdapter = new RecyclerAdapter(filteredList, getApplicationContext());
                     recyclerView.setAdapter(recyclerAdapter);
                     runLayoutAnimation(recyclerView);
                     filterDialog.dismiss();
@@ -327,11 +337,21 @@ public class SearchResults extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 stores = new ArrayList<>();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    stores.add(new Store(ds.child("name").getValue().toString(),
-                                        ds.child("payment").getValue().toString(),
-                                        ds.child("address").getValue().toString()));
+                    if (ds.child("image").getValue() == null) {
+                        stores.add(new Store(ds.child("name").getValue().toString(),
+                                ds.child("payment").getValue().toString(),
+                                ds.child("address").getValue().toString(),
+                                ""));
+                    } else {
+                        stores.add(new Store(ds.child("name").getValue().toString(),
+                                ds.child("payment").getValue().toString(),
+                                ds.child("address").getValue().toString(),
+                                ds.child("image").getValue().toString()));
+                    }
                 }
-                adapter = new RecyclerAdapter(stores);
+                // sort stores based on name lexicographically ignoring case
+                Collections.sort(stores, new StoreComparator());
+                adapter = new RecyclerAdapter(stores, getApplicationContext());
                 recyclerView.setAdapter(adapter);
                 recyclerView.setVisibility(View.VISIBLE);
                 pb.setVisibility(View.GONE);

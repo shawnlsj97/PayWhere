@@ -1,10 +1,15 @@
 package com.marshmallow.paywhere;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * StoreViewHolder extends RecyclerView.ViewHolder.This is the class that adds details for each
@@ -32,7 +37,9 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
      * @param address Store address.
      * @param payment Mobile payment options available at the store.
      */
-    public void setDetails(String name, String address, String payment) {
+    public void setDetails(String name, String address, String payment, String image,
+                           Context context) {
+        CircleImageView storeImage = view.findViewById(R.id.storeImage);
         TextView storeName = view.findViewById(R.id.storeName);
         TextView storeAddress = view.findViewById(R.id.storeAddress);
         ImageView storePayment1 = view.findViewById(R.id.storePayment1);
@@ -87,5 +94,11 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
                 storePayment3.setVisibility(View.VISIBLE);
                 break;
         }
+
+        // load image from url into circular image view using glide
+        Glide.with(context)
+                .asBitmap()
+                .load(image)
+                .into(storeImage);
     }
 }

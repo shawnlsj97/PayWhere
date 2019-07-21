@@ -1,5 +1,6 @@
 package com.marshmallow.paywhere;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,14 +24,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter<StoreViewHolder> {
      * List of all stores in the particular mall.
      */
     ArrayList<Store> stores;
+    Context context;
 
     /**
      * Constructor that creates instance of RecyclerAdapter class and assigns it a list of stores
      * to display.
      * @param stores List of stores in a particular mall based on user search query.
      */
-    public RecyclerAdapter(ArrayList<Store> stores) {
+    public RecyclerAdapter(ArrayList<Store> stores, Context context) {
         this.stores = stores;
+        this.context = context;
     }
 
     /**
@@ -50,11 +53,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<StoreViewHolder> {
     /**
      * Binds data to the StoreViewHolder based on position in the list.
      * @param viewHolder From R.layout.recycler_item_layout.xml.
-     * @param position Postiion in the list of stores.
+     * @param position Position in the list of stores.
      */
     @Override
     public void onBindViewHolder(@NonNull StoreViewHolder viewHolder, int position) {
-        viewHolder.setDetails(stores.get(position).getName(), stores.get(position).getAddress(), stores.get(position).getPayment());
+        viewHolder.setDetails(stores.get(position).getName(), stores.get(position).getAddress(),
+                stores.get(position).getPayment(), stores.get(position).getImage(), context);
     }
 
     /**

@@ -5,21 +5,22 @@ package com.marshmallow.paywhere;
  */
 public class Store {
     /**
-     * Each store has a name, mobile payment options and an address.
+     * Each store has a name, mobile payment options, address and image url.
      */
-    public String name, payment, address;
+    public String name, payment, address, image;
 
     /**
      * Constructor that creates an instance of the Store class and assigns a name, payment
-     * options and address to the instance.
+     * options, address and image url to the instance.
      * @param name Store name.
      * @param payment Mobile payment options available at the store.
      * @param address Store address.
      */
-    public Store(String name, String payment, String address) {
+    public Store(String name, String payment, String address, String image) {
         this.name = name;
         this.payment = payment;
         this.address = address;
+        this.image = image;
     }
 
     public Store(){}
@@ -69,5 +70,21 @@ public class Store {
      */
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    /**
+     * Method to get store image url.
+     * @return String representing store image url.
+     */
+    public String getImage() {
+        return image;
+    }
+
+    /**
+     * Method to set store image url.
+     * @param image String representing store image url.
+     */
+    public void setImage(String image) {
+        this.image = image;
     }
 }
