@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoInternetActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".NoInternetActivity" />
         <activity
             android:name=".OnboardingSecondary"
             android:configChanges="orientation"

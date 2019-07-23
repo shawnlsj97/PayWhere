@@ -45,6 +45,9 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
         ImageView storePayment1 = view.findViewById(R.id.storePayment1);
         ImageView storePayment2 = view.findViewById(R.id.storePayment2);
         ImageView storePayment3 = view.findViewById(R.id.storePayment3);
+        ImageView storePayment4 = view.findViewById(R.id.storePayment4);
+        ImageView storePayment5 = view.findViewById(R.id.storePayment5);
+        ImageView storePayment6 = view.findViewById(R.id.storePayment6);
 
         storeName.setText(name);
         storeAddress.setText(address);
@@ -55,36 +58,64 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
         switch(count) {
             case 1:
                 storePayment1.setVisibility(View.VISIBLE);
-                storePayment2.setVisibility(View.GONE);
-                storePayment3.setVisibility(View.GONE);
+                storePayment2.setVisibility(View.INVISIBLE);
+                storePayment3.setVisibility(View.INVISIBLE);
+                storePayment4.setVisibility(View.INVISIBLE);
+                storePayment5.setVisibility(View.INVISIBLE);
+                storePayment6.setVisibility(View.INVISIBLE);
 
                 if (payment.contains("Dash")) {
-                    storePayment1.setImageResource(R.drawable.singteldash);
+                    storePayment1.setImageResource(R.drawable.dash_circle);
                 } else if (payment.contains("GrabPay")) {
-                    storePayment1.setImageResource(R.drawable.grabpay);
+                    storePayment1.setImageResource(R.drawable.grabpay_circle);
                 } else if (payment.contains("NetsQR")) {
-                    storePayment1.setImageResource(R.drawable.netsqr);
+                    storePayment2.setVisibility(View.VISIBLE);
+                    storePayment3.setVisibility(View.VISIBLE);
+                    storePayment4.setVisibility(View.VISIBLE);
+
+                    storePayment1.setImageResource(R.drawable.uob_circle);
+                    storePayment2.setImageResource(R.drawable.ocbc_circle);
+                    storePayment3.setImageResource(R.drawable.paylah_circle);
+                    storePayment4.setImageResource(R.drawable.netspay_circle);
                 } else {
                     // array contains empty string
-                    storePayment1.setVisibility(View.GONE);
+                    storePayment1.setVisibility(View.INVISIBLE);
                 }
                 break;
 
             case 2:
                 storePayment1.setVisibility(View.VISIBLE);
                 storePayment2.setVisibility(View.VISIBLE);
-                storePayment3.setVisibility(View.GONE);
+                storePayment3.setVisibility(View.INVISIBLE);
+                storePayment4.setVisibility(View.INVISIBLE);
+                storePayment5.setVisibility(View.INVISIBLE);
+                storePayment6.setVisibility(View.INVISIBLE);
 
                 if (payment.contains("Dash")) {
-                    storePayment1.setImageResource(R.drawable.singteldash);
+                    storePayment2.setImageResource(R.drawable.dash_circle);
                     if (payment.contains("GrabPay")) {
-                        storePayment2.setImageResource(R.drawable.grabpay);
+                        storePayment1.setImageResource(R.drawable.grabpay_circle);
                     } else {
-                        storePayment2.setImageResource(R.drawable.netsqr);
+                        storePayment3.setVisibility(View.VISIBLE);
+                        storePayment4.setVisibility(View.VISIBLE);
+                        storePayment5.setVisibility(View.VISIBLE);
+
+                        storePayment1.setImageResource(R.drawable.uob_circle);
+                        storePayment2.setImageResource(R.drawable.ocbc_circle);
+                        storePayment3.setImageResource(R.drawable.paylah_circle);
+                        storePayment4.setImageResource(R.drawable.netspay_circle);
+                        storePayment5.setImageResource(R.drawable.dash_circle);
                     }
                 } else {
-                    storePayment1.setImageResource(R.drawable.grabpay);
-                    storePayment2.setImageResource(R.drawable.netsqr);
+                    storePayment3.setVisibility(View.VISIBLE);
+                    storePayment4.setVisibility(View.VISIBLE);
+                    storePayment5.setVisibility(View.VISIBLE);
+
+                    storePayment1.setImageResource(R.drawable.uob_circle);
+                    storePayment2.setImageResource(R.drawable.ocbc_circle);
+                    storePayment3.setImageResource(R.drawable.paylah_circle);
+                    storePayment4.setImageResource(R.drawable.netspay_circle);
+                    storePayment5.setImageResource(R.drawable.grabpay_circle);
                 }
                 break;
 
@@ -92,6 +123,9 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
                 storePayment1.setVisibility(View.VISIBLE);
                 storePayment2.setVisibility(View.VISIBLE);
                 storePayment3.setVisibility(View.VISIBLE);
+                storePayment4.setVisibility(View.VISIBLE);
+                storePayment5.setVisibility(View.VISIBLE);
+                storePayment6.setVisibility(View.VISIBLE);
                 break;
         }
 

@@ -110,6 +110,16 @@ public class SearchResults extends AppCompatActivity {
      */
     private ArrayList<Store> stores;
 
+    private ImageView dash_tick;
+    private ImageView grab_tick;
+    private ImageView nets_tick;
+
+    private boolean filtered;
+
+    private boolean dash_checked = false;
+    private boolean grab_checked = false;
+    private boolean nets_checked = false;
+
     /**
      * Method that initialises the view of our SearchResults activity.
      * Assigns onClickListeners to our up button and searchview.
@@ -197,21 +207,47 @@ public class SearchResults extends AppCompatActivity {
         grab = filterDialog.findViewById(R.id.dialog_grab);
         nets = filterDialog.findViewById(R.id.dialog_nets);
 
+        dash_tick = filterDialog.findViewById(R.id.dash_tick);
+        grab_tick = filterDialog.findViewById(R.id.grab_tick);
+        nets_tick = filterDialog.findViewById(R.id.nets_tick);
+
+        dash_tick.setVisibility(View.INVISIBLE);
+        grab_tick.setVisibility(View.INVISIBLE);
+        nets_tick.setVisibility(View.INVISIBLE);
+
         // after clicking cancel, all check boxes reset to unchecked state
         Button cancel_btn = filterDialog.findViewById(R.id.cancel_btn);
         cancel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 filterDialog.dismiss();
-                dash.setCheckMarkDrawable(null);
-                dash.setChecked(false);
-                dash.setTextColor(getColor(R.color.textColor));
-                grab.setCheckMarkDrawable(null);
-                grab.setChecked(false);
-                grab.setTextColor(getColor(R.color.textColor));
-                nets.setCheckMarkDrawable(null);
-                nets.setChecked(false);
-                nets.setTextColor(getColor(R.color.textColor));
+                if (filtered) {
+                    if (dash_checked) {
+                        dash.setTextColor(getColor(R.color.colorPrimary));
+                        dash_tick.setVisibility(View.VISIBLE);
+                        dash.setChecked(true);
+                    }
+                    if (grab_checked) {
+                        grab.setTextColor(getColor(R.color.colorPrimary));
+                        grab_tick.setVisibility(View.VISIBLE);
+                        grab.setChecked(true);
+                    }
+                    if (nets_checked) {
+                        nets.setTextColor(getColor(R.color.colorPrimary));
+                        nets_tick.setVisibility(View.VISIBLE);
+                        nets.setChecked(true);
+                    }
+                } else {
+                    dash_tick.setVisibility(View.INVISIBLE);
+                    dash.setChecked(false);
+                    dash.setTextColor(getColor(R.color.textColor));
+                    grab_tick.setVisibility(View.INVISIBLE);
+                    grab.setChecked(false);
+                    grab.setTextColor(getColor(R.color.textColor));
+                    nets_tick.setVisibility(View.INVISIBLE);
+                    nets.setChecked(false);
+                    nets.setTextColor(getColor(R.color.textColor));
+                }
             }
         });
 
@@ -220,11 +256,11 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if (dash.isChecked()) {
                     dash.setTextColor(getColor(R.color.textColor));
-                    dash.setCheckMarkDrawable(null);
+                    dash_tick.setVisibility(View.INVISIBLE);
                     dash.setChecked(false);
                 } else {
                     dash.setTextColor(getColor(R.color.colorPrimary));
-                    dash.setCheckMarkDrawable(R.drawable.dialog_tick);
+                    dash_tick.setVisibility(View.VISIBLE);
                     dash.setChecked(true);
                 }
             }
@@ -235,11 +271,11 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if (grab.isChecked()) {
                     grab.setTextColor(getColor(R.color.textColor));
-                    grab.setCheckMarkDrawable(null);
+                    grab_tick.setVisibility(View.INVISIBLE);
                     grab.setChecked(false);
                 } else {
                     grab.setTextColor(getColor(R.color.colorPrimary));
-                    grab.setCheckMarkDrawable(R.drawable.dialog_tick);
+                    grab_tick.setVisibility(View.VISIBLE);
                     grab.setChecked(true);
                 }
             }
@@ -250,11 +286,11 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if (nets.isChecked()) {
                     nets.setTextColor(getColor(R.color.textColor));
-                    nets.setCheckMarkDrawable(null);
+                    nets_tick.setVisibility(View.INVISIBLE);
                     nets.setChecked(false);
                 } else {
                     nets.setTextColor(getColor(R.color.colorPrimary));
-                    nets.setCheckMarkDrawable(R.drawable.dialog_tick);
+                    nets_tick.setVisibility(View.VISIBLE);
                     nets.setChecked(true);
                 }
             }
@@ -274,9 +310,9 @@ public class SearchResults extends AppCompatActivity {
         apply_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean dash_checked = dash.isChecked();
-                boolean grab_checked = grab.isChecked();
-                boolean nets_checked = nets.isChecked();
+                dash_checked = dash.isChecked();
+                grab_checked = grab.isChecked();
+                nets_checked = nets.isChecked();
 
                 if (!dash_checked && !grab_checked && !nets_checked) {
                     // none of the options are checked
@@ -308,6 +344,7 @@ public class SearchResults extends AppCompatActivity {
                     RecyclerAdapter recyclerAdapter = new RecyclerAdapter(filteredList, getApplicationContext());
                     recyclerView.setAdapter(recyclerAdapter);
                     runLayoutAnimation(recyclerView);
+                    filtered = true;
                     filterDialog.dismiss();
                 }
             }

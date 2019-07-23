@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp" >
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/storeImage"
@@ -16,8 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/grabpay"/>
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/storeName"
@@ -53,7 +53,49 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/storePayment1"
+        android:id="@+id/storePayment6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/storeName"
+        app:srcCompat="@drawable/dash_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/storeName"
+        app:srcCompat="@drawable/grabpay_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/storeName"
+        app:srcCompat="@drawable/netspay_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment3"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="6dp"
@@ -64,8 +106,7 @@
         app:layout_constraintHorizontal_bias="0.271"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toBottomOf="@+id/storeName"
-
-        app:srcCompat="@drawable/singteldash" />
+        app:srcCompat="@drawable/paylah_circle" />
 
     <ImageView
         android:id="@+id/storePayment2"
@@ -73,18 +114,18 @@
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="46dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/storePayment1"
+        app:layout_constraintStart_toEndOf="@id/storePayment3"
         app:layout_constraintTop_toBottomOf="@+id/storeName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0"
-        app:srcCompat="@drawable/grabpay" />
+        app:srcCompat="@drawable/ocbc_circle" />
 
     <ImageView
-        android:id="@+id/storePayment3"
+        android:id="@+id/storePayment1"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -97,6 +138,6 @@
         app:layout_constraintTop_toBottomOf="@+id/storeName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0"
-        app:srcCompat="@drawable/netsqr" />
+        app:srcCompat="@drawable/uob_circle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,7 +16,7 @@
             android:id="@+id/dialog_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/darkTextColor"
+            android:background="@color/colorPrimary"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:paddingLeft="8dp"
@@ -33,7 +34,7 @@
             app:layout_constraintTop_toBottomOf="@id/dialog_title"
             app:layout_constraintBottom_toTopOf="@id/dialog_grab"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/singteldash"/>
+            android:src="@drawable/dash_circle"/>
 
         <CheckedTextView
             android:id="@+id/dialog_dash"
@@ -49,14 +50,32 @@
             android:checked="false"/>
 
         <ImageView
+            android:id="@+id/dash_tick"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:layout_constraintTop_toTopOf="@+id/dialog_dash"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_dash"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/tick"/>
+
+        <View
+            android:id="@+id/dash_and_grab_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/dialog_dash"
+            app:layout_constraintBottom_toTopOf="@id/dialog_grab"
+            android:background="#c0c0c0"/>
+
+        <ImageView
             android:id="@+id/grab_icon"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginStart="8dp"
-            app:layout_constraintTop_toBottomOf="@id/dialog_dash"
-            app:layout_constraintBottom_toTopOf="@id/dialog_nets"
+            app:layout_constraintTop_toBottomOf="@id/dash_and_grab_divider"
+            app:layout_constraintBottom_toTopOf="@id/grab_and_nets_divider"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/grabpay"/>
+            android:src="@drawable/grabpay_circle"/>
 
         <CheckedTextView
             android:id="@+id/dialog_grab"
@@ -64,33 +83,92 @@
             android:layout_height="50dp"
             android:layout_marginEnd="16dp"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/dialog_dash"
+            app:layout_constraintTop_toBottomOf="@id/dash_and_grab_divider"
             android:paddingLeft="44dp"
             android:text="GrabPay"
             android:textSize="20sp"
             android:checked="false"/>
 
         <ImageView
+            android:id="@+id/grab_tick"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:layout_constraintTop_toTopOf="@+id/dialog_grab"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_grab"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/tick"/>
+
+        <View
+            android:id="@+id/grab_and_nets_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/dialog_grab"
+            app:layout_constraintBottom_toTopOf="@id/dialog_nets"
+            android:background="#c0c0c0"/>
+
+        <ImageView
             android:id="@+id/nets_icon"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="11dp"
             app:layout_constraintTop_toBottomOf="@id/dialog_grab"
-            app:layout_constraintBottom_toTopOf="@id/text_and_btn_divider"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/netsqr"/>
+            android:src="@drawable/netspay_circle"/>
+
+        <ImageView
+            android:id="@+id/paylah_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="58dp"
+            app:layout_constraintTop_toBottomOf="@id/dialog_grab"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/paylah_circle"/>
+
+        <ImageView
+            android:id="@+id/ocbc_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="104dp"
+            app:layout_constraintTop_toBottomOf="@id/dialog_grab"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ocbc_circle"/>
+
+        <ImageView
+            android:id="@+id/uob_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="9dp"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_nets"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/uob_circle"/>
 
         <CheckedTextView
             android:id="@+id/dialog_nets"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="190dp"
             android:layout_marginEnd="16dp"
+            android:checked="false"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/dialog_grab"
             android:paddingLeft="44dp"
-            android:text="Nets QR"
+            android:text="Nets QR\n\nDBS PayLah\n\nOCBC Pay Anyone\n\nUOB Mighty"
             android:textSize="20sp"
-            android:checked="false"/>
+            app:layout_constraintTop_toBottomOf="@id/grab_and_nets_divider"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/nets_tick"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:layout_constraintTop_toTopOf="@+id/dialog_nets"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_nets"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/tick"/>
 
         <View
             android:id="@+id/text_and_btn_divider"
