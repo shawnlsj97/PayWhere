@@ -49,6 +49,8 @@ public class Main {
         int numMalls = Integer.parseInt(sc.nextLine());
         Mall.mallArray = new Mall[numMalls];
 
+        Restaurant.makeHash();
+
         for (int i = 0; i < numMalls; i++) {
             String mallName = sc.nextLine();
             System.out.println("    \"" + mallName + "\" : {");
