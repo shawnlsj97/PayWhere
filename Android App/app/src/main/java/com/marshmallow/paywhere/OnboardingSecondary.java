@@ -34,8 +34,6 @@ public class OnboardingSecondary extends AppCompatActivity {
 
     private Animation btn_anim;
 
-    private ImageView paymentOptions, exampleSearch;
-
     /**
      * Method that initialises the view of our onboarding activity.
      * Assigns onClickListener to get started button.
@@ -52,8 +50,6 @@ public class OnboardingSecondary extends AppCompatActivity {
         mDotLayout = findViewById(R.id.dotsLayout);
         get_started_btn = findViewById(R.id.get_started_btn);
         btn_anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.get_started_btn_anim);
-        paymentOptions = findViewById(R.id.payment_imageView);
-        exampleSearch = findViewById(R.id.searchExample_imageView);
 
         sliderAdapter = new SliderAdapter(this);
 
@@ -90,25 +86,13 @@ public class OnboardingSecondary extends AppCompatActivity {
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226;"));
             mDots[i].setTextSize(35);
-            mDots[i].setTextColor(getColor(R.color.statusBar));
+            mDots[i].setTextColor(getColor(R.color.grey));
 
             mDotLayout.addView(mDots[i]);
         }
 
         if(mDots.length > 0) {
             mDots[position].setTextColor(getColor(R.color.colorPrimary));
-        }
-
-        if (position ==  mDots.length - 2) {
-            paymentOptions.setVisibility(View.VISIBLE);
-        } else {
-            paymentOptions.setVisibility(View.INVISIBLE);
-        }
-
-        if (position == mDots.length - 3) {
-            exampleSearch.setVisibility(View.VISIBLE);
-        } else {
-            exampleSearch.setVisibility(View.INVISIBLE);
         }
     }
 

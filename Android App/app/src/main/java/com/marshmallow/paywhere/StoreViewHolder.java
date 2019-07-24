@@ -58,11 +58,11 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
         switch(count) {
             case 1:
                 storePayment1.setVisibility(View.VISIBLE);
-                storePayment2.setVisibility(View.INVISIBLE);
-                storePayment3.setVisibility(View.INVISIBLE);
-                storePayment4.setVisibility(View.INVISIBLE);
-                storePayment5.setVisibility(View.INVISIBLE);
-                storePayment6.setVisibility(View.INVISIBLE);
+                storePayment2.setVisibility(View.GONE);
+                storePayment3.setVisibility(View.GONE);
+                storePayment4.setVisibility(View.GONE);
+                storePayment5.setVisibility(View.GONE);
+                storePayment6.setVisibility(View.GONE);
 
                 if (payment.contains("Dash")) {
                     storePayment1.setImageResource(R.drawable.dash_circle);
@@ -73,49 +73,50 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
                     storePayment3.setVisibility(View.VISIBLE);
                     storePayment4.setVisibility(View.VISIBLE);
 
-                    storePayment1.setImageResource(R.drawable.uob_circle);
-                    storePayment2.setImageResource(R.drawable.ocbc_circle);
-                    storePayment3.setImageResource(R.drawable.paylah_circle);
-                    storePayment4.setImageResource(R.drawable.netspay_circle);
+                    storePayment1.setImageResource(R.drawable.netspay_circle);
+                    storePayment2.setImageResource(R.drawable.paylah_circle);
+                    storePayment3.setImageResource(R.drawable.ocbc_circle);
+                    storePayment4.setImageResource(R.drawable.uob_circle);
+
                 } else {
                     // array contains empty string
-                    storePayment1.setVisibility(View.INVISIBLE);
+                    storePayment1.setVisibility(View.GONE);
                 }
                 break;
 
             case 2:
                 storePayment1.setVisibility(View.VISIBLE);
                 storePayment2.setVisibility(View.VISIBLE);
-                storePayment3.setVisibility(View.INVISIBLE);
-                storePayment4.setVisibility(View.INVISIBLE);
-                storePayment5.setVisibility(View.INVISIBLE);
-                storePayment6.setVisibility(View.INVISIBLE);
+                storePayment3.setVisibility(View.GONE);
+                storePayment4.setVisibility(View.GONE);
+                storePayment5.setVisibility(View.GONE);
+                storePayment6.setVisibility(View.GONE);
 
                 if (payment.contains("Dash")) {
-                    storePayment2.setImageResource(R.drawable.dash_circle);
+                    storePayment1.setImageResource(R.drawable.dash_circle);
                     if (payment.contains("GrabPay")) {
-                        storePayment1.setImageResource(R.drawable.grabpay_circle);
+                        storePayment2.setImageResource(R.drawable.grabpay_circle);
                     } else {
                         storePayment3.setVisibility(View.VISIBLE);
                         storePayment4.setVisibility(View.VISIBLE);
                         storePayment5.setVisibility(View.VISIBLE);
 
-                        storePayment1.setImageResource(R.drawable.uob_circle);
-                        storePayment2.setImageResource(R.drawable.ocbc_circle);
+                        storePayment1.setImageResource(R.drawable.dash_circle);
+                        storePayment2.setImageResource(R.drawable.netspay_circle);
                         storePayment3.setImageResource(R.drawable.paylah_circle);
-                        storePayment4.setImageResource(R.drawable.netspay_circle);
-                        storePayment5.setImageResource(R.drawable.dash_circle);
+                        storePayment4.setImageResource(R.drawable.ocbc_circle);
+                        storePayment5.setImageResource(R.drawable.uob_circle);
                     }
                 } else {
                     storePayment3.setVisibility(View.VISIBLE);
                     storePayment4.setVisibility(View.VISIBLE);
                     storePayment5.setVisibility(View.VISIBLE);
 
-                    storePayment1.setImageResource(R.drawable.uob_circle);
-                    storePayment2.setImageResource(R.drawable.ocbc_circle);
+                    storePayment1.setImageResource(R.drawable.grabpay_circle);
+                    storePayment2.setImageResource(R.drawable.netspay_circle);
                     storePayment3.setImageResource(R.drawable.paylah_circle);
-                    storePayment4.setImageResource(R.drawable.netspay_circle);
-                    storePayment5.setImageResource(R.drawable.grabpay_circle);
+                    storePayment4.setImageResource(R.drawable.ocbc_circle);
+                    storePayment5.setImageResource(R.drawable.uob_circle);
                 }
                 break;
 

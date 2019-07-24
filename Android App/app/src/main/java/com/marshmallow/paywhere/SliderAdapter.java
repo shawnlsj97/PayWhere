@@ -41,9 +41,9 @@ public class SliderAdapter extends PagerAdapter {
      */
     public int[] slide_images = {
             R.drawable.onboard_logo,
-            R.drawable.pin_drop,
-            R.drawable.filter_tool,
-            R.drawable.thumbs_up
+            R.drawable.ob2_choose,
+            R.drawable.ob3_filter,
+            R.drawable.ob4_enjoy
     };
 
     /**
@@ -76,6 +76,13 @@ public class SliderAdapter extends PagerAdapter {
             ""
     };
 
+    public int[] slide_display = {
+            0,
+            R.drawable.search_example,
+            R.drawable.all_payments,
+            0
+    };
+
     /**
      * Method that returns number of pages in the slider.
      * @return Integer representing total number of pages.
@@ -106,11 +113,13 @@ public class SliderAdapter extends PagerAdapter {
         TextView stepHeading = view.findViewById(R.id.stepHeading);
         TextView slideHeading = view.findViewById(R.id.slideHeading);
         TextView slideDesc = view.findViewById(R.id.slideDesc);
+        ImageView slideDisplay = view.findViewById(R.id.slideDisplay);
 
         slideImageView.setImageResource(slide_images[position]);
         stepHeading.setText(step_headings[position]);
         slideHeading.setText(slide_headings[position]);
         slideDesc.setText(slide_desc[position]);
+        slideDisplay.setImageResource(slide_display[position]);
 
         container.addView(view);
 

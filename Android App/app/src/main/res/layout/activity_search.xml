@@ -15,13 +15,15 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:elevation="4dp"
+        app:theme="@style/ToolbarTheme"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
         app:contentInsetStartWithNavigation="0dp"
         app:contentInsetEnd="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/colorPrimary">
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
@@ -32,7 +34,8 @@
             android:inputType="textAutoComplete"
             app:searchIcon="@null"
             app:iconifiedByDefault="false"
-            app:queryHint="@string/search_hint" />
+            app:queryHint="@string/search_hint"
+            android:backgroundTint="@color/colorPrimary" />
     </androidx.appcompat.widget.Toolbar>
 
     <TextView

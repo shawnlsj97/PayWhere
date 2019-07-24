@@ -24,7 +24,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Store Name"
         android:textColor="@color/colorPrimary"
@@ -36,108 +35,95 @@
 
     <TextView
         android:id="@+id/storeAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="81dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Address"
         android:textColor="@color/textColor"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/storeImage"
-        app:layout_constraintTop_toBottomOf="@+id/storeName"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/storePayment6"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="198dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toBottomOf="@+id/storeName"
-        app:srcCompat="@drawable/dash_circle" />
-
-    <ImageView
-        android:id="@+id/storePayment5"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toBottomOf="@+id/storeName"
-        app:srcCompat="@drawable/grabpay_circle" />
-
-    <ImageView
-        android:id="@+id/storePayment4"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="122dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toBottomOf="@+id/storeName"
-        app:srcCompat="@drawable/netspay_circle" />
-
-    <ImageView
-        android:id="@+id/storePayment3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toBottomOf="@+id/storeName"
-        app:srcCompat="@drawable/paylah_circle" />
-
-    <ImageView
-        android:id="@+id/storePayment2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/storePayment3"
-        app:layout_constraintTop_toBottomOf="@+id/storeName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
-        app:srcCompat="@drawable/ocbc_circle" />
+        app:layout_constraintTop_toBottomOf="@id/storeName" />
 
     <ImageView
         android:id="@+id/storePayment1"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="12dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/storePayment2"
-        app:layout_constraintTop_toBottomOf="@+id/storeName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/storeAddress"
+        app:layout_constraintStart_toEndOf="@id/storeImage"
+        app:srcCompat="@drawable/dash_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/storeAddress"
+        app:layout_constraintStart_toEndOf="@id/storePayment1"
+        app:srcCompat="@drawable/grabpay_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/storeAddress"
+        app:layout_constraintStart_toEndOf="@id/storePayment2"
+        app:srcCompat="@drawable/netspay_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/storeAddress"
+        app:layout_constraintStart_toEndOf="@id/storePayment3"
+        app:srcCompat="@drawable/paylah_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/storeAddress"
+        app:layout_constraintStart_toEndOf="@id/storePayment4"
+        app:srcCompat="@drawable/ocbc_circle" />
+
+    <ImageView
+        android:id="@+id/storePayment6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/storeAddress"
+        app:layout_constraintStart_toEndOf="@id/storePayment5"
         app:srcCompat="@drawable/uob_circle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
