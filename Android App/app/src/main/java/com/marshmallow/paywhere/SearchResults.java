@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -224,29 +225,50 @@ public class SearchResults extends AppCompatActivity {
                 if (filtered) {
                     if (dash_checked) {
                         dash.setTextColor(getColor(R.color.colorPrimary));
+                        dash.setTypeface(null, Typeface.NORMAL);
                         dash_tick.setVisibility(View.VISIBLE);
                         dash.setChecked(true);
+                    } else {
+                        dash.setTextColor(getColor(R.color.textColor));
+                        dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        dash_tick.setVisibility(View.INVISIBLE);
+                        dash.setChecked(false);
                     }
                     if (grab_checked) {
                         grab.setTextColor(getColor(R.color.colorPrimary));
+                        grab.setTypeface(null, Typeface.NORMAL);
                         grab_tick.setVisibility(View.VISIBLE);
                         grab.setChecked(true);
+                    } else {
+                        grab.setTextColor(getColor(R.color.textColor));
+                        grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        grab_tick.setVisibility(View.INVISIBLE);
+                        grab.setChecked(false);
                     }
                     if (nets_checked) {
                         nets.setTextColor(getColor(R.color.colorPrimary));
+                        nets.setTypeface(null, Typeface.NORMAL);
                         nets_tick.setVisibility(View.VISIBLE);
                         nets.setChecked(true);
+                    } else {
+                        nets.setTextColor(getColor(R.color.textColor));
+                        nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        nets_tick.setVisibility(View.INVISIBLE);
+                        nets.setChecked(false);
                     }
                 } else {
                     dash_tick.setVisibility(View.INVISIBLE);
                     dash.setChecked(false);
                     dash.setTextColor(getColor(R.color.textColor));
+                    dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
                     grab_tick.setVisibility(View.INVISIBLE);
                     grab.setChecked(false);
                     grab.setTextColor(getColor(R.color.textColor));
+                    grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
                     nets_tick.setVisibility(View.INVISIBLE);
                     nets.setChecked(false);
                     nets.setTextColor(getColor(R.color.textColor));
+                    nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
                 }
             }
         });
@@ -256,10 +278,12 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if (dash.isChecked()) {
                     dash.setTextColor(getColor(R.color.textColor));
+                    dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
                     dash_tick.setVisibility(View.INVISIBLE);
                     dash.setChecked(false);
                 } else {
                     dash.setTextColor(getColor(R.color.colorPrimary));
+                    dash.setTypeface(null, Typeface.NORMAL);
                     dash_tick.setVisibility(View.VISIBLE);
                     dash.setChecked(true);
                 }
@@ -271,10 +295,12 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if (grab.isChecked()) {
                     grab.setTextColor(getColor(R.color.textColor));
+                    grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
                     grab_tick.setVisibility(View.INVISIBLE);
                     grab.setChecked(false);
                 } else {
                     grab.setTextColor(getColor(R.color.colorPrimary));
+                    grab.setTypeface(null, Typeface.NORMAL);
                     grab_tick.setVisibility(View.VISIBLE);
                     grab.setChecked(true);
                 }
@@ -286,10 +312,12 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if (nets.isChecked()) {
                     nets.setTextColor(getColor(R.color.textColor));
+                    nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
                     nets_tick.setVisibility(View.INVISIBLE);
                     nets.setChecked(false);
                 } else {
                     nets.setTextColor(getColor(R.color.colorPrimary));
+                    nets.setTypeface(null, Typeface.NORMAL);
                     nets_tick.setVisibility(View.VISIBLE);
                     nets.setChecked(true);
                 }
