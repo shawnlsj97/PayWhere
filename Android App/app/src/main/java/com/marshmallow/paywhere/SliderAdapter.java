@@ -40,7 +40,7 @@ public class SliderAdapter extends PagerAdapter {
      * Integer array containing title icons on each page.
      */
     public int[] slide_images = {
-            R.drawable.onboarding_icon,
+            R.drawable.onboarding_logo,
             R.drawable.ob2_choose,
             R.drawable.ob3_filter,
             R.drawable.ob4_enjoy
