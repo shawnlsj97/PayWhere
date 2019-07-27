@@ -17,7 +17,7 @@ path = 'C:\\Users\Shawn Lee\AppData\Local\Programs\Python\Python37\chromedriver.
 browser = webdriver.Chrome(path)
 
 # visit website of interest
-website = "https://www.capitaland.com/sg/malls/imm/en/stores.html?category=foodandbeverage"
+website = "https://www.capitaland.com/sg/malls/jcube/en/stores.html?category=foodandbeverage"
 browser.get(website)
 
 # wait up to 10 seconds for all elements on page to load (observe which element loads last and use it to determine if entire page is loaded)
