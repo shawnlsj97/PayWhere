@@ -155,7 +155,7 @@
             android:checked="false"
             android:gravity="center"
             android:paddingLeft="44dp"
-            android:text="Nets QR\n\nDBS PayLah\n\nOCBC Pay Anyone\n\nUOB Mighty"
+            android:text="NetsPay\n\nDBS PayLah\n\nOCBC Pay Anyone\n\nUOB Mighty"
             android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@id/grab_and_nets_divider"
             tools:layout_editor_absoluteX="0dp" />
