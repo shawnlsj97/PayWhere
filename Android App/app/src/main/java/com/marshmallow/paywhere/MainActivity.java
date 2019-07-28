@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private ImageView onboarding;
     private ImageView about;
+    private ImageView feedback;
 
     /**
      * Method that initialises the view of our main activity.
@@ -97,6 +98,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent aboutActivity = new Intent(getApplicationContext(), AboutActivity.class);
                 startActivity(aboutActivity);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        feedback = findViewById(R.id.feedbackImageView);
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent feedbackActivity = new Intent(getApplicationContext(), FeedbackActivity.class);
+                startActivity(feedbackActivity);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });

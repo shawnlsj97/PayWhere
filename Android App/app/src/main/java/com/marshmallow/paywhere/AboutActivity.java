@@ -21,7 +21,7 @@ public class AboutActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
-        ab.setDisplayShowTitleEnabled(false);
+        ab.setDisplayShowTitleEnabled(true);
         // Up button has same behavior as back button.
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

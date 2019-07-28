@@ -94,7 +94,6 @@
     <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/noInternetPB"
         style="?android:attr/progressBarStyle"
-        android:theme="@style/blue"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"

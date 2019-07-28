@@ -16,15 +16,21 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:theme="@style/AboutToolbarTheme">
+                app:title="About Us!"
+                app:titleTextColor="@color/white"
+                android:elevation="4dp"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ToolbarTheme">
             </androidx.appcompat.widget.Toolbar>
+
             <ImageView
                 android:id="@+id/shawnImageView"
                 android:src="@drawable/shawn"
@@ -33,7 +39,7 @@
                 app:layout_constraintTop_toBottomOf="@id/toolbar"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="96dp"
-                android:layout_marginTop="0dp"/>
+                android:layout_marginTop="28dp"/>
             <ImageView
                 android:src="@drawable/dommy"
                 android:layout_width="100dp"
@@ -41,19 +47,22 @@
                 app:layout_constraintTop_toBottomOf="@id/toolbar"
                 app:layout_constraintStart_toEndOf="@id/shawnImageView"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="0dp"/>
+                android:layout_marginTop="28dp"/>
             <TextView
                 android:id="@+id/aboutTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 app:layout_constraintTop_toBottomOf="@id/shawnImageView"
                 android:layout_marginTop="8dp"
                 android:lineSpacingExtra="8dp"
                 android:textIsSelectable="true"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:text="Hey there!\n\nWe are Shawn and Dominique. We created PayWhere as part of our freshman summer project (Orbital CP2106) in NUS Computing in 2019. PayWhere stems from our frustration on how there are so many mobile payment options available in Singapore, yet they are not compiled and properly presented anywhere. As self-proclaimed foodies, we chose to focus on dining options.\n\nWe would love to know how we can make PayWhere better for all our users! If you have any suggestions, feel free to let us know at\nteammarshmallow2019@gmail.com. Our PayWhere repository is available on GitHub at\nhttps://github.com/shawnlsj97/PayWhere.\n\nWe get our mobile payment merchant data from the providers themselves: GrabPay, Singtel Dash, Nets QR. Nets QR is supported by NETSPay, DBS PayLah!, OCBC Pay Anyone and UOB Mighty.\n\nPayWhere would like to thank Freepik from \nwww.flaticon.com for the icons used in our app."/>
+                android:text="Hey there!\n\nWe are Shawn and Dominique. We created PayWhere as part of our freshman summer project (Orbital CP2106) in NUS Computing in 2019. PayWhere stems from our frustration on how there are so many mobile payment options available in Singapore, yet they are not compiled and properly presented anywhere. As self-proclaimed foodies, we chose to focus on dining options.\n\nWe would love to know how we can make PayWhere better for all our users! If you have any suggestions, feel free to let us know by sending us a feedback through the app.\n\nOur PayWhere repository is available on GitHub at\nhttps://github.com/shawnlsj97/PayWhere.\n\nWe get our mobile payment merchant data from the providers themselves: GrabPay, Singtel Dash, Nets QR. Nets QR is supported by NETSPay, DBS PayLah!, OCBC Pay Anyone and UOB Mighty.\n\nPayWhere would like to thank Freepik from \nwww.flaticon.com for the icons used in our app."/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
