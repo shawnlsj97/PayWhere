@@ -31,69 +31,96 @@
 
             <ImageView
                 android:id="@+id/feedback_img"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 app:layout_constraintTop_toBottomOf="@id/feedback_toolbar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/feedback_icon"/>
+
+            <TextView
+                android:id="@+id/feedback_instr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/feedback_img"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="We value your feedback!\nLet us know how we can make PayWhere better for you."
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/feedback_subject_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/feedback_instr"
+                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="16dp"
-                android:src="@drawable/onboarding_logo"/>
+                android:layout_marginStart="8dp"
+                android:text="Subject"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/feedback_subject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/feedback_img"
+                app:layout_constraintTop_toBottomOf="@id/feedback_subject_title"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginTop="16dp"
-                android:hint="Subject"
-                android:textSize="20dp"
-                android:gravity="start|top"/>
-
-            <View
-                android:id="@+id/subject_msg_separator"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                app:layout_constraintTop_toBottomOf="@id/feedback_subject"
-                app:layout_constraintBottom_toTopOf="@id/feedback_msg"
                 android:layout_marginTop="8dp"
-                android:background="@color/colorPrimary"/>
+                android:padding="8dp"
+                android:hint="Subject of your feedback"
+                android:textSize="20sp"
+                android:gravity="start|top"
+                android:elevation="2dp"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/feedback_msg_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/feedback_subject"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:text="Message"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/feedback_msg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/subject_msg_separator"
+                app:layout_constraintTop_toBottomOf="@id/feedback_msg_title"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginTop="16dp"
-                android:hint="Message"
-                android:textSize="20dp"
-                android:lines="5"
-                android:gravity="start|top"/>
-
-            <View
-                android:id="@+id/msg_btn_separator"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                app:layout_constraintTop_toBottomOf="@id/feedback_msg"
-                app:layout_constraintBottom_toTopOf="@id/send_btn"
                 android:layout_marginTop="8dp"
-                android:background="@color/colorPrimary"/>
+                android:padding="8dp"
+                android:hint="Type your message here"
+                android:textSize="20sp"
+                android:lines="5"
+                android:gravity="start|top"
+                android:elevation="2dp"
+                android:background="@color/colorAccent"/>
 
             <Button
                 android:id="@+id/send_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/msg_btn_separator"
+                app:layout_constraintTop_toBottomOf="@id/feedback_msg"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp"
-                android:text="Send Feedback!"
+                android:layout_marginTop="24dp"
+                android:text="Send"
                 android:textColor="@color/white"
                 android:background="@drawable/get_started_btn_style"
-                android:padding="10sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

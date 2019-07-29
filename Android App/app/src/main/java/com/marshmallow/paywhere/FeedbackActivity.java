@@ -49,10 +49,9 @@ public class FeedbackActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String subject_text = subject.getText().toString();
                 String message_text = message.getText().toString();
-                String dev_email = "teammarshmallow2019@gmail.com";
 
                 Intent send = new Intent(Intent.ACTION_SEND);
-                send.putExtra(Intent.EXTRA_EMAIL, dev_email);
+                send.putExtra(Intent.EXTRA_EMAIL, new String[]{"teammarshmallow2019@gmail.com"});
                 send.putExtra(Intent.EXTRA_SUBJECT, subject_text);
                 send.putExtra(Intent.EXTRA_TEXT, message_text);
                 send.setType("message/rfc882");

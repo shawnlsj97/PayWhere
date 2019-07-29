@@ -83,8 +83,18 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/about" />
+        app:layout_constraintStart_toEndOf="@id/aboutImageView"
+        app:layout_constraintEnd_toStartOf="@id/favouritesImageView"
+        app:srcCompat="@drawable/feedback_icon" />
+
+    <ImageView
+        android:id="@+id/favouritesImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/feedbackImageView"
+        app:layout_constraintEnd_toStartOf="@id/infoImageView"
+        app:srcCompat="@drawable/favourites_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
