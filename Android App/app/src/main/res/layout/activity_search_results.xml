@@ -31,7 +31,7 @@
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/successSearchView"
-                android:layout_width="match_parent"
+                android:layout_width="307dp"
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusedByDefault="false"
@@ -41,6 +41,17 @@
                 app:iconifiedByDefault="false"
                 app:queryHint="@string/search_hint"
                 android:backgroundTint="@color/colorPrimary"/>
+
+            <ToggleButton
+                android:id="@+id/fav_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/fav_toggle" />
+
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.constraintlayout.widget.ConstraintLayout

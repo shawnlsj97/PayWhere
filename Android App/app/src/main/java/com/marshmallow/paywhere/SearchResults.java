@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -32,9 +33,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckedTextView;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -49,6 +52,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * This is the page where the list of dining outlets in a particular mall selected by the user is
@@ -121,6 +126,8 @@ public class SearchResults extends AppCompatActivity {
     private boolean grab_checked = false;
     private boolean nets_checked = false;
 
+    private ToggleButton fav_btn;
+
     /**
      * Method that initialises the view of our SearchResults activity.
      * Assigns onClickListeners to our up button and searchview.
@@ -149,7 +156,7 @@ public class SearchResults extends AppCompatActivity {
 
         searchView = findViewById(R.id.successSearchView);
         Bundle bundle = getIntent().getExtras();
-        String input = bundle.getString("input");
+        final String input = bundle.getString("input");
         originalText = input;
         searchView.setQuery(toTitleCase(input), false);
         searchView.clearFocus();
@@ -374,6 +381,47 @@ public class SearchResults extends AppCompatActivity {
                     runLayoutAnimation(recyclerView);
                     filtered = true;
                     filterDialog.dismiss();
+                }
+            }
+        });
+
+        fav_btn = findViewById(R.id.fav_btn);
+
+        // check if mall is in user's favourites list
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("fav",
+                MODE_PRIVATE);
+        Set<String> malls = pref.getStringSet("malls", new TreeSet<String>());
+        boolean inFav = malls.contains(toTitleCase(input));
+        if (inFav) {
+            fav_btn.setChecked(true);
+        } else {
+            fav_btn.setChecked(false);
+        }
+
+        fav_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // Add mall to favourites
+                    SharedPreferences pref = getApplicationContext().getSharedPreferences("fav",
+                            MODE_PRIVATE);
+                    Set<String> malls = pref.getStringSet("malls", new TreeSet<String>());
+                    malls.add(toTitleCase(input));
+                    pref.edit().putStringSet("malls", malls).apply();
+                    // Display Toast to inform user
+                    Toast.makeText(getApplicationContext(), "Added " + toTitleCase(input) + " to " +
+                            "favourites!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Remove mall from favourites
+                    SharedPreferences pref = getApplicationContext().getSharedPreferences("fav",
+                            MODE_PRIVATE);
+                    Set<String> malls = pref.getStringSet("malls", new TreeSet<String>());
+                    malls.remove(toTitleCase(input));
+                    pref.edit().putStringSet("malls", malls).apply();
+                    // Display Toast to inform user
+                    Toast.makeText(getApplicationContext(), "Removed " + toTitleCase(input) + " " +
+                            "from " +
+                            "favourites!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

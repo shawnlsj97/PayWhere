@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fav_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/favourites_mallname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Mall Name"
+        android:padding="16sp"
+        android:textSize="20sp"/>
+
+    <ToggleButton
+        android:id="@+id/favourites_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:padding="12dp"
+        android:textOn=""
+        android:textOff=""
+        android:checked="true"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/fav_toggle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
