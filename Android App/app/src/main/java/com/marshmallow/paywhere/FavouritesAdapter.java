@@ -45,7 +45,7 @@ public class FavouritesAdapter extends RecyclerView.Adapter<MallViewHolder> {
     public void onBindViewHolder(@NonNull MallViewHolder holder, final int position) {
         holder.setDetails(malls.get(position));
         final String name_string = malls.get(position);
-        ToggleButton fav_btn = holder.view.findViewById(R.id.favourites_btn);
+        final ToggleButton fav_btn = holder.view.findViewById(R.id.favourites_btn);
         fav_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -61,6 +61,7 @@ public class FavouritesAdapter extends RecyclerView.Adapter<MallViewHolder> {
                         "favourites!", Toast.LENGTH_SHORT).show();
                 malls.remove(toTitleCase(name_string));
                 notifyDataSetChanged();
+                fav_btn.setChecked(true);
             }
         });
 
