@@ -15,6 +15,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -138,6 +139,16 @@ public class SearchResults extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (restoreThemePref()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
@@ -230,52 +241,103 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 filterDialog.dismiss();
                 if (filtered) {
-                    if (dash_checked) {
-                        dash.setTextColor(getColor(R.color.colorPrimary));
-                        dash.setTypeface(null, Typeface.NORMAL);
-                        dash_tick.setVisibility(View.VISIBLE);
-                        dash.setChecked(true);
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        if (dash_checked) {
+                            dash.setTextColor(getColor(R.color.colorPrimaryLight));
+                            dash.setTypeface(null, Typeface.NORMAL);
+                            dash_tick.setVisibility(View.VISIBLE);
+                            dash.setChecked(true);
+                        } else {
+                            dash.setTextColor(getColor(R.color.darkTextColor));
+                            dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                            dash_tick.setVisibility(View.INVISIBLE);
+                            dash.setChecked(false);
+                        }
+                        if (grab_checked) {
+                            grab.setTextColor(getColor(R.color.colorPrimaryLight));
+                            grab.setTypeface(null, Typeface.NORMAL);
+                            grab_tick.setVisibility(View.VISIBLE);
+                            grab.setChecked(true);
+                        } else {
+                            grab.setTextColor(getColor(R.color.darkTextColor));
+                            grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                            grab_tick.setVisibility(View.INVISIBLE);
+                            grab.setChecked(false);
+                        }
+                        if (nets_checked) {
+                            nets.setTextColor(getColor(R.color.colorPrimaryLight));
+                            nets.setTypeface(null, Typeface.NORMAL);
+                            nets_tick.setVisibility(View.VISIBLE);
+                            nets.setChecked(true);
+                        } else {
+                            nets.setTextColor(getColor(R.color.darkTextColor));
+                            nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                            nets_tick.setVisibility(View.INVISIBLE);
+                            nets.setChecked(false);
+                        }
                     } else {
-                        dash.setTextColor(getColor(R.color.textColor));
-                        dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                        dash_tick.setVisibility(View.INVISIBLE);
-                        dash.setChecked(false);
-                    }
-                    if (grab_checked) {
-                        grab.setTextColor(getColor(R.color.colorPrimary));
-                        grab.setTypeface(null, Typeface.NORMAL);
-                        grab_tick.setVisibility(View.VISIBLE);
-                        grab.setChecked(true);
-                    } else {
-                        grab.setTextColor(getColor(R.color.textColor));
-                        grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                        grab_tick.setVisibility(View.INVISIBLE);
-                        grab.setChecked(false);
-                    }
-                    if (nets_checked) {
-                        nets.setTextColor(getColor(R.color.colorPrimary));
-                        nets.setTypeface(null, Typeface.NORMAL);
-                        nets_tick.setVisibility(View.VISIBLE);
-                        nets.setChecked(true);
-                    } else {
-                        nets.setTextColor(getColor(R.color.textColor));
-                        nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                        nets_tick.setVisibility(View.INVISIBLE);
-                        nets.setChecked(false);
+                        if (dash_checked) {
+                            dash.setTextColor(getColor(R.color.colorPrimary));
+                            dash.setTypeface(null, Typeface.NORMAL);
+                            dash_tick.setVisibility(View.VISIBLE);
+                            dash.setChecked(true);
+                        } else {
+                            dash.setTextColor(getColor(R.color.textColor));
+                            dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                            dash_tick.setVisibility(View.INVISIBLE);
+                            dash.setChecked(false);
+                        }
+                        if (grab_checked) {
+                            grab.setTextColor(getColor(R.color.colorPrimary));
+                            grab.setTypeface(null, Typeface.NORMAL);
+                            grab_tick.setVisibility(View.VISIBLE);
+                            grab.setChecked(true);
+                        } else {
+                            grab.setTextColor(getColor(R.color.textColor));
+                            grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                            grab_tick.setVisibility(View.INVISIBLE);
+                            grab.setChecked(false);
+                        }
+                        if (nets_checked) {
+                            nets.setTextColor(getColor(R.color.colorPrimary));
+                            nets.setTypeface(null, Typeface.NORMAL);
+                            nets_tick.setVisibility(View.VISIBLE);
+                            nets.setChecked(true);
+                        } else {
+                            nets.setTextColor(getColor(R.color.textColor));
+                            nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                            nets_tick.setVisibility(View.INVISIBLE);
+                            nets.setChecked(false);
+                        }
                     }
                 } else {
-                    dash_tick.setVisibility(View.INVISIBLE);
-                    dash.setChecked(false);
-                    dash.setTextColor(getColor(R.color.textColor));
-                    dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                    grab_tick.setVisibility(View.INVISIBLE);
-                    grab.setChecked(false);
-                    grab.setTextColor(getColor(R.color.textColor));
-                    grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                    nets_tick.setVisibility(View.INVISIBLE);
-                    nets.setChecked(false);
-                    nets.setTextColor(getColor(R.color.textColor));
-                    nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        dash_tick.setVisibility(View.INVISIBLE);
+                        dash.setChecked(false);
+                        dash.setTextColor(getColor(R.color.darkTextColor));
+                        dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        grab_tick.setVisibility(View.INVISIBLE);
+                        grab.setChecked(false);
+                        grab.setTextColor(getColor(R.color.darkTextColor));
+                        grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        nets_tick.setVisibility(View.INVISIBLE);
+                        nets.setChecked(false);
+                        nets.setTextColor(getColor(R.color.darkTextColor));
+                        nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                    } else {
+                        dash_tick.setVisibility(View.INVISIBLE);
+                        dash.setChecked(false);
+                        dash.setTextColor(getColor(R.color.textColor));
+                        dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        grab_tick.setVisibility(View.INVISIBLE);
+                        grab.setChecked(false);
+                        grab.setTextColor(getColor(R.color.textColor));
+                        grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        nets_tick.setVisibility(View.INVISIBLE);
+                        nets.setChecked(false);
+                        nets.setTextColor(getColor(R.color.textColor));
+                        nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                    }
                 }
             }
         });
@@ -284,15 +346,29 @@ public class SearchResults extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (dash.isChecked()) {
-                    dash.setTextColor(getColor(R.color.textColor));
-                    dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                    dash_tick.setVisibility(View.INVISIBLE);
-                    dash.setChecked(false);
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        dash.setTextColor(getColor(R.color.darkTextColor));
+                        dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        dash_tick.setVisibility(View.INVISIBLE);
+                        dash.setChecked(false);
+                    } else {
+                        dash.setTextColor(getColor(R.color.textColor));
+                        dash.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        dash_tick.setVisibility(View.INVISIBLE);
+                        dash.setChecked(false);
+                    }
                 } else {
-                    dash.setTextColor(getColor(R.color.colorPrimary));
-                    dash.setTypeface(null, Typeface.NORMAL);
-                    dash_tick.setVisibility(View.VISIBLE);
-                    dash.setChecked(true);
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        dash.setTextColor(getColor(R.color.colorPrimaryLight));
+                        dash.setTypeface(null, Typeface.NORMAL);
+                        dash_tick.setVisibility(View.VISIBLE);
+                        dash.setChecked(true);
+                    } else {
+                        dash.setTextColor(getColor(R.color.colorPrimary));
+                        dash.setTypeface(null, Typeface.NORMAL);
+                        dash_tick.setVisibility(View.VISIBLE);
+                        dash.setChecked(true);
+                    }
                 }
             }
         });
@@ -301,15 +377,29 @@ public class SearchResults extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (grab.isChecked()) {
-                    grab.setTextColor(getColor(R.color.textColor));
-                    grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                    grab_tick.setVisibility(View.INVISIBLE);
-                    grab.setChecked(false);
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        grab.setTextColor(getColor(R.color.darkTextColor));
+                        grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        grab_tick.setVisibility(View.INVISIBLE);
+                        grab.setChecked(false);
+                    } else {
+                        grab.setTextColor(getColor(R.color.textColor));
+                        grab.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        grab_tick.setVisibility(View.INVISIBLE);
+                        grab.setChecked(false);
+                    }
                 } else {
-                    grab.setTextColor(getColor(R.color.colorPrimary));
-                    grab.setTypeface(null, Typeface.NORMAL);
-                    grab_tick.setVisibility(View.VISIBLE);
-                    grab.setChecked(true);
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        grab.setTextColor(getColor(R.color.colorPrimaryLight));
+                        grab.setTypeface(null, Typeface.NORMAL);
+                        grab_tick.setVisibility(View.VISIBLE);
+                        grab.setChecked(true);
+                    } else {
+                        grab.setTextColor(getColor(R.color.colorPrimary));
+                        grab.setTypeface(null, Typeface.NORMAL);
+                        grab_tick.setVisibility(View.VISIBLE);
+                        grab.setChecked(true);
+                    }
                 }
             }
         });
@@ -318,15 +408,29 @@ public class SearchResults extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (nets.isChecked()) {
-                    nets.setTextColor(getColor(R.color.textColor));
-                    nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
-                    nets_tick.setVisibility(View.INVISIBLE);
-                    nets.setChecked(false);
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        nets.setTextColor(getColor(R.color.darkTextColor));
+                        nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        nets_tick.setVisibility(View.INVISIBLE);
+                        nets.setChecked(false);
+                    } else {
+                        nets.setTextColor(getColor(R.color.textColor));
+                        nets.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
+                        nets_tick.setVisibility(View.INVISIBLE);
+                        nets.setChecked(false);
+                    }
                 } else {
-                    nets.setTextColor(getColor(R.color.colorPrimary));
-                    nets.setTypeface(null, Typeface.NORMAL);
-                    nets_tick.setVisibility(View.VISIBLE);
-                    nets.setChecked(true);
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        nets.setTextColor(getColor(R.color.colorPrimaryLight));
+                        nets.setTypeface(null, Typeface.NORMAL);
+                        nets_tick.setVisibility(View.VISIBLE);
+                        nets.setChecked(true);
+                    } else {
+                        nets.setTextColor(getColor(R.color.colorPrimary));
+                        nets.setTypeface(null, Typeface.NORMAL);
+                        nets_tick.setVisibility(View.VISIBLE);
+                        nets.setChecked(true);
+                    }
                 }
             }
         });
@@ -559,5 +663,12 @@ public class SearchResults extends AppCompatActivity {
         recyclerView.setLayoutAnimation(layoutAnimationController);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
+    }
+
+    private boolean restoreThemePref() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("theme",
+                MODE_PRIVATE);
+        boolean isDark = pref.getBoolean("isDark", false);
+        return isDark;
     }
 }

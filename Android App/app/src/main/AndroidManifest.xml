@@ -14,6 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SettingsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".FavouritesActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />

@@ -6,9 +6,12 @@ import android.content.Intent;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -43,6 +46,16 @@ public class SearchActivity extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (restoreThemePref()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
@@ -185,6 +198,13 @@ public class SearchActivity extends AppCompatActivity {
         toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
         toast.setView(toastView);
         toast.show();
+    }
+
+    private boolean restoreThemePref() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("theme",
+                MODE_PRIVATE);
+        boolean isDark = pref.getBoolean("isDark", false);
+        return isDark;
     }
 }
 

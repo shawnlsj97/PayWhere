@@ -1,19 +1,49 @@
 <resources>
 
     <!-- Base application theme. -->
+    <!-- Light/Day Mode theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorPrimaryLight</item>
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="autoCompleteTextViewStyle">@style/SearchAutoCompleteTextView</item>
-        <item name="android:textColorHighlight">@color/textHighlight</item>
-        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
         <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorHighlight">@color/textHighlight</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:screenOrientation">portrait</item>
-        <item name="android:textCursorDrawable">@null</item>
+        <item name="popupBackground">@color/androidWhite</item>
+        <item name="textColorPrimary">@color/textColor</item>
+        <item name="textColorColored">@color/colorPrimary</item>
+        <item name="textColorSecondary">@color/textColor</item>
+        <item name="contrastTextColor">@color/black</item>
+        <item name="noInternetText">@color/darkerTextColor</item>
+    </style>
+
+    <!-- Dark/Night Mode theme. -->
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darkPrimary</item>
+        <item name="colorPrimaryDark">@color/darkPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
         <item name="android:fontFamily">sans-serif-light</item>
+        <item name="autoCompleteTextViewStyle">@style/SearchAutoCompleteTextView</item>
+        <item name="android:textColor">@color/darkTextColor</item>
+        <item name="android:textColorHighlight">@color/textHighlight</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowBackground">@color/darkPrimaryLight</item>
+        <item name="popupBackground">@color/darkPopupBackground</item>
+        <item name="textColorPrimary">@color/darkTextColor</item>
+        <item name="textColorColored">@color/darkTextColor</item>
+        <item name="textColorSecondary">@color/darkTextColorSecondary</item>
+        <item name="contrastTextColor">@color/darkTextColor</item>
+        <item name="noInternetText">@color/white</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">

@@ -6,11 +6,19 @@
     <color name="textHighlight">#53ac95</color>
     <color name="colorAccent">#EFEFEF</color>
     <color name="textColor">#666666</color>
-    <color name="darkTextColor">#454545</color>
+    <color name="darkerTextColor">#454545</color>
     <color name="grey">#9E9E9E</color>
     <color name="white">#FFFFFF</color>
-    <color name="bluePeterriver">#FF03A9F4</color>
     <color name="androidWhite">#FAFAFA</color>
     <color name="black">#000000</color>
     <color name="fav_yellow">#FFCB05</color>
+
+    <!-- dark mode colors -->
+    <color name="darkPrimary">#212121</color>
+    <color name="darkPrimaryDark">#000000</color>
+    <color name="darkPrimaryLight">#303030</color>
+    <color name="darkTextHighlight">#53ac95</color>
+    <color name="darkTextColor">#FAFAFA</color>
+    <color name="darkTextColorSecondary">#9E9E9E</color>
+    <color name="darkPopupBackground">#424242</color>
 </resources>

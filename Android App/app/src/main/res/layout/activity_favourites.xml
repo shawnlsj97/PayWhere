@@ -16,7 +16,7 @@
         app:titleTextColor="@color/white"
         android:elevation="4dp"
         android:theme="@style/ToolbarTheme"
-        android:background="@color/colorPrimary">
+        android:background="?android:attr/colorPrimary">
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView

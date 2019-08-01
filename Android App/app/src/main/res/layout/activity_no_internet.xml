@@ -11,7 +11,6 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:theme="@style/ToolbarTheme"
@@ -23,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/colorPrimary">
+        android:background="?android:attr/colorPrimary">
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
@@ -34,8 +33,7 @@
             android:inputType="none"
             app:searchIcon="@null"
             app:iconifiedByDefault="false"
-            app:queryHint="@string/no_connection"
-            android:backgroundTint="@color/colorPrimary"/>
+            app:queryHint="@string/no_connection" />
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
@@ -46,7 +44,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="30dp"
         android:text="@string/offline"
-        android:textColor="@color/darkTextColor"
+        android:textColor="?attr/noInternetText"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +84,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/retry"
         android:textSize="20sp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryLight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />

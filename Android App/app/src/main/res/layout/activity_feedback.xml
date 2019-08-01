@@ -26,7 +26,7 @@
                 app:titleTextColor="@color/white"
                 android:elevation="4dp"
                 android:theme="@style/ToolbarTheme"
-                android:background="@color/colorPrimary">
+                android:background="?android:attr/colorPrimary">
             </androidx.appcompat.widget.Toolbar>
 
             <ImageView
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/feedback_img"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="We value your feedback!\nLet us know how we can make PayWhere better for you."
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/feedback_instr"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginStart="8dp"
                 android:text="Subject"
                 android:textSize="20sp"
@@ -70,7 +70,7 @@
                 app:layout_constraintTop_toBottomOf="@id/feedback_subject_title"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:padding="8dp"
                 android:hint="Subject of your feedback"
                 android:textSize="20sp"
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/feedback_subject"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginStart="8dp"
                 android:text="Message"
                 android:textSize="20sp"
@@ -97,7 +97,7 @@
                 app:layout_constraintTop_toBottomOf="@id/feedback_msg_title"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:padding="8dp"
                 android:hint="Type your message here"
                 android:textSize="20sp"
@@ -113,7 +113,7 @@
                 app:layout_constraintTop_toBottomOf="@id/feedback_msg"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 android:text="Send"
                 android:textColor="@color/white"
                 android:background="@drawable/get_started_btn_style"

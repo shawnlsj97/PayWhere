@@ -17,7 +17,6 @@
             android:id="@+id/successToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:theme="@style/ToolbarTheme"
@@ -27,7 +26,7 @@
             app:contentInsetStartWithNavigation="0dp"
             app:contentInsetEnd="0dp"
             app:layout_scrollFlags="scroll|enterAlways|snap"
-            android:backgroundTint="@color/colorPrimary">
+            android:background="?android:attr/colorPrimary">
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/successSearchView"
@@ -39,8 +38,7 @@
                 android:inputType="textAutoComplete"
                 app:searchIcon="@null"
                 app:iconifiedByDefault="false"
-                app:queryHint="@string/search_hint"
-                android:backgroundTint="@color/colorPrimary"/>
+                app:queryHint="@string/search_hint" />
 
             <ToggleButton
                 android:id="@+id/fav_btn"
@@ -58,11 +56,10 @@
             android:id="@+id/filterBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorAccent"
             android:foreground="?attr/selectableItemBackground"
             android:elevation="4dp"
             android:clickable="true"
-            android:backgroundTint="@color/colorPrimary">
+            android:background="?android:attr/colorPrimary">
             <ImageView
                 android:id="@+id/filterIcon"
                 android:layout_width="20dp"

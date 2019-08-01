@@ -2,6 +2,7 @@ package com.marshmallow.paywhere;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.ContentLoadingProgressBar;
 
@@ -9,6 +10,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -64,6 +66,16 @@ public class NoInternetActivity extends AppCompatActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (restoreThemePref()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_no_internet);
 
@@ -137,12 +149,7 @@ public class NoInternetActivity extends AppCompatActivity {
                                 if (!isConnected) {
                                     isConnected = true;
                                     showOnlineToast();
-                                    if (activity.equals("main")) {
-                                        Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
-                                        startActivity(searchActivity);
-                                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                                        finish();
-                                    } else if (activity.equals("search") | activity.equals("results") | activity.equals("error")) {
+                                    if (activity.equals("search") | activity.equals("results") | activity.equals("error")) {
                                         String query = bundle.getString("input");
                                         String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
                                         if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
@@ -282,4 +289,11 @@ public class NoInternetActivity extends AppCompatActivity {
 
         return output.toString();
     }
+
+    private boolean restoreThemePref() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("theme",
+                MODE_PRIVATE);
+        boolean isDark = pref.getBoolean("isDark", false);
+        return isDark;
     }
+}

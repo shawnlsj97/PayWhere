@@ -30,7 +30,7 @@
         android:text="@string/main_activity_message"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/textColor"
+        android:textColor="?attr/textColorPrimary"
         android:textColorHighlight="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,7 +84,7 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/aboutImageView"
-        app:layout_constraintEnd_toStartOf="@id/favouritesImageView"
+        app:layout_constraintEnd_toStartOf="@id/settingsImageView"
         app:srcCompat="@drawable/feedback_icon" />
 
     <ImageView
@@ -93,8 +93,18 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/feedbackImageView"
+        app:layout_constraintStart_toEndOf="@id/settingsImageView"
         app:layout_constraintEnd_toStartOf="@id/infoImageView"
         app:srcCompat="@drawable/favourites_icon" />
+
+    <ImageView
+        android:id="@+id/settingsImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/feedbackImageView"
+        app:layout_constraintEnd_toStartOf="@id/favouritesImageView"
+        app:srcCompat="@drawable/settings_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
