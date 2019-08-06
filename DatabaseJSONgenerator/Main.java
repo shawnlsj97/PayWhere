@@ -1,15 +1,27 @@
 /*
-Input format:
-# num of Dash merchants
-dash merchants...
-# num of malls
+This programme generates a JSON file for the dining outlets in malls.
+We have:
+- mall
+    - restaurant
+        - name
+        - unit number
+        - mobile payments accepted (currently Dash, Grab, Nets)
+        - URL for icon on Firebase
+
+General input format:
+# of Dash merchants
+Dash merchants
+# of Grab merchants
+Grab merchants
+# of Nets merchants
+Nets merchants
+# of malls
+[mall input]
+
+Mall input format:
 mall name
-# num of restaurants
-restaurant names...
-mall name
-# num of restaurants
-restaurant names...
-...
+# of dining outlets in mall
+outlet name, unit number
 */
 
 import java.util.*;
@@ -49,7 +61,7 @@ public class Main {
         int numMalls = Integer.parseInt(sc.nextLine());
         Mall.mallArray = new Mall[numMalls];
 
-        Restaurant.makeHash();
+        Icon.makeHash();
 
         for (int i = 0; i < numMalls; i++) {
             String mallName = sc.nextLine();
