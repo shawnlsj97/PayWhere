@@ -13,7 +13,10 @@ public class Icon {
         hashE();
         hashF();
         hashG();
+        hashH();
         hashI();
+        hashJ();
+        hashK();
         hashL();
         hashM();
         hashN();
@@ -327,8 +330,150 @@ public class Icon {
         imgHash.put("Gyu-Kaku Japanese BBQ", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Gyu-Kaku_Japanese_BBQ.png?alt=media&token=e1cb84dc-f070-41fb-bf1d-63a8cea39b65");
     }
 
+    public static void hashH() {
+        imgHash.put("Ha Jun", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ha_Jun.png?alt=media&token=4283c7dc-c336-4a61-a39e-c70f23f66e44");
+        imgHash.put("Häagen-Dazs", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Haagen-Dazs.png?alt=media&token=ffed54d4-eb82-4340-9017-e77324638628");
+        imgHash.put("Hai Di Lao 海底捞火锅", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hai_Di_Lao.png?alt=media&token=9250ecda-6617-4243-9016-dc1abcd23f2b");
+        imgHash.put("Haig Road Putu Piring", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Haig_Road_Puti_Piring.png?alt=media&token=ef8f881b-a397-4703-b3d2-09ec9435f342");
+        imgHash.put("Hainanese Curry Rice", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hainanese_Curry_Rice.png?alt=media&token=ff76b1e3-db2d-4cbe-aa57-8c90404abbf5");
+        imgHash.put("HAJJAH MARIAM CAFE", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/HAJJAH_MARIAM_CAFE.png?alt=media&token=f1b9a22c-73f7-4dbe-945e-d98c4cdb81c6");
+        imgHash.put("Han's", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hans.png?alt=media&token=3e79f917-4137-4fe7-bf28-10511a5e0190");
+        imgHash.put("Hanis Café & Bakery", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hanis_Cafe_%26_Bakery.png?alt=media&token=d3383db6-158a-4769-96e1-257b7d020ee9");
+        imgHash.put("Harry’s", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Harrys.png?alt=media&token=1a3add53-e327-4a17-8e05-ef0943131835");
+        imgHash.put("Harvest", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Harvest.png?alt=media&token=8ba2e8dc-92fe-4e39-950d-d624c0e62e53");
+        imgHash.put("Hatyai Noodle Cafe", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hatyai_Noodle_Cafe.png?alt=media&token=31d7813c-bb56-480f-b5fa-9ad75973ae07");
+        imgHash.put("Hawker", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hawker.png?alt=media&token=4246ec55-1b39-477b-87e4-b99f97cee5d5");
+        imgHash.put("Hawkerman", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hawkerman.png?alt=media&token=c33e1da5-12e1-4f14-8bc0-a0b13320180b");
+        imgHash.put("Heavenly Wang", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Heavenly_Wang.png?alt=media&token=94f55dc3-6766-413f-b8ef-f4b6cf82e777");
+        imgHash.put("Hei Sushi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hei_Sushi.png?alt=media&token=68bb6345-19e7-4c98-b251-e70a82b657d3");
+        imgHash.put("Henri Charpentier", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Henri_Charpentier.png?alt=media&token=0e1dc8f3-3d19-42cc-b804-d7cd8874e45b");
+        imgHash.put("Herbal Tea", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Herbal_Tea.png?alt=media&token=31861d6f-c46e-464c-938e-f9af657d37cf");
+        imgHash.put("Herit8ge - 回忆", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Herit8ge.png?alt=media&token=3b6b1be3-3a31-4684-b252-edee5025995c");
+        imgHash.put("Hey Long Cha", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hey_Long_Cha.png?alt=media&token=aa099c42-3b75-43b1-8c2c-90d963b11681");
+        imgHash.put("Hey Yummy!", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hey_Yummy.png?alt=media&token=bd702853-5bc3-465e-98cd-6b664d5fdca4");
+        imgHash.put("HEYTEA", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/HEYTEA.png?alt=media&token=12bc40d8-8d1f-4901-af4c-7ddf593f099d");
+        imgHash.put("Himonoya", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Himonoya.png?alt=media&token=fc11a98a-d3d4-4af6-a8ed-4a221904ed67");
+        imgHash.put("Hinata", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hinata.png?alt=media&token=4fbd90b8-cc1f-4159-925f-c87bdc9f4a01");
+        imgHash.put("Ho Kee Pau", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ho_Kee_Pau.png?alt=media&token=c6eae55f-42cf-49e4-88d5-27ab3d86e319");
+        imgHash.put("Hockhua Herbal Tea", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hockhua_Herbal_Tea.png?alt=media&token=67dfa796-1389-4fdf-8b24-b0b9877025a0");
+        imgHash.put("Hokkaido Baked Cheese Tart", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hokkaido_Baked_Cheese_Tart.png?alt=media&token=118d1bbb-b8e4-4ad0-9f43-62960cd79862");
+        imgHash.put("Holey Moley", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Holey_Moley.png?alt=media&token=39761240-12a9-4bb3-8ecc-b2ae6cec63f0");
+        imgHash.put("Honeymoon Dessert", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Honeymoon_Dessert.png?alt=media&token=d0f330b0-9016-49ef-b83d-a7865a66ecc8");
+        imgHash.put("HoneyWorld", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/HoneyWorld.png?alt=media&token=262f98f5-c582-48d2-8382-891e52155032");
+        imgHash.put("Hong Kong Egglet", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Egglet.png?alt=media&token=be3fe5e7-aec0-4e84-86f4-d3e7b0c49431");
+        imgHash.put("Hong Kong Egglet NAM KEE PAU", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Egglet_Nam_Kee_Pau.png?alt=media&token=d2fdb4c5-7d5d-4f33-ad47-cd3a0fd06ff1");
+        imgHash.put("Hong Kong Sheng Kee Dessert", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Sheng_Kee_Dessert.png?alt=media&token=ee46ae9d-b917-41e4-95fc-7aca9a6c9ff6");
+        imgHash.put("Hong Kong Sheng Kee Dessert & Hong Kong Sheng Kee Pau", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Sheng_Kee_Dessert_%26_Hong_Kong_Sheng_Kee_Pau.png?alt=media&token=0e0c94db-2570-488f-b3e8-1e2bf6eabd0b");
+        imgHash.put("Hong Kong Sheng Kee Pau", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Sheng_Kee_Pau.png?alt=media&token=bc8682e9-5abf-406d-a876-92cdb5c6c6fb");
+        imgHash.put("Honguo", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Honguo.png?alt=media&token=0a876491-ccc6-4bd3-aadc-6db889208830");
+        imgHash.put("Honolulu Café", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Honolulu_Cafe.png?alt=media&token=fcfee15c-021e-4ade-ad92-01fd9a1f60f3");
+        imgHash.put("Hooters Singapore", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hooters_Singapore.png?alt=media&token=5000a120-0ffd-4042-828a-a138747aaea4");
+        imgHash.put("Hoshino Coffee", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hoshino_Coffee.png?alt=media&token=07d13606-d7b1-4740-9219-94ab36bbe7b9");
+        imgHash.put("Hot Stones", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hot_Stones.png?alt=media&token=69740ae9-736e-4442-af99-2ec67a93b0d3");
+        imgHash.put("Hot Tomato", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hot_Tomato.png?alt=media&token=99a67cc7-22b3-4db6-9f1c-b5b930d8cb8d");
+        imgHash.put("Hot Tomato Cafe & Grill", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hot_Tomato.png?alt=media&token=99a67cc7-22b3-4db6-9f1c-b5b930d8cb8d");
+        imgHash.put("Hot Tomato Express", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hot_Tomato.png?alt=media&token=99a67cc7-22b3-4db6-9f1c-b5b930d8cb8d");
+        imgHash.put("HOT-STAR Large Fried Chicken", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/HOT-STAR_Large_Fried_Chicken.png?alt=media&token=e52924dc-89f7-4e9d-aced-5c3b16a2c5e6");
+        imgHash.put("Huo Yan Shai Zi Niu Flame Diced Beef Cubes", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Huo_Yan_Shai_Zi_Niu_Flame_Diced_Beef_Cubes.png?alt=media&token=e4c8ed59-3f7e-41e4-8656-47ceeac759b1");
+        imgHash.put("Hutong (胡同)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hutong.png?alt=media&token=6b67df11-212b-4165-89df-12aaab579c89");
+        imgHash.put("Hyang-To-Gol", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hyang-To-Gol.png?alt=media&token=699dfbee-feb6-4f49-8d40-dff7cda68aa2");
+        imgHash.put("HYFE Travel Café", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/HYFE_Travel_Cafe.png?alt=media&token=92dcc41b-6180-46a1-aa30-1fe36079633c");
+    }
+
     public static void hashI() {
+        imgHash.put("I Love Taimei", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d");
+        imgHash.put("I Love Yoo", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Yoo.png?alt=media&token=2493fb99-ab2d-42d2-bee5-3f13d168f2e8");
+        imgHash.put("Ice Fork", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ice_Fork.png?alt=media&token=5f98f856-8e0a-4cc2-a857-df3a83ac7259");
+        imgHash.put("Icenoie Hokkaido", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Icenoie_Hokkaido.png?alt=media&token=a0c1252d-fc4d-4e88-9ab4-0fa736fc08e5");
+        imgHash.put("Ichiban Bento (Shokutsu Ten)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ichiban_Bento.png?alt=media&token=3445562d-9eaa-435d-b82a-45baf8d9c8ba");
+        imgHash.put("Ichiban Boshi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ichiban_Boshi.png?alt=media&token=2d7d5b12-f878-49bf-9096-1fb4011f62d4");
+        imgHash.put("Ichiban Boshi (Shokutsu Ten)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ichiban_Boshi.png?alt=media&token=2d7d5b12-f878-49bf-9096-1fb4011f62d4");
+        imgHash.put("Ichiban Sushi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ichiban_Sushi.png?alt=media&token=b0f4171a-7bd1-4270-ab9d-1e14350e8ce7");
+        imgHash.put("ICREPE", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/ICREPE.png?alt=media&token=a0520842-635e-45b4-8ac3-73225d15c9c2");
+        imgHash.put("Idaten Udon", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Idaten_Udon.png?alt=media&token=77467015-3205-4f4f-805c-9933ed95587c");
+        imgHash.put("Idaten Udon (Shokutsu Ten)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Idaten_Udon.png?alt=media&token=77467015-3205-4f4f-805c-9933ed95587c");
+        imgHash.put("iFRESH", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/iFRESH.png?alt=media&token=2bb2a6db-7247-463e-b8b4-88d0981ef79b");
+        imgHash.put("Imakatsu", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Imakatsu.png?alt=media&token=342d1672-0567-4d20-b28f-c278cbe6c485");
+        imgHash.put("Imperial Treasure Fine Shanghai Cuisine", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Imperial_Treasure_Fine_Shanghai_Cuisine.png?alt=media&token=a4191223-bef1-4da8-9855-37b2d3ad236a");
+        imgHash.put("Imperial Treasure Fine Teochew Cuisine", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Imperial_Treasure_Fine_Teochew_Cuisine.png?alt=media&token=388cebe3-6231-4298-9a69-03b916f4dbc6");
+        imgHash.put("Imperial Treasure Nan Bei Restaurant", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Imperial_Treasure_Nan_Bei_Restaurant.png?alt=media&token=38ab03ba-b947-41a6-863d-fe9f1eed6f5f");
+        imgHash.put("Imperial Treasure Steamboat Restaurant", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Imperial_Treasure_Steamboat.png?alt=media&token=96d4236a-0768-44af-a8bc-93a53deaf444");
+        imgHash.put("Indobox", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Indobox.png?alt=media&token=c25cd4ae-58e7-4039-8f16-99c4ea0eebc2");
+        imgHash.put("Ippudo", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ippudo.png?alt=media&token=26493f0b-f241-49c9-9de8-f4bbf06a06e2");
+        imgHash.put("Iroha Mart", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Iroha_Mart.png?alt=media&token=61d4f6de-c558-4abd-aaec-c4062d8ad1e6");
+        imgHash.put("Irvins Salted Egg", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Irvins_Salted_Egg.png?alt=media&token=916d58bd-5a22-4dcc-afde-d9505ebc3cd2");
+        imgHash.put("Isaac Toast", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Isaac_Toast.png?alt=media&token=be7bf669-933e-48df-9518-5a444f116125");
+        imgHash.put("Island Creamery", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Island_Creamery.png?alt=media&token=66a893a5-e3d1-4a18-be6f-80b001e599c9");
+        imgHash.put("iSTEAKS Diner", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/iSteaks.png?alt=media&token=0cba2dac-e7d5-4cae-bc5a-26181a9ecb9d");
         imgHash.put("Itacho Sushi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Itacho_Sushi.png?alt=media&token=c7004437-e7c1-4a97-a424-2f4199e86fb6");
+        imgHash.put("iTea", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/iTea.png?alt=media&token=fa6e597d-fe80-4e2b-bb91-1bb5b5a7d03d");
+    }
+
+    public static void hashJ() {
+        imgHash.put("J Co Donuts & Coffee", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/J_Co_Donuts_%26_Coffee.png?alt=media&token=377958aa-1368-4e20-ab88-ddba56585921");
+        imgHash.put("J-Mart", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/J-Mart.png?alt=media&token=5af6dfbd-6ca5-423a-9867-2f72fbca62ad");
+        imgHash.put("Jaan", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jaan.png?alt=media&token=532c2d27-1736-480d-8bab-4a6ec108bc28");
+        imgHash.put("Jack's Place", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jaan.png?alt=media&token=532c2d27-1736-480d-8bab-4a6ec108bc28");
+        imgHash.put("Jalan Kayu The Prata Cafe", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jalan_Kayu_The_Prata_Cafe.png?alt=media&token=7a37e682-104e-43d4-9ffb-504b4766f15e");
+        imgHash.put("Janice Wong", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Janice_Wong.png?alt=media&token=da03bbff-7ce4-4995-9cd1-6c5d862edaff");
+        imgHash.put("Jeju Kitchen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jeju_Kitchen.png?alt=media&token=85cee7d9-42ff-4048-adf2-1dcf3e11d906");
+        imgHash.put("Ji De Chi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ji_De_Chi.png?alt=media&token=d7af407a-b7e0-4319-8f6a-9bfaf0e72386");
+        imgHash.put("Jiak Zhey", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jiak_Zhey.png?alt=media&token=bcc02686-127a-4b99-8a6e-3b724a9f53f8");
+        imgHash.put("Jian Bo Tiong Bahru Shui Kueh", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jian_Bo_Tiong_Bahru_Shui_Kueh.png?alt=media&token=91c7db0f-fd6e-4f92-b481-2148ca8dafca");
+        imgHash.put("Jin Shang Yi Ping Buffet Hotpot", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jin_Shang_Yi_Ping_Buffet_Hotpot.png?alt=media&token=baa1f4df-bf4c-40f1-8af6-6e1d1be053f6");
+        imgHash.put("Jinjja Chicken", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jinjja_Chicken.png?alt=media&token=71764f8f-ecbe-4030-9e73-f734ef796391");
+        imgHash.put("Joe & Dough", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Joe_%26_Dough.png?alt=media&token=5a121dd0-f574-4bfa-9ed0-e62524baf68d");
+        imgHash.put("Joe & The Juice", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Joe_%26_The_Juice.png?alt=media&token=8e5bf232-dcb7-44f5-9b2d-7cdadd480681");
+        imgHash.put("Jollibean", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jollibean.png?alt=media&token=bfc7e94a-56b3-4374-a8cc-e79c6bd018f3");
+        imgHash.put("Jollibee", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jollibee.png?alt=media&token=c2c230be-1c35-4dfd-af96-433aa32787cf");
+        imgHash.put("Ju Hao", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ju_Hao.png?alt=media&token=c3a2f294-cdb4-4349-a192-5e4f5579841f");
+        imgHash.put("Ju Shin Jung Korean Charcoal BBQ", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ju_Shin_Jung_Korean_Charcoal_BBQ.png?alt=media&token=5367e34e-fc66-404f-95a2-27e463878c86");
+        imgHash.put("JUEWEI", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/JUEWEI.png?alt=media&token=bf4ba81b-cc8b-4c5d-b54c-ff9ae20dc4be");
+        imgHash.put("Jumbo Seafood", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jumbo_Seafood.png?alt=media&token=420953e3-8d12-4834-846c-c198ebf80dd7");
+        imgHash.put("Junshin Express", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Junshin_Express.png?alt=media&token=e008c9ed-404b-49aa-b7b9-c93bc7d2f44e");
+        imgHash.put("Jw360°", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Jw360.png?alt=media&token=193fcf92-2e3a-4344-8049-a9051a44d501");
+    }
+
+    public static void hashK() {
+        imgHash.put("K-Market", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/K-Market.png?alt=media&token=1fe6b2c1-5fac-418c-8368-10c6bf054989");
+        imgHash.put("Kabe No Ana (Shokutsu Ten)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kabe_No_Ana.png?alt=media&token=d443b3e6-2030-4a75-81da-45d79355808b");
+        imgHash.put("Kaffe & Toast Thai Noodle Bar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kaffe_%26_Toast_Thai_Noodle_Bar.png?alt=media&token=a80b3a84-ca02-4a3e-b258-0d1c07c988f4");
+        imgHash.put("Kaffe & Toast", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kaffe_%26_Toast.png?alt=media&token=5332b591-4265-4d99-bcbb-3053e5eabdf4");
+        imgHash.put("Kai sushi & Robatayaki", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kai_sushi_%26_Robatayaki.png?alt=media&token=ded21c0e-ecf4-45d0-a03c-701125bc4bbe");
+        imgHash.put("Kam's Roast", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kams_Roast.png?alt=media&token=e46a43a4-e0c3-46cb-83ea-4d22329c8f6c");
+        imgHash.put("Kane Mochi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KANEMOCHI.png?alt=media&token=e5df2836-e149-4161-9015-7a066e9373f5");
+        imgHash.put("Kanpai 789", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kanpai_789.png?alt=media&token=4638a87c-6c63-4533-975f-2755a515174b");
+        imgHash.put("Kanshoku Ramen Bar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kanshoku_Ramen_Bar.png?alt=media&token=bd596687-6209-4175-bf40-26e57cb3b5a3");
+        imgHash.put("Kara-men Ajisen Ramen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kara-men_Ajisen_Ramen.png?alt=media&token=52270f89-d7f7-483a-a245-12aafdcb0e7e");
+        imgHash.put("Kazokutei", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kazokutei.png?alt=media&token=428eaf1f-357d-4da9-9413-8fe27aa8a6da");
+        imgHash.put("KeCha", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KeCha.png?alt=media&token=422483ea-c448-4c3b-8a6b-2256f52cd358");
+        imgHash.put("Keki Et Bijoux", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Keki_Et_Bijoux.png?alt=media&token=6afadde4-10a1-4415-9c31-798f9b1562c5");
+        imgHash.put("KFC", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KFC.png?alt=media&token=5530002b-6c4a-436f-ac91-c93b967c840e");
+        imgHash.put("Kim Choo Kueh Chang", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kim_Choo_Kueh_Chang.png?alt=media&token=58801d16-23ed-48eb-9b38-6cb1209b3f16");
+        imgHash.put("Kin No Mame", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kin_No_Mame.png?alt=media&token=3385aac1-fe9b-416b-aeb2-db332a86bd83");
+        imgHash.put("Kko Kko Nara", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kko_Kko_Nara.png?alt=media&token=6e2ba232-1b1b-4895-8325-ddfb6bb47af3");
+        imgHash.put("KOI Café", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KOI_Cafe.png?alt=media&token=be80361b-6311-47d4-8090-0daaac6223ad");
+        imgHash.put("KOI Thé", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KOI_The.png?alt=media&token=fa86ca9c-2421-4e0e-89a0-2a0612e7643b");
+        imgHash.put("KOI Thé Express", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KOI_The_Express.png?alt=media&token=158dc21d-4bf0-4a1f-9e1f-a8f0330fe0c3");
+        imgHash.put("Koji Sushi Bar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Koji_Sushi_Bar.png?alt=media&token=566bd890-5f01-4ed5-af3e-b9e1d659e723");
+        imgHash.put("Koji-San", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Koji-San.png?alt=media&token=d34e3179-881e-4be5-b3c2-28ce906e35cf");
+        imgHash.put("KOKO", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KOKO.png?alt=media&token=1cef2202-9792-41ea-ad72-86548bc43076");
+        imgHash.put("Koo Kee", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Koo_Kee.png?alt=media&token=cf5c011f-9022-44ec-8890-e4fd8af0a151");
+        imgHash.put("Koong Woh Tong", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Koong_Woh_Tong.png?alt=media&token=e21ec744-4b4f-4f07-afd3-fe3f4d762ad4");
+        imgHash.put("Kopi & Tarts", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kopi_%26_Tarts.png?alt=media&token=2f80e210-81e3-47a1-95a0-57173fa79700");
+        imgHash.put("Kopi Hive", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kopi_Hive.png?alt=media&token=6a92a964-57c6-4e69-bdf1-5b8ff7edeb4e");
+        imgHash.put("Kopi Tiam", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kopi_Tiam.png?alt=media&token=c1f9cd9b-5152-4dd0-84c3-2056b49be032");
+        imgHash.put("KopiTech", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KopiTech.png?alt=media&token=c1597975-1fd6-4bdc-807f-4314e132fca3");
+        imgHash.put("Kopitiam", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kopitiam.png?alt=media&token=9f1da01e-f8d3-4711-abac-1e53c14008d1");
+        imgHash.put("Kotsujiru Nabe", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kotsujiru_Nabe.png?alt=media&token=2eb3fba8-c034-48e0-b7c3-28d3b7e8bbde");
+        imgHash.put("Koufu", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Koufu.png?alt=media&token=b6f4fe7e-d8b5-4d49-8d48-34049fa75377");
+        imgHash.put("Krispy Kreme", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Krispy_Kreme.png?alt=media&token=5610c6f6-d73f-4540-88cd-c404db52c29c");
+        imgHash.put("Kungfu Roast", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kungfu_Roast.png?alt=media&token=954b8d66-e660-4a00-8d10-85d725162af0");
+        imgHash.put("Kuriya Japanese Market", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kuriya_Japanese_Market.png?alt=media&token=3e346d8c-36a0-4cfd-bfb6-7a7074afde6d");
+        imgHash.put("Kuriya Japanese Market (Shokutsu Ten)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kuriya_Japanese_Market.png?alt=media&token=3e346d8c-36a0-4cfd-bfb6-7a7074afde6d");
+        imgHash.put("Kuriya Japanese Market Yokocho", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kuriya_Yokocho.png?alt=media&token=ca5e38f6-4cb9-4518-bb04-10790b522bb2");
+        imgHash.put("Kushikatsu Tanaka", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kushikatsu_Tanaka.png?alt=media&token=6331af1a-a86b-4e70-8f77-ec2a3351997c");
+        imgHash.put("Kushiya", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kushiya.png?alt=media&token=194d18aa-9f36-42fa-b42c-1ae923a79788");
     }
 
     public static void hashL() {
@@ -559,7 +704,7 @@ public class Icon {
     }
 
     public static void hashQ() {
-        imgHash.put("Qi Ji", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/PUTIEN.png?alt=media&token=b65e1cc7-f972-46cd-b9ed-d09f948b6fb2");
+        imgHash.put("Qi Ji", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Qi_Ji.png?alt=media&token=b9e120b9-31a2-403e-b867-e83fedf31585");
         imgHash.put("Qian Wei Shan Dong Da Bao", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Qian_Wei_Shan_Dong_Da_Bao.png?alt=media&token=e02b232d-fe5e-4bcb-9286-addda514a3b4");
         imgHash.put("QQ Rice", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/QQ_rice.png?alt=media&token=4dcd8a6e-6b29-438f-9908-f03b0cc09cc4");
         imgHash.put("Quayside Seafood Restaurant", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Quayside_Seafood_Restaurant.png?alt=media&token=a8801f3d-1fdb-4de7-92b7-0a2250b1330a");       
@@ -739,11 +884,11 @@ public class Icon {
         imgHash.put("The Golden Duck Co Snack Bar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Golden_Duck.png?alt=media&token=94367a99-fa1f-4407-b9c8-6fe182a6c36c");
         imgHash.put("The Grande Whisky Collection", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Grande_Whisky_Collection.png?alt=media&token=7e480f7c-5aa9-4573-9275-a95ff701144a");
         imgHash.put("The Highlander Bar & Restaurant", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Highlander_Bar_%26_Restaurant.png?alt=media&token=83012203-cecf-44d4-8773-e73374ae6a20");
-        imgHash.put("The Icing Room (Breadtalk Family)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Highlander_Bar_%26_Restaurant.png?alt=media&token=83012203-cecf-44d4-8773-e73374ae6a20");
-        imgHash.put("The Manhattan Fish Market", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Highlander_Bar_%26_Restaurant.png?alt=media&token=83012203-cecf-44d4-8773-e73374ae6a20");
+        imgHash.put("The Icing Room (Breadtalk Family)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Icing_Room.png?alt=media&token=0a35140a-b767-4cb7-84dc-e83145163b20");
+        imgHash.put("The Manhattan Fish Market", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Manhattan_Fish_Market.png?alt=media&token=a9b7e7af-a6d3-4fcd-8ee1-274561f60e7f");
         imgHash.put("The Marmalade Pantry", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Marmalade_Pantry.png?alt=media&token=761089d0-a3e3-4e0a-b8cb-425bb13dc372");
         imgHash.put("The MeatHouse by 18 Chefs", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_MeatHouse_by_18_Chefs.png?alt=media&token=ab4a339b-1f8a-430c-b525-991912c77306");
-        imgHash.put("The miniBar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_MeatHouse_by_18_Chefs.png?alt=media&token=ab4a339b-1f8a-430c-b525-991912c77306");
+        imgHash.put("The miniBar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_miniBar.png?alt=media&token=0f48074a-704f-4e15-ae5e-6dc75b85ecfc");
         imgHash.put("The Mix", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Mix.png?alt=media&token=e73ae5df-b6f7-4e1c-8e67-e0689f3c9775");
         imgHash.put("The Oaks Cellar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Oaks_Cellar.png?alt=media&token=60df5641-3ad4-4e94-908a-7ddf27c6f3bf");
         imgHash.put("The Old Malaya Cafe", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Old_Malaya_Cafe.png?alt=media&token=257ee109-af57-4ff6-a315-451c36b3e4e9");
