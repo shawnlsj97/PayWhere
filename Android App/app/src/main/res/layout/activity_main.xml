@@ -58,16 +58,6 @@
         android:foreground="?attr/selectableItemBackground"/>
 
     <ImageView
-        android:id="@+id/infoImageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/lifesaver" />
-
-    <ImageView
         android:id="@+id/aboutImageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -84,7 +74,7 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/aboutImageView"
-        app:layout_constraintEnd_toStartOf="@id/settingsImageView"
+        app:layout_constraintEnd_toStartOf="@id/favouritesImageView"
         app:srcCompat="@drawable/feedback_icon" />
 
     <ImageView
@@ -93,18 +83,28 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/settingsImageView"
+        app:layout_constraintStart_toEndOf="@id/feedbackImageView"
         app:layout_constraintEnd_toStartOf="@id/infoImageView"
         app:srcCompat="@drawable/favourites_icon" />
+
+    <ImageView
+        android:id="@+id/infoImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/favouritesImageView"
+        app:layout_constraintEnd_toStartOf="@id/settingsImageView"
+        app:srcCompat="@drawable/lifesaver" />
 
     <ImageView
         android:id="@+id/settingsImageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/feedbackImageView"
-        app:layout_constraintEnd_toStartOf="@id/favouritesImageView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/settings_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
