@@ -1,6 +1,3 @@
-![](./READMEMedia/media/image1.png){width="0.5416666666666666in" height="0.6979166666666666in"}
-===============================================================================================
-
 # PayWhere
 
 PayWhere is an Android application that helps mobile payment users to
@@ -18,60 +15,41 @@ height="3.6527777777777777in"}
 PayWhere currently supports:
 
 -   33 shopping malls across Singapore
-
     -   Capitaland Malls
-
         -   Bedok Mall, Bugis Junction, Bugis+, Bukit Panjang Plaza,
             Clarke Quay, Funan, IMM, ION Orchard, JCube, Jewel Changi
             Airport, Junction 8, Lot One, Plaza Singapura, Raffles City,
             Singpost Centre, Tampines Mall, The Star Vista, Westgate
-
     -   Frasers Property Malls
-
         -   Anchorpoint, Changi City Point, Northpoint City, Robertson
             Walk, The Centrepoint, ValleyPoint, Waterway Point, YewTee
             Point
-
     -   AsiaMalls
-
         -   Century Square, Hougang Mall, Tampines 1, Tiong Bahru Plaza,
             White Sands
-
 -   6 major mobile payment platforms
-
     -   Singtel Dash
-
     -   GrabPay
-
     -   NetsPay
-
     -   DBS PayLah!
-
     -   UOB Mighty
-
     -   OCBC Pay Anyone
 
-Compatibility
-=============
+## Compatibility
 
 PayWhere supports Android 8.0 (Oreo) (SDK 26) and later.
 
-How do I use PayWhere?
-======================
+## How do I use PayWhere?
 
 Currently, you may install PayWhere on your Android device via Android
 Studio. These are the steps in order to do so:
 
 1.  Download the 'Android App' folder from this repository.
-
 2.  Open the folder in Android Studio.
-
 3.  Connect your Android device to your computer.
-
 4.  Click on 'Run' then 'Run App' and select your Android device.
     Alternatively, click on the green play button on the Navigation Bar
     near the top of Android Studio.
-
 5.  Enjoy using PayWhere on your Android Device!
 
 We have made plans to publish PayWhere for free on the Google Play Store
@@ -91,8 +69,7 @@ height="2.0833333333333335in"}
 On subsequent app launches, you will be directed to the home page
 immediately.
 
-Contributing
-============
+## Contributing
 
 You may get in touch with us at
 [teammarshmallow2019\@gmail.com](mailto:teammarshmallow2019@gmail.com).
@@ -101,22 +78,19 @@ Alternatively, before submitting pull requests on GitHub, contributors
 must sign Google\'s [individual contributor license
 agreement](https://cla.developers.google.com/about/google-individual).
 
-Thanks
-======
+## Thanks
 
 We would like to thank Freepik from
 [https://www.flaticon.com](https://www.flaticon.com) for
 the icons used.
 
-Authors
-=======
+## Authors
 
 Dominique Ng - \@hellodommy on GitHub
 
 Shawn Lee - \@shawnlsj97 on GitHub
 
-License
-=======
+## License
 
 PayWhere is [GNU
 AGPLv3-licensed](https://github.com/shawnlsj97/PayWhere/blob/master/LICENSE).
