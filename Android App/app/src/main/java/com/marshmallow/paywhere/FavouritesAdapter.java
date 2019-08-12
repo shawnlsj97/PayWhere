@@ -54,7 +54,7 @@ public class FavouritesAdapter extends RecyclerView.Adapter<MallViewHolder> {
                 // Remove mall from favourites
                 SharedPreferences pref = context.getSharedPreferences("fav",
                         MODE_PRIVATE);
-                Set<String> malls_set = pref.getStringSet("malls", new TreeSet<String>());
+                Set<String> malls_set = new TreeSet<>(pref.getStringSet("malls", new TreeSet<String>()));
                 malls_set.remove(toTitleCase(name_string));
                 pref.edit().putStringSet("malls", malls_set).apply();
                 // Display Toast to inform user

@@ -69,6 +69,7 @@ public class FavouritesActivity extends AppCompatActivity {
             malls.add(name);
             Collections.sort(malls);
         }
+        pref.edit().putStringSet("malls", malls_set).apply();
 
         Activity activity = this;
         adapter = new FavouritesAdapter(malls, getApplicationContext(), activity);

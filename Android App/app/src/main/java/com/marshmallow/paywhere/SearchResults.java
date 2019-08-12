@@ -53,6 +53,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -509,7 +510,7 @@ public class SearchResults extends AppCompatActivity {
                     // Add mall to favourites
                     SharedPreferences pref = getApplicationContext().getSharedPreferences("fav",
                             MODE_PRIVATE);
-                    Set<String> malls = pref.getStringSet("malls", new TreeSet<String>());
+                    Set<String> malls = new TreeSet<>(pref.getStringSet("malls", new TreeSet<String>()));
                     malls.add(toTitleCase(input));
                     pref.edit().putStringSet("malls", malls).apply();
                     // Display Toast to inform user
@@ -519,7 +520,8 @@ public class SearchResults extends AppCompatActivity {
                     // Remove mall from favourites
                     SharedPreferences pref = getApplicationContext().getSharedPreferences("fav",
                             MODE_PRIVATE);
-                    Set<String> malls = pref.getStringSet("malls", new TreeSet<String>());
+                    Set<String> malls = new TreeSet<>(pref.getStringSet("malls",
+                            new TreeSet<String>()));
                     malls.remove(toTitleCase(input));
                     pref.edit().putStringSet("malls", malls).apply();
                     // Display Toast to inform user
