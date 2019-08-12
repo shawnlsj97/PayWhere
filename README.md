@@ -9,8 +9,7 @@ easily, so you don't have to trawl through multiple websites. We have
 included the F&B outlet name, unit number and mobile payment platforms
 accepted in an easy-to-use and elegant interface.
 
-![](./READMEMedia/media/image2.png){width="6.5in"
-height="3.6527777777777777in"}
+<img src="./READMEMedia/media/image2.png" width="624" height="350.66666667" />
 
 PayWhere currently supports:
 
@@ -60,11 +59,10 @@ provide you with an introduction and how to use our app. Our user
 onboarding has 3 steps that describe the purpose of PayWhere in a clear
 and concise manner.
 
-![](./READMEMedia/media/image3.png){width="1.1666666666666667in"
-height="2.0833333333333335in"}![](./READMEMedia/media/image4.png){width="1.1666666666666667in"
-height="2.0833333333333335in"}![](./READMEMedia/media/image5.png){width="1.1666666666666667in"
-height="2.0833333333333335in"}![](./READMEMedia/media/image6.png){width="1.1666666666666667in"
-height="2.0833333333333335in"}
+<img src="./READMEMedia/media/image3.png" width="112" height="200" />
+<img src="./READMEMedia/media/image4.png" width="112" height="200" />
+<img src="./READMEMedia/media/image5.png" width="112" height="200" />
+<img src="./READMEMedia/media/image6.png" width="112" height="200" />
 
 On subsequent app launches, you will be directed to the home page
 immediately.
