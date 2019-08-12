@@ -59,10 +59,7 @@ provide you with an introduction and how to use our app. Our user
 onboarding has 3 steps that describe the purpose of PayWhere in a clear
 and concise manner.
 
-<img src="./READMEMedia/media/image3.png" width="112" height="200" />
-<img src="./READMEMedia/media/image4.png" width="112" height="200" />
-<img src="./READMEMedia/media/image5.png" width="112" height="200" />
-<img src="./READMEMedia/media/image6.png" width="112" height="200" />
+<img src="./READMEMedia/media/image3.png" width="112" height="200" /> <img src="./READMEMedia/media/image4.png" width="112" height="200" /> <img src="./READMEMedia/media/image5.png" width="112" height="200" /> <img src="./READMEMedia/media/image6.png" width="112" height="200" />
 
 On subsequent app launches, you will be directed to the home page
 immediately.
