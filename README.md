@@ -1,7 +1,7 @@
 ![](./READMEMedia/media/image1.png){width="0.5416666666666666in" height="0.6979166666666666in"}
 ===============================================================================================
 
-PayWhere
+# PayWhere
 
 PayWhere is an Android application that helps mobile payment users to
 find suitable dining outlets in shopping centres by displaying those
@@ -95,17 +95,17 @@ Contributing
 ============
 
 You may get in touch with us at
-[[teammarshmallow2019\@gmail.com]{.underline}](mailto:teammarshmallow2019@gmail.com).
+[teammarshmallow2019\@gmail.com](mailto:teammarshmallow2019@gmail.com).
 
 Alternatively, before submitting pull requests on GitHub, contributors
-must sign Google\'s [[individual contributor license
-agreement]{.underline}](https://cla.developers.google.com/about/google-individual).
+must sign Google\'s [individual contributor license
+agreement](https://cla.developers.google.com/about/google-individual).
 
 Thanks
 ======
 
 We would like to thank Freepik from
-[[https://www.flaticon.com]{.underline}](https://www.flaticon.com) for
+[https://www.flaticon.com](https://www.flaticon.com) for
 the icons used.
 
 Authors
@@ -118,5 +118,5 @@ Shawn Lee - \@shawnlsj97 on GitHub
 License
 =======
 
-PayWhere is [[GNU
-AGPLv3-licensed]{.underline}](https://github.com/shawnlsj97/PayWhere/blob/master/LICENSE).
+PayWhere is [GNU
+AGPLv3-licensed](https://github.com/shawnlsj97/PayWhere/blob/master/LICENSE).
