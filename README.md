@@ -86,5 +86,4 @@ Shawn Lee - \@shawnlsj97 on GitHub
 
 ## License
 
-PayWhere is [GNU
-AGPLv3-licensed](https://github.com/shawnlsj97/PayWhere/blob/master/LICENSE).
+PayWhere is [Attribution-NonCommercial-NoDerivatives 4.0 International-licensed](https://github.com/shawnlsj97/PayWhere/blob/master/LICENSE).
