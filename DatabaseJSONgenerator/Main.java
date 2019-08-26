@@ -67,12 +67,13 @@ public class Main {
             String mallName = sc.nextLine();
             System.out.println("    \"" + mallName + "\" : {");
             int numRest = Integer.parseInt(sc.nextLine());
-            Mall.mallArray[i] = new Mall(mallName, numRest);
+            Mall currMall = new Mall(mallName, numRest);
+            Mall.mallArray[i] = currMall;
 
             for (int j = 0; j < numRest; j++) {
                 String currLine = sc.nextLine();
                 String[] currArray = currLine.split(", ");
-                Mall.mallArray[i].restArray[j] = new Restaurant(currArray[0], currArray[1]);
+                Mall.mallArray[i].restArray[j] = new Restaurant(currArray[0], currArray[1], currMall);
                 if (j == numRest - 1) {
                     Mall.mallArray[i].restArray[j].printRestLast();
                 } else {

@@ -3,10 +3,12 @@ import java.util.*;
 class Restaurant {
     private String name;
     private String unitNumber;
+    private Mall mall;
 
-    Restaurant (String name, String unitNumber) {
+    Restaurant (String name, String unitNumber, Mall mall) {
         this.name = name;
         this.unitNumber = unitNumber;
+        this.mall = mall;
     }
 
     public boolean hasDash() {
