@@ -25,9 +25,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView;
@@ -36,24 +34,17 @@ import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
-
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -556,17 +547,10 @@ public class SearchResults extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 stores = new ArrayList<>();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    if (ds.child("image").getValue() == null) {
-                        stores.add(new Store(ds.child("name").getValue().toString(),
-                                ds.child("payment").getValue().toString(),
-                                ds.child("address").getValue().toString(),
-                                ""));
-                    } else {
-                        stores.add(new Store(ds.child("name").getValue().toString(),
-                                ds.child("payment").getValue().toString(),
-                                ds.child("address").getValue().toString(),
-                                ds.child("image").getValue().toString()));
-                    }
+                    stores.add(new Store(ds.child("name").getValue().toString(),
+                    ds.child("payment").getValue().toString(),
+                    ds.child("address").getValue().toString(),
+                    ds.child("image").getValue().toString()));
                 }
                 // sort stores based on name lexicographically ignoring case
                 Collections.sort(stores, new StoreComparator());
