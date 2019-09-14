@@ -1,28 +1,21 @@
-/*
-This programme generates a JSON file for the dining outlets in malls.
-We have:
-- mall
-    - restaurant
-        - name
-        - unit number
-        - mobile payments accepted (currently Dash, Grab, Nets)
-        - URL for icon on Firebase
-
-Input format:
-mall name
-# of dining outlets in mall
-outlet name, unit number
-*/
-
 import java.util.*;
 import java.io.*;
 
+/**
+ * Generates a JSON file of the malls supported by PayWhere.
+ */
 public class Main {
 
     public static ArrayList<String> dashArray = new ArrayList<>();;
     public static ArrayList<GrabMerchant> grabArray = new ArrayList<>();;
     public static ArrayList<String> netsArray = new ArrayList<>();
 
+    /**
+     * Reads and stores the Singtel Dash merchants.
+     * 
+     * @param filePath File path of Singtel Dash merchants.
+     * @throws FileNotFoundException If file cannot be found.
+     */
     public static void readDashMerchants(String filePath) throws FileNotFoundException {
         File f = new File(filePath);
         Scanner sc = new Scanner(f);
@@ -32,6 +25,11 @@ public class Main {
         sc.close();
     }
 
+    /**
+     * Reads and stores the GrabPay merchants.
+     * @param filePath File path of GrabPay merchants.
+     * @throws FileNotFoundException If file cannot be found.
+     */
     public static void readGrabMerchants(String filePath) throws FileNotFoundException {
         File f = new File(filePath);
         Scanner sc = new Scanner(f);
@@ -44,6 +42,11 @@ public class Main {
         sc.close();
     }
 
+    /**
+     * Reads and stores the Nets QR merchants.
+     * @param filePath File path of Nets QR merchants.
+     * @throws FileNotFoundException If file cannot be found.
+     */
     public static void readNetsMerchants(String filePath) throws FileNotFoundException {
         File f = new File(filePath);
         Scanner sc = new Scanner(f);
@@ -53,6 +56,11 @@ public class Main {
         sc.close();
     }
 
+    /**
+     * Main logic of the Database JSON Generator.
+     * 
+     * @param args Unused.
+     */
     public static void main (String[] args) {
         try {
             readDashMerchants("MobileWallets/dash.txt");
