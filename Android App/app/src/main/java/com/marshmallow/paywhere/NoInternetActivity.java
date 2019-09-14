@@ -155,7 +155,7 @@ public class NoInternetActivity extends AppCompatActivity {
                                     showOnlineToast();
                                     if (activity.equals("search") || activity.equals("results") || activity.equals("error")) {
                                         String query = bundle.getString("input");
-                                        String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                                        String[] validMalls = bundle.getStringArray("suggestions");
                                         if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
                                             Intent searchResults = new Intent(getApplicationContext(), SearchResults.class);
                                             searchResults.putExtra("input", query);
@@ -169,6 +169,11 @@ public class NoInternetActivity extends AppCompatActivity {
                                             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                                             finish();
                                         }
+                                    } else {
+                                        Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
+                                        startActivity(searchActivity);
+                                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                                        finish();
                                     }
                                 }
                             }
@@ -181,10 +186,6 @@ public class NoInternetActivity extends AppCompatActivity {
         IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(networkChangeReceiver, intentFilter);
         registered = true;
-
-        AdView adView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
     }
 
     /**

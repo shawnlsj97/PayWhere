@@ -134,31 +134,15 @@ public class SearchResults extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (restoreThemePref()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            setTheme(R.style.DarkTheme);
-        } else {
-            setTheme(R.style.AppTheme);
-        }
+
+        setAppTheme();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
         pb = findViewById(R.id.progress_bar);
-        toolBar = findViewById(R.id.successToolbar);
-        setSupportActionBar(toolBar);
-        ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
-        ab.setDisplayShowTitleEnabled(false);
-        toolBar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+
+        configureToolbar();
 
         searchView = findViewById(R.id.successSearchView);
         Bundle bundle = getIntent().getExtras();
@@ -168,7 +152,9 @@ public class SearchResults extends AppCompatActivity {
         searchView.clearFocus();
 
         final SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
-        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item, R.id.suggestion, getResources().getStringArray(R.array.search_suggestions));
+        final String[] suggestions = bundle.getStringArray("suggestions");
+        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item,
+                R.id.suggestion, suggestions);
         searchAutoComplete.setAdapter(suggestionAdapter);
         searchAutoComplete.setThreshold(1);
         searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -183,10 +169,11 @@ public class SearchResults extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if (haveNetworkConnection()) {
-                    String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                    String[] validMalls = suggestions;
                     if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
                         Intent intent = new Intent(getApplicationContext(), SearchResults.class);
                         intent.putExtra("input", query);
+                        intent.putExtra("suggestions", suggestions);
                         startActivity(intent);
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         searchView.clearFocus();
@@ -194,6 +181,7 @@ public class SearchResults extends AppCompatActivity {
                     } else {
                         Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
                         errorIntent.putExtra("input", query);
+                        errorIntent.putExtra("suggestions", suggestions);
                         startActivity(errorIntent);
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
@@ -540,6 +528,20 @@ public class SearchResults extends AppCompatActivity {
         adView.loadAd(adRequest);
     }
 
+    private void configureToolbar() {
+        toolBar = findViewById(R.id.successToolbar);
+        setSupportActionBar(toolBar);
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayShowTitleEnabled(false);
+        toolBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
     /**
      * Perform search on firebase using input string from user.
      * @param input User input in lower case.
@@ -663,5 +665,18 @@ public class SearchResults extends AppCompatActivity {
                 MODE_PRIVATE);
         boolean isDark = pref.getBoolean("isDark", false);
         return isDark;
+    }
+
+    private void setAppTheme() {
+        if (restoreThemePref()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
     }
 }

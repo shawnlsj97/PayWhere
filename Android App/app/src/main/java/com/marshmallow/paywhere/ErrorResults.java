@@ -88,7 +88,9 @@ public class ErrorResults extends AppCompatActivity {
         searchView.setQuery(input, false);
 
         final SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
-        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item, R.id.suggestion, getResources().getStringArray(R.array.search_suggestions));
+        final String[] suggestions = bundle.getStringArray("suggestions");
+        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item,
+                R.id.suggestion, suggestions);
         searchAutoComplete.setAdapter(suggestionAdapter);
         searchAutoComplete.setThreshold(1);
         searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -103,10 +105,11 @@ public class ErrorResults extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if (haveNetworkConnection()) {
-                    String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                    String[] validMalls = suggestions;
                     if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
                         Intent intent = new Intent(getApplicationContext(), SearchResults.class);
                         intent.putExtra("input", query);
+                        intent.putExtra("suggestions", suggestions);
                         startActivity(intent);
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         searchView.clearFocus();
@@ -114,6 +117,7 @@ public class ErrorResults extends AppCompatActivity {
                     } else {
                         Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
                         errorIntent.putExtra("input", query);
+                        errorIntent.putExtra("suggestions", suggestions);
                         startActivity(errorIntent);
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;

@@ -82,9 +82,17 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
-                startActivity(searchActivity);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                if (haveNetworkConnection()) {
+                    Intent searchActivity = new Intent(getApplicationContext(), SearchActivity.class);
+                    startActivity(searchActivity);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                } else {
+                    showOfflineToast();
+                    Intent noInternetActivity = new Intent(getApplicationContext(), NoInternetActivity.class);
+                    noInternetActivity.putExtra("activity", "main");
+                    startActivity(noInternetActivity);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
             }
         });
 
@@ -150,5 +158,38 @@ public class MainActivity extends AppCompatActivity {
                 MODE_PRIVATE);
         boolean isDark = pref.getBoolean("isDark", false);
         return isDark;
+    }
+
+    /**
+     * Displays toast message informing user that there is no network connection.
+     */
+    public void showOfflineToast() {
+        View toastView = getLayoutInflater().inflate(R.layout.offline_toast, null);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "No Connection :(", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
+        toast.setView(toastView);
+        toast.show();
+    }
+
+    /**
+     * Checks if there is internet connectivity. Both wifi and mobile data are checked to determine if there is internet connectivity.
+     * @return True if internet connectivity exists, false otherwise.
+     */
+    private boolean haveNetworkConnection() {
+        boolean haveConnectedWifi = false;
+        boolean haveConnectedMobile = false;
+
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        for (NetworkInfo ni : netInfo) {
+            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+                if (ni.isConnected())
+                    haveConnectedWifi = true;
+            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (ni.isConnected())
+                    haveConnectedMobile = true;
+        }
+        return haveConnectedWifi || haveConnectedMobile;
     }
 }

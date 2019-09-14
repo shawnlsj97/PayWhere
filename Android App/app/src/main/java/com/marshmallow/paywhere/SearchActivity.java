@@ -69,18 +69,8 @@ public class SearchActivity extends AppCompatActivity {
         configureToolbar();
         // Automatically bring focus to searchview which brings up the keyboard for input.
         focusOnSearchview();
-        configureSuggestions();
+        configureSearchSuggestions(this);
         addSearchFunctionality();
-    }
-
-    private void setAppTheme() {
-        if (isThemeDark()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            setTheme(R.style.DarkTheme);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            setTheme(R.style.AppTheme);
-        }
     }
 
     private void configureToolbar() {
@@ -102,12 +92,42 @@ public class SearchActivity extends AppCompatActivity {
         searchView.requestFocus();
     }
 
-    private void configureSuggestions() {
-        SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
-        retrieveOfflineMallSuggestion(searchAutoComplete);
-//        retrieveMallSuggestion();
-        // sort suggestions based on name lexicographically ignoring case
-//        Collections.sort(searchSuggestions, String.CASE_INSENSITIVE_ORDER);
+    private void configureSearchSuggestions(final Context c) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("malls");
+        searchSuggestions = new ArrayList<>();
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                searchSuggestions = new ArrayList<>();
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    String mallName = ds.getKey();
+                    searchSuggestions.add(toTitleCase(mallName));
+                }
+                Collections.sort(searchSuggestions, String.CASE_INSENSITIVE_ORDER);
+                SearchView.SearchAutoComplete searchAutoComplete =
+                        searchView.findViewById(androidx.appcompat.R.id.search_src_text);
+                String[] suggestions = searchSuggestions.toArray(new String[0]);
+                ArrayAdapter suggestionAdapter = new ArrayAdapter(c, R.layout.suggestion_item,
+                        R.id.suggestion, suggestions);
+                searchAutoComplete.setAdapter(suggestionAdapter);
+                // Suggestions only appear after input of first letter
+                searchAutoComplete.setThreshold(1);
+                // Clicking on suggestion immediately proceeds with search
+                searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String item = (String) parent.getAdapter().getItem(position);
+                        searchView.setQuery(item, true);
+                    }
+                });
+                Log.i("size of suggestions", String.valueOf(suggestions.length));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
     }
 
     private void addSearchFunctionality() {
@@ -117,10 +137,11 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if (haveNetworkConnection()) {
-                    String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
+                    String[] validMalls = searchSuggestions.toArray(new String[0]);
                     if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
                         Intent intent = new Intent(getApplicationContext(), SearchResults.class);
                         intent.putExtra("input", query);
+                        intent.putExtra("suggestions", searchSuggestions.toArray(new String[0]));
                         startActivity(intent);
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         searchView.clearFocus();
@@ -128,6 +149,8 @@ public class SearchActivity extends AppCompatActivity {
                     } else {
                         Intent errorIntent = new Intent(getApplicationContext(), ErrorResults.class);
                         errorIntent.putExtra("input", query);
+                        errorIntent.putExtra("suggestions",
+                                searchSuggestions.toArray(new String[0]));
                         startActivity(errorIntent);
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         return true;
@@ -146,41 +169,6 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;
-            }
-        });
-    }
-
-    private void retrieveOfflineMallSuggestion(SearchView.SearchAutoComplete searchAutoComplete) {
-        // Search suggestions adapter.
-        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item,
-                R.id.suggestion, getResources().getStringArray(R.array.search_suggestions));
-        searchAutoComplete.setAdapter(suggestionAdapter);
-        // Suggestions only appear after input of first letter;
-        searchAutoComplete.setThreshold(1);
-        // Clicking on suggestion immediately proceeds with search.
-        searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String item = (String) parent.getAdapter().getItem(position);
-                searchView.setQuery(item, true);
-            }
-        });
-    }
-
-    private void retrieveMallSuggestion() {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("malls");
-        searchSuggestions = new ArrayList<>();
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    searchSuggestions.add(toTitleCase(ds.child("name").getValue().toString()));
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                throw databaseError.toException();
             }
         });
     }
@@ -260,6 +248,16 @@ public class SearchActivity extends AppCompatActivity {
         }
 
         return output.toString();
+    }
+
+    private void setAppTheme() {
+        if (isThemeDark()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            setTheme(R.style.DarkTheme);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            setTheme(R.style.AppTheme);
+        }
     }
 }
 
