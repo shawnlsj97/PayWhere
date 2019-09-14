@@ -1,9 +1,15 @@
 import java.util.*;
 
+/**
+ * A class that represents the icons of the restaurants supported by PayWhere.
+ */
 public class Icon {
     
     public static HashMap<String, String> imgHash = new HashMap<String, String>();
 
+    /**
+     * Populates the HashMap with names of restaurants as keys and URLs of icons as values.
+     */
     public static void makeHash() {
         hashNum();
         hashA();

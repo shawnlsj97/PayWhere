@@ -1,68 +1,80 @@
-/*
-This programme generates a JSON file for the dining outlets in malls.
-We have:
-- mall
-    - restaurant
-        - name
-        - unit number
-        - mobile payments accepted (currently Dash, Grab, Nets)
-        - URL for icon on Firebase
-
-General input format:
-# of Dash merchants
-Dash merchants
-# of Grab merchants
-Grab merchants
-# of Nets merchants
-Nets merchants
-# of malls
-[mall input]
-
-Mall input format:
-mall name
-# of dining outlets in mall
-outlet name, unit number
-*/
-
 import java.util.*;
+import java.io.*;
 
+/**
+ * Generates a JSON file of the malls supported by PayWhere.
+ */
 public class Main {
 
-    public static String[] dashArray;
-    public static String[] grabArray;
-    public static String[] netsArray;
+    public static ArrayList<String> dashArray = new ArrayList<>();;
+    public static ArrayList<GrabMerchant> grabArray = new ArrayList<>();;
+    public static ArrayList<String> netsArray = new ArrayList<>();
 
+    /**
+     * Reads and stores the Singtel Dash merchants.
+     * 
+     * @param filePath File path of Singtel Dash merchants.
+     * @throws FileNotFoundException If file cannot be found.
+     */
+    public static void readDashMerchants(String filePath) throws FileNotFoundException {
+        File f = new File(filePath);
+        Scanner sc = new Scanner(f);
+        while (sc.hasNextLine()) {
+            dashArray.add(sc.nextLine());
+        }
+        sc.close();
+    }
+
+    /**
+     * Reads and stores the GrabPay merchants.
+     * @param filePath File path of GrabPay merchants.
+     * @throws FileNotFoundException If file cannot be found.
+     */
+    public static void readGrabMerchants(String filePath) throws FileNotFoundException {
+        File f = new File(filePath);
+        Scanner sc = new Scanner(f);
+        while (sc.hasNextLine()) {
+            String currLine = sc.nextLine();
+            String[] currArray = currLine.split(", ");
+            GrabMerchant currMerchant = new GrabMerchant(currArray[0], currArray[1]);
+            grabArray.add(currMerchant);
+        }
+        sc.close();
+    }
+
+    /**
+     * Reads and stores the Nets QR merchants.
+     * @param filePath File path of Nets QR merchants.
+     * @throws FileNotFoundException If file cannot be found.
+     */
+    public static void readNetsMerchants(String filePath) throws FileNotFoundException {
+        File f = new File(filePath);
+        Scanner sc = new Scanner(f);
+        while (sc.hasNextLine()) {
+            netsArray.add(sc.nextLine());
+        }
+        sc.close();
+    }
+
+    /**
+     * Main logic of the Database JSON Generator.
+     * 
+     * @param args Unused.
+     */
     public static void main (String[] args) {
+        try {
+            readDashMerchants("MobileWallets/dash.txt");
+            readGrabMerchants("MobileWallets/grabpay_merchants.txt");
+            readNetsMerchants("MobileWallets/nets.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+
         Scanner sc = new Scanner(System.in);
-
-        int numDash = Integer.parseInt(sc.nextLine());
-        dashArray = new String[numDash];
-        for (int i = 0; i < numDash; i++) {
-            String currMerchant = sc.nextLine();
-            dashArray[i] = currMerchant;
-        }
-
-        int numGrab = Integer.parseInt(sc.nextLine());
-        grabArray = new String[numGrab];
-        for (int i = 0; i < numGrab; i++) {
-            String currMerchant = sc.nextLine();
-            grabArray[i] = currMerchant;
-        }
-
-        int numNets = Integer.parseInt(sc.nextLine());
-        netsArray = new String[numNets];
-        for (int i = 0; i < numNets; i++) {
-            String currMerchant = sc.nextLine();
-            netsArray[i] = currMerchant;
-        }
-
-
         System.out.println("{");
         int numMalls = Integer.parseInt(sc.nextLine());
         Mall.mallArray = new Mall[numMalls];
-
         Icon.makeHash();
-
         for (int i = 0; i < numMalls; i++) {
             String mallName = sc.nextLine();
             System.out.println("    \"" + mallName + "\" : {");
@@ -86,6 +98,8 @@ public class Main {
                 Mall.printMallClose();
             }
         }
+        sc.close();
         System.out.println("}");
+        
     }
 }
