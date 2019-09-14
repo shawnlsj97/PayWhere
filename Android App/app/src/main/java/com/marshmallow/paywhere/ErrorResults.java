@@ -22,6 +22,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.Arrays;
 
 public class ErrorResults extends AppCompatActivity {
@@ -137,6 +140,10 @@ public class ErrorResults extends AppCompatActivity {
         String errorMsg1 = getResources().getString(R.string.error_text_1);
         String errorMsg2 = getResources().getString(R.string.error_text_2);
         textView.setText(errorMsg1 + '\n' + errorMsg2);
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     /**

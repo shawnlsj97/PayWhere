@@ -19,6 +19,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.Arrays;
 
 /**
@@ -95,7 +99,7 @@ public class NoInternetActivity extends AppCompatActivity {
         });
 
         // retry button for users to click on when they have turned on their internet connection
-        retry = findViewById(R.id.reset_tv);
+        retry = findViewById(R.id.retry_tv);
         retry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,7 +153,7 @@ public class NoInternetActivity extends AppCompatActivity {
                                 if (!isConnected) {
                                     isConnected = true;
                                     showOnlineToast();
-                                    if (activity.equals("search") | activity.equals("results") | activity.equals("error")) {
+                                    if (activity.equals("search") || activity.equals("results") || activity.equals("error")) {
                                         String query = bundle.getString("input");
                                         String[] validMalls = getResources().getStringArray(R.array.search_suggestions);
                                         if ((Arrays.asList(validMalls)).contains(toTitleCase(query))) {
@@ -177,6 +181,10 @@ public class NoInternetActivity extends AppCompatActivity {
         IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(networkChangeReceiver, intentFilter);
         registered = true;
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     /**

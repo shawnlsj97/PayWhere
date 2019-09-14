@@ -36,6 +36,9 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -531,6 +534,10 @@ public class SearchResults extends AppCompatActivity {
                 DividerItemDecoration.VERTICAL));
 
         firebaseSearch(input.toLowerCase());
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     /**
@@ -600,7 +607,7 @@ public class SearchResults extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        searchView.setQuery(originalText,false);
+        searchView.setQuery(toTitleCase(originalText),false);
     }
 
     /**

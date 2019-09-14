@@ -13,6 +13,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -74,6 +77,10 @@ public class FavouritesActivity extends AppCompatActivity {
         Activity activity = this;
         adapter = new FavouritesAdapter(malls, getApplicationContext(), activity);
         recyclerView.setAdapter(adapter);
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

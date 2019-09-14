@@ -16,6 +16,12 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 /**
  * This is the home page that users first see when they launch PayWhere.
  * The 'MainActivity' class supports methods which include:
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         searchView = findViewById(R.id.searchView);
         // If have internet connection, proceed to search page, otherwise go to error page. This
         // function dictates action of the search icon only.
@@ -131,6 +138,11 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
+
+        MobileAds.initialize(this, "ca-app-pub-9776147023910692~9503606303");
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     private boolean restoreThemePref() {

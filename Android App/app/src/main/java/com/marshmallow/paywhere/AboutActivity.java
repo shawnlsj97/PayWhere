@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class AboutActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -41,6 +44,10 @@ public class AboutActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

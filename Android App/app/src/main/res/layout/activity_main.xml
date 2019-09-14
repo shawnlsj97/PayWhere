@@ -63,7 +63,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/about" />
 
@@ -72,7 +72,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintStart_toEndOf="@id/aboutImageView"
         app:layout_constraintEnd_toStartOf="@id/favouritesImageView"
         app:srcCompat="@drawable/feedback_icon" />
@@ -82,7 +82,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintStart_toEndOf="@id/feedbackImageView"
         app:layout_constraintEnd_toStartOf="@id/infoImageView"
         app:srcCompat="@drawable/favourites_icon" />
@@ -92,7 +92,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintStart_toEndOf="@id/favouritesImageView"
         app:layout_constraintEnd_toStartOf="@id/settingsImageView"
         app:srcCompat="@drawable/lifesaver" />
@@ -103,8 +103,21 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/settings_icon" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

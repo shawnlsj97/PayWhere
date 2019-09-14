@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class SettingsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -64,6 +67,10 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             }
         });
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     private void refreshApp() {

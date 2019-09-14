@@ -17,6 +17,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class FeedbackActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -73,6 +76,10 @@ public class FeedbackActivity extends AppCompatActivity {
                 startActivity(send);
             }
         });
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

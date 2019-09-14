@@ -3,6 +3,8 @@ package com.marshmallow.paywhere;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,13 +17,25 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * This is the page where users input their mall that they intend to visit.
@@ -35,6 +49,7 @@ public class SearchActivity extends AppCompatActivity {
 
     private Toolbar toolBar;
     private SearchView searchView;
+    private ArrayList<String> searchSuggestions;
 
     /**
      * Method that initialises the view of our search activity.
@@ -46,51 +61,56 @@ public class SearchActivity extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (restoreThemePref()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            setTheme(R.style.DarkTheme);
-        } else {
-            setTheme(R.style.AppTheme);
-        }
+        // Check if user has selected Night Mode and sets the theme accordingly
+        setAppTheme();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        configureToolbar();
+        // Automatically bring focus to searchview which brings up the keyboard for input.
+        focusOnSearchview();
+        configureSuggestions();
+        addSearchFunctionality();
+    }
+
+    private void setAppTheme() {
+        if (isThemeDark()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            setTheme(R.style.DarkTheme);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            setTheme(R.style.AppTheme);
+        }
+    }
+
+    private void configureToolbar() {
         toolBar = findViewById(R.id.toolbar);
         setSupportActionBar(toolBar);
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayShowTitleEnabled(false);
-
-        // Up button has same behavior as back button.
         toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
+    }
 
+    private void focusOnSearchview() {
         searchView = findViewById(R.id.searchView);
-        // Automatically bring focus to searchview which brings up the keyboard for input.
         searchView.requestFocus();
-        final SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
-        // Search suggestions adapter.
-        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item, R.id.suggestion, getResources().getStringArray(R.array.search_suggestions));
-        searchAutoComplete.setAdapter(suggestionAdapter);
-        // Suggestions only appear after input of first letter;
-        searchAutoComplete.setThreshold(1);
-        // Clicking on suggestion immediately proceeds with search.
-        searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String item = (String) parent.getAdapter().getItem(position);
-                searchView.setQuery(item, true);
-            }
-        });
+    }
 
+    private void configureSuggestions() {
+        SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
+        retrieveOfflineMallSuggestion(searchAutoComplete);
+//        retrieveMallSuggestion();
+        // sort suggestions based on name lexicographically ignoring case
+//        Collections.sort(searchSuggestions, String.CASE_INSENSITIVE_ORDER);
+    }
+
+    private void addSearchFunctionality() {
         // If have internet connection, check if query is valid. If valid, proceed to results
         // page, else proceed to error page. If no internet connection, go to error page.
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -130,28 +150,39 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Converts input query to title case.
-     * @param input Input string from user.
-     * @return String that is converted from user input to title case.
-     */
-    public String toTitleCase(String input) {
-
-        StringBuilder output = new StringBuilder();
-        boolean convertNext = true;
-        for (char ch : input.toCharArray()) {
-            if (Character.isSpaceChar(ch)) {
-                convertNext = true;
-            } else if (convertNext) {
-                ch = Character.toTitleCase(ch);
-                convertNext = false;
-            } else {
-                ch = Character.toLowerCase(ch);
+    private void retrieveOfflineMallSuggestion(SearchView.SearchAutoComplete searchAutoComplete) {
+        // Search suggestions adapter.
+        ArrayAdapter suggestionAdapter = new ArrayAdapter(this, R.layout.suggestion_item,
+                R.id.suggestion, getResources().getStringArray(R.array.search_suggestions));
+        searchAutoComplete.setAdapter(suggestionAdapter);
+        // Suggestions only appear after input of first letter;
+        searchAutoComplete.setThreshold(1);
+        // Clicking on suggestion immediately proceeds with search.
+        searchAutoComplete.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = (String) parent.getAdapter().getItem(position);
+                searchView.setQuery(item, true);
             }
-            output.append(ch);
-        }
+        });
+    }
 
-        return output.toString();
+    private void retrieveMallSuggestion() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("malls");
+        searchSuggestions = new ArrayList<>();
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    searchSuggestions.add(toTitleCase(ds.child("name").getValue().toString()));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
     }
 
     @Override
@@ -200,11 +231,35 @@ public class SearchActivity extends AppCompatActivity {
         toast.show();
     }
 
-    private boolean restoreThemePref() {
+    private boolean isThemeDark() {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("theme",
                 MODE_PRIVATE);
         boolean isDark = pref.getBoolean("isDark", false);
         return isDark;
+    }
+
+    /**
+     * Converts input query to title case.
+     * @param input Input string from user.
+     * @return String that is converted from user input to title case.
+     */
+    public String toTitleCase(String input) {
+
+        StringBuilder output = new StringBuilder();
+        boolean convertNext = true;
+        for (char ch : input.toCharArray()) {
+            if (Character.isSpaceChar(ch)) {
+                convertNext = true;
+            } else if (convertNext) {
+                ch = Character.toTitleCase(ch);
+                convertNext = false;
+            } else {
+                ch = Character.toLowerCase(ch);
+            }
+            output.append(ch);
+        }
+
+        return output.toString();
     }
 }
 
