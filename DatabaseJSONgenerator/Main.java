@@ -20,7 +20,7 @@ import java.io.*;
 public class Main {
 
     public static ArrayList<String> dashArray = new ArrayList<>();;
-    public static ArrayList<String> grabArray = new ArrayList<>();;
+    public static ArrayList<GrabMerchant> grabArray = new ArrayList<>();;
     public static ArrayList<String> netsArray = new ArrayList<>();
 
     public static void readDashMerchants(String filePath) throws FileNotFoundException {
@@ -36,7 +36,10 @@ public class Main {
         File f = new File(filePath);
         Scanner sc = new Scanner(f);
         while (sc.hasNextLine()) {
-            grabArray.add(sc.nextLine());
+            String currLine = sc.nextLine();
+            String[] currArray = currLine.split(", ");
+            GrabMerchant currMerchant = new GrabMerchant(currArray[0], currArray[1]);
+            grabArray.add(currMerchant);
         }
         sc.close();
     }
@@ -53,7 +56,7 @@ public class Main {
     public static void main (String[] args) {
         try {
             readDashMerchants("MobileWallets/dash.txt");
-            readGrabMerchants("MobileWallets/grabpay.txt");
+            readGrabMerchants("MobileWallets/grabpay_merchants.txt");
             readNetsMerchants("MobileWallets/nets.txt");
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());

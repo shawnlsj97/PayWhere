@@ -23,8 +23,10 @@ class Restaurant {
 
     public boolean hasGrab() {
         Boolean containsFlag = false;
-        for (String merchant : Main.grabArray) {
-            if (name.compareToIgnoreCase(merchant) == 0) {
+        for (GrabMerchant merchant : Main.grabArray) {
+            String merchantName = merchant.getName();
+            String merchantAddress = merchant.getAddress().toLowerCase();
+            if ((name.compareToIgnoreCase(merchantName) == 0) && (merchantAddress.contains(mall.getName()))) {
                 containsFlag = true;
             }
         }

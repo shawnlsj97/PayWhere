@@ -8,6 +8,10 @@ class Mall {
         this.restArray = new Restaurant[numRest];
     }
 
+    public String getName() {
+        return name;
+    }
+    
     public static void printMallClose() {
         System.out.println("    },");
     }
