@@ -12,19 +12,21 @@ accepted in an easy-to-use and elegant interface.
 <img src="./READMEMedia/media/image2.png" width="700" height="393" />
 
 PayWhere currently supports:
--   33 shopping malls across Singapore
+-   35 shopping malls across Singapore
     -   Capitaland Malls
         -   Bedok Mall, Bugis Junction, Bugis+, Bukit Panjang Plaza,
             Clarke Quay, Funan, IMM, ION Orchard, JCube, Jewel Changi
             Airport, Junction 8, Lot One, Plaza Singapura, Raffles City,
             Singpost Centre, Tampines Mall, The Star Vista, Westgate
     -   Frasers Property Malls
-        -   Anchorpoint, Changi City Point, Northpoint City, Robertson
+        -   Anchorpoint, Changi City Point, Eastpoint Mall, Northpoint City, Robertson
             Walk, The Centrepoint, ValleyPoint, Waterway Point, YewTee
             Point
     -   AsiaMalls
         -   Century Square, Hougang Mall, Tampines 1, Tiong Bahru Plaza,
             White Sands
+    -   Others
+        -   NEX
 -   6 major mobile payment platforms
     -   Singtel Dash
     -   GrabPay
