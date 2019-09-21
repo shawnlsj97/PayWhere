@@ -78,6 +78,6 @@
         ads:layout_constraintStart_toStartOf="parent"
         ads:layout_constraintEnd_toEndOf="parent"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="ca-app-pub-9776147023910692/3736274304">
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
     </com.google.android.gms.ads.AdView>
 </androidx.constraintlayout.widget.ConstraintLayout>
