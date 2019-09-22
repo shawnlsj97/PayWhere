@@ -86,11 +86,7 @@ public class Main {
                 String currLine = sc.nextLine();
                 String[] currArray = currLine.split(", ");
                 Mall.mallArray[i].restArray[j] = new Restaurant(currArray[0], currArray[1], currMall);
-                if (j == numRest - 1) {
-                    Mall.mallArray[i].restArray[j].printRestLast();
-                } else {
-                    Mall.mallArray[i].restArray[j].printRest();
-                }
+                Mall.mallArray[i].restArray[j].printRest(j, numRest);
             }
             if (i == numMalls - 1) {
                 Mall.printMallCloseLast();

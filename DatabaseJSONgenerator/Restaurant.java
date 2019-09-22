@@ -99,7 +99,7 @@ public class Restaurant {
     /**
      * Prints the contents of this restaurant in the JSON file, followed by a comma at the end.
      */
-    public void printRest() {
+    public void printRest(int index, int numRest) {
         System.out.println("        \"" + name + "\" : {");
         System.out.println("            \"name\" : " + "\"" + name + "\",");
         System.out.println("            \"address\" : " + "\"" + unitNumber+ "\",");
@@ -109,22 +109,11 @@ public class Restaurant {
         } else {
             System.out.println("            \"image\" : " + "\"\"");
         }
-        System.out.println("        " + "},");
+        if (index == numRest - 1) {
+            System.out.println("        " + "}");
+        } else {
+            System.out.println("        " + "},");
+        }
     }
 
-    /**
-     * Prints the contents of this restaurant in the JSON file.
-     */
-    public void printRestLast() {
-        System.out.println("        \"" + name + "\" : {");
-        System.out.println("            \"name\" : " + "\"" + name + "\",");
-        System.out.println("            \"address\" : " + "\"" + unitNumber + "\",");
-        System.out.println(getPayment() + ",");
-        if (Icon.imgHash.containsKey(name)) {
-            System.out.println("            \"image\" : " + "\"" + Icon.imgHash.get(name) + "\"");
-        } else {
-            System.out.println("            \"image\" : " + "\"\"");
-        }
-        System.out.println("        " + "}");
-    }
 }
