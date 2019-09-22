@@ -4,7 +4,7 @@ import java.util.*;
  * A class that represents the icons of the restaurants supported by PayWhere.
  */
 public class Icon {
-    
+
     public static HashMap<String, String> imgHash = new HashMap<String, String>();
 
     /**
@@ -39,7 +39,7 @@ public class Icon {
         hashY();
         hashZ();
     }
-    
+
     public static void hashNum() {
         imgHash.put("2it & Drink", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/2it_%26_Drink.png?alt=media&token=5e9b5ad8-7f77-460c-9c59-cd99c1776419");
         imgHash.put("2nd Bread セールス", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/2nd_Bread.png?alt=media&token=7a4407bf-eae5-452f-a773-153e37dcfb27");
@@ -204,7 +204,7 @@ public class Icon {
         imgHash.put("Cuba Libre Cafe & Bar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Cuba_Libre_Cafe_%26_Bar.png?alt=media&token=113c2009-52a4-40ee-a64b-76fbd7566ac5");
         imgHash.put("Cubemelt", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Cubemelt.png?alt=media&token=a0c3a50a-e481-44ee-91bb-a99ff65bf8e7");
         imgHash.put("Curry is Drink", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Curry_is_Drink.png?alt=media&token=cf93edbe-2eac-4a85-b277-b5dc317cfb02");
-        imgHash.put("Curry Times", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Curry_Times.png?alt=media&token=a28b8cf9-0728-4d26-9461-9f6128ca4e10");  
+        imgHash.put("Curry Times", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Curry_Times.png?alt=media&token=a28b8cf9-0728-4d26-9461-9f6128ca4e10");
     }
 
     public static void hashD() {
@@ -644,7 +644,7 @@ public class Icon {
         imgHash.put("Osaka Ohsho", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Osaka_Ohsho.png?alt=media&token=e0fea6fc-871e-4fb7-a2b8-99a3a0876afd");
         imgHash.put("Outback Steakhouse", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Outback_Steakhouse.png?alt=media&token=09d88dd3-e83a-4209-8a81-38d7341ec101");
     }
-    
+
     public static void hashP() {
         imgHash.put("Paddyfolks", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Paddyfolks.png?alt=media&token=dece7996-6a07-40b9-a5fc-195d85289dc8");
         imgHash.put("Paik's Bibimbap", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Paiks_Bibimbap.png?alt=media&token=b7839650-4b7e-4f47-bd64-6e1bc8d4c0e7");
@@ -713,7 +713,7 @@ public class Icon {
         imgHash.put("Qi Ji", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Qi_Ji.png?alt=media&token=b9e120b9-31a2-403e-b867-e83fedf31585");
         imgHash.put("Qian Wei Shan Dong Da Bao", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Qian_Wei_Shan_Dong_Da_Bao.png?alt=media&token=e02b232d-fe5e-4bcb-9286-addda514a3b4");
         imgHash.put("QQ Rice", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/QQ_rice.png?alt=media&token=4dcd8a6e-6b29-438f-9908-f03b0cc09cc4");
-        imgHash.put("Quayside Seafood Restaurant", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Quayside_Seafood_Restaurant.png?alt=media&token=a8801f3d-1fdb-4de7-92b7-0a2250b1330a");       
+        imgHash.put("Quayside Seafood Restaurant", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Quayside_Seafood_Restaurant.png?alt=media&token=a8801f3d-1fdb-4de7-92b7-0a2250b1330a");
     }
 
     public static void hashR() {
@@ -799,7 +799,7 @@ public class Icon {
         imgHash.put("SKAI", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/SKAI.png?alt=media&token=27cd5dde-a70f-4ebd-8c34-8c710071a2a5");
         imgHash.put("Slappy Cakes", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Slappy_Cakes.png?alt=media&token=66429472-b017-42ad-a53f-32d082bd40ed");
         imgHash.put("Snackz It! 可口味", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Snackz_It.png?alt=media&token=ee137f40-1128-4a26-9314-716a2846f602");
-        imgHash.put("Sō (Breadtalk Family)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/So.png?alt=media&token=fbe166eb-7b1b-441f-9c68-44c449d0e40c");        
+        imgHash.put("Sō (Breadtalk Family)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/So.png?alt=media&token=fbe166eb-7b1b-441f-9c68-44c449d0e40c");
         imgHash.put("So Pho", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/So_Pho.png?alt=media&token=de630458-4d6c-48b8-b5a3-c5e78d14a75e");
         imgHash.put("Sō Ramen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/So_Ramen.png?alt=media&token=f3a0266c-7957-422c-8471-5dc27a8bc439");
         imgHash.put("Social Square", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Social_Square.png?alt=media&token=b2cc4d0a-a203-4a15-a780-6b31d846b4ae");
@@ -837,7 +837,7 @@ public class Icon {
         imgHash.put("Swee Heng 1989 Classic", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Swee_Heng_1989_Classic.png?alt=media&token=1b40b105-eaf2-4b5f-99cd-052ebfcb7adc");
         imgHash.put("Swee Heng Bakery", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Swee_Heng_Bakery.png?alt=media&token=3b5396e9-d208-425e-bf4d-05a693bdcb32");
         imgHash.put("Swensen's", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Swensens.png?alt=media&token=5ad247e1-db42-486d-a6d8-6a805e841958");
-        imgHash.put("Szechuan Court & Kitchen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Szechuan_Court_%26_Kitchen.png?alt=media&token=b01adde6-0423-400b-95db-95a254141b2c"); 
+        imgHash.put("Szechuan Court & Kitchen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Szechuan_Court_%26_Kitchen.png?alt=media&token=b01adde6-0423-400b-95db-95a254141b2c");
     }
 
     public static void hashT() {
@@ -1048,6 +1048,6 @@ public class Icon {
         imgHash.put("Zaffron Kitchen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Zaffron_Kitchen.png?alt=media&token=7d7995d7-faf9-4a31-afdd-0466f5c05278");
         imgHash.put("Zouk", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Zouk.png?alt=media&token=df485f94-75be-470b-9299-d0238fbc1fca");
         imgHash.put("ZTP Herbal Tea", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/ZTP_Herbal_Tea.png?alt=media&token=8cd21551-83a7-42c5-9148-27ab429d5d1a");
-        imgHash.put("牛一嘴 Núodle", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/nuodle.png?alt=media&token=5bec26de-f96b-4462-820f-a57b951e31b9");    
+        imgHash.put("牛一嘴 Núodle", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/nuodle.png?alt=media&token=5bec26de-f96b-4462-820f-a57b951e31b9");
     }
 }
