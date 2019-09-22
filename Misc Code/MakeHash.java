@@ -1,15 +1,15 @@
-/*
+import java.util.ArrayList;
+import java.util.Scanner;
 
-Given lines of outlet names, this programme will generate the code that adds the outlet name to the key of HashMap imgHash.
-
-Value (icon URL) will be added manually.
-
-*/
-
-import java.util.*;
-
+/**
+ * This programme generates the method call to insert store name keys and image URL entries.
+ */
 public class MakeHash {
 
+    /**
+     * Takes in a a list of store names.
+     * Image URL is inserted manually.
+     */
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> names = new ArrayList<>();
@@ -17,7 +17,7 @@ public class MakeHash {
         while (sc.hasNextLine()) {
             String curr = sc.nextLine();
             names.add(curr);
-            output.add("        imgHash.put(\"" + curr + "\", \"\");"); 
+            output.add("        imgHash.put(\"" + curr + "\", \"\");");
         }
         for (String i : output) {
             System.out.println(i);

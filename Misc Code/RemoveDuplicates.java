@@ -1,15 +1,18 @@
-/*
-Dash merchants in .csv file with duplicates.
-Programme to get only 1 of each store name.
-*/
+import java.util.Scanner;
+import java.util.ArrayList;
 
-import java.util.*;
+/**
+ * This programme removes duplicate names.
+ */
+public class RemoveDuplicates {
 
-public class Main {
+    /**
+     * Takes in a list of names that might contain duplicates, to be removed.
+     */
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> nameArray = new ArrayList<>();
-        
+
         while (sc.hasNext()) {
             String currName = sc.nextLine();
             Boolean duplicateFlag = false;

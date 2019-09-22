@@ -1,7 +1,15 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.ArrayList;
 
-public class Main {
+/**
+ * This programme removes the parentheses and the words it contains at the end of a store name.
+ * Eg. LiHo (Tampines Mall) would just be LiHo.
+ */
+public class RemoveBracket {
 
+    /**
+     * Takes in a list of store names with parentheses at the end to be removed.
+     */
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> merchantArray = new ArrayList<>();
