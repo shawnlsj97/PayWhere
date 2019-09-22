@@ -8,8 +8,8 @@ public class Mall {
     private String name;
     private ArrayList<Restaurant> restaurants;
     private static ArrayList<Mall> malls = new ArrayList<>();
-    private final String TAB = "    ";
-    private final String QUOTE = "\"";
+    private static final String TAB = "    ";
+    private static final String QUOTE = "\"";
 
     /**
      * Creates a Mall object with the mall name and restaurants it contains.
@@ -94,6 +94,28 @@ public class Mall {
             String currRestaurantEntry = currRestaurant.getRestaurantEntry(i, restaurantCount);
             sb.append(currRestaurantEntry);
         }
+        return sb.toString();
+    }
+
+    /**
+     * Retrieves the dummy mall listing for all the mall names in the JSON file.
+     *
+     * @return Dummy mall listing.
+     */
+    public static String getMallsJson() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(TAB + QUOTE + "malls" + QUOTE + " : {\n");
+        for (int i = 0; i < malls.size(); i++) {
+            Mall mall = malls.get(i);
+            sb.append(TAB + TAB + QUOTE + mall.name + QUOTE + " : {\n");
+            sb.append(TAB + TAB + TAB + QUOTE + "name" + QUOTE + " : " + QUOTE + mall.name + QUOTE + "\n");
+            if (i == malls.size() - 1) {
+                sb.append(TAB + TAB + "}\n");
+            } else {
+                sb.append(TAB + TAB + "},\n");
+            }
+        }
+        sb.append(TAB + "},");
         return sb.toString();
     }
 

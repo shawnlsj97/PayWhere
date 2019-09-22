@@ -115,7 +115,7 @@ public class Restaurant {
             sb.append(TAB + TAB + TAB + QUOTE + "image" + QUOTE + " : " + QUOTE + QUOTE + "\n");
         }
         if (index == numRest - 1) {
-            sb.append(TAB + TAB + "}\n");
+            sb.append(TAB + TAB + "}");
         } else {
             sb.append(TAB + TAB + "},\n");
         }

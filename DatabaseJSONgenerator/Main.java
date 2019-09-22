@@ -16,6 +16,7 @@ public class Main {
         Reader.readMerchants();
         Reader.readMalls();
         System.out.println("{");
+        System.out.println(Mall.getMallsJson());
         for (int i = 0; i < Mall.getMalls().size(); i++) {
             Mall mall = Mall.getMalls().get(i);
             System.out.println(mall.getOpening());
