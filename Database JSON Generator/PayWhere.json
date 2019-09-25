@@ -514,7 +514,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B1-K8",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "iSTEAKS Diner" : {
@@ -822,7 +822,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B1-K5 (West Wing)",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Ichiban Boshi" : {
@@ -948,7 +948,7 @@
         "Pizza Hut" : {
             "name" : "Pizza Hut",
             "address" : "#B1-11 (West Wing)",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pizza_Hut.png?alt=media&token=2f70de94-b839-41c9-86ec-a4fde8bb428d"
         },
         "Playmade by 丸作" : {
@@ -1900,7 +1900,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-49 (North Wing)",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Central Hong Kong Café" : {
@@ -2440,7 +2440,7 @@
         "Pizza Hut" : {
             "name" : "Pizza Hut",
             "address" : "#B1-37 (North Wing)",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pizza_Hut.png?alt=media&token=2f70de94-b839-41c9-86ec-a4fde8bb428d"
         },
         "Pizza Hut Express" : {
@@ -2802,7 +2802,7 @@
         "Ajumma's" : {
             "name" : "Ajumma's",
             "address" : "#B1-31",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ajummas.png?alt=media&token=a0345574-a32f-43d5-8e32-4f95dd62efa6"
         },
         "avobites" : {
@@ -3290,7 +3290,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B1-K6/K7",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Choc Spot" : {
@@ -5300,7 +5300,7 @@
         "Janice Wong" : {
             "name" : "Janice Wong",
             "address" : "#B1-48",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Janice_Wong.png?alt=media&token=da03bbff-7ce4-4995-9cd1-6c5d862edaff"
         },
         "Joe & The Juice" : {
@@ -6588,7 +6588,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B2-258",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Icenoie Hokkaido" : {
@@ -6600,7 +6600,7 @@
         "Itacho Sushi" : {
             "name" : "Itacho Sushi",
             "address" : "#B2-210",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Itacho_Sushi.png?alt=media&token=c7004437-e7c1-4a97-a424-2f4199e86fb6"
         },
         "Jw360°" : {
@@ -7166,7 +7166,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B1-22",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Joe & Dough" : {
@@ -8210,7 +8210,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B1-K11 to 11A",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Itacho Sushi" : {
@@ -8530,7 +8530,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B2-73",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Chateraise" : {
@@ -8620,7 +8620,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B4-62",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Imperial Treasure Fine Teochew Cuisine" : {
@@ -9376,7 +9376,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-01",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Buddy Hoagies" : {
@@ -9514,7 +9514,7 @@
         "Pizza Hut" : {
             "name" : "Pizza Hut",
             "address" : "#02-03",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pizza_Hut.png?alt=media&token=2f70de94-b839-41c9-86ec-a4fde8bb428d"
         },
         "Pontian Wanton Noodles" : {
@@ -10294,7 +10294,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-110",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Bun Times" : {
@@ -10426,7 +10426,7 @@
         "O Banh Mi" : {
             "name" : "O Banh Mi",
             "address" : "#02-113",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/O_Banh_Mi.png?alt=media&token=c978d990-37cb-4e64-828d-d7019003d86c"
         },
         "Old Chang Kee" : {
@@ -12088,7 +12088,7 @@
         "Pot Luck" : {
             "name" : "Pot Luck",
             "address" : "#01-101A",
-            "payment" : "Dash",
+            "payment" : "",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pot_Luck.png?alt=media&token=4959d85c-2a17-41ab-b72c-e043f7105fe1"
         },
         "PrimaDéli" : {
