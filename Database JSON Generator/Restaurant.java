@@ -111,8 +111,8 @@ public class Restaurant {
         sb.append(TAB + TAB + TAB + QUOTE + "name" + QUOTE + " : " + QUOTE + name + QUOTE + ",\n");
         sb.append(TAB + TAB + TAB + QUOTE + "address" + QUOTE + " : " + QUOTE + unitNumber+ QUOTE + ",\n");
         sb.append(getPayment() + ",\n");
-        if (Icon.imgHash.containsKey(name)) {
-            sb.append(TAB + TAB + TAB + QUOTE + "image" + QUOTE + " : " + QUOTE + Icon.imgHash.get(name) + QUOTE + "\n");
+        if (Icon.iconMap.containsKey(name)) {
+            sb.append(TAB + TAB + TAB + QUOTE + "image" + QUOTE + " : " + QUOTE + Icon.iconMap.get(name) + QUOTE + "\n");
         } else {
             sb.append(TAB + TAB + TAB + QUOTE + "image" + QUOTE + " : " + QUOTE + QUOTE + "\n");
         }
