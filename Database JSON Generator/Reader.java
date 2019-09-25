@@ -5,14 +5,18 @@ import java.io.*;
 
 public class Reader {
 
-    public static ArrayList<String> dashArray = new ArrayList<>();;
+    public static ArrayList<DashMerchant> dashArray = new ArrayList<>();;
     public static ArrayList<GrabMerchant> grabArray = new ArrayList<>();;
     public static ArrayList<String> netsArray = new ArrayList<>();
-    public static final String dashFilePath = "MobileWallets/dash.txt";
+    public static final String dashFilePath = "MobileWallets/dash_merchants.txt";
     public static final String grabFilePath = "MobileWallets/grabpay_merchants.txt";
     public static final String netsFilePath = "MobileWallets/nets.txt";
     public static final String mallFilePath = "Malls";
 
+
+    public static ArrayList<DashMerchant> getDashArray() {
+        return dashArray;
+    }
 
     /**
      * Reads all the restaurants listed under the mall.
@@ -67,6 +71,7 @@ public class Reader {
             paths
                 .filter(Files::isRegularFile)
                 .forEach(p -> mallFilePaths.add(p.toString()));
+            paths.close();
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
@@ -96,7 +101,10 @@ public class Reader {
         File f = new File(filePath);
         Scanner sc = new Scanner(f);
         while (sc.hasNextLine()) {
-            dashArray.add(sc.nextLine());
+            String currLine = sc.nextLine();
+            String[] currArray = currLine.split(",", 2);
+            DashMerchant currMerchant = new DashMerchant(currArray[0], currArray[1]);
+            dashArray.add(currMerchant);
         }
         sc.close();
     }

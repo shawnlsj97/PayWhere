@@ -33,8 +33,10 @@ public class Restaurant {
      */
     private boolean hasDash() {
         Boolean containsFlag = false;
-        for (String merchant : Reader.dashArray) {
-            if (name.compareToIgnoreCase(merchant) == 0) {
+        for (DashMerchant merchant : Reader.dashArray) {
+            String merchantName = merchant.getName();
+            String merchantAddress = merchant.getAddress().toLowerCase();
+            if ((name.compareToIgnoreCase(merchantName) == 0) && (merchantAddress.contains(mall.getName()))) {
                 containsFlag = true;
             }
         }
