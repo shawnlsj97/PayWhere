@@ -13,6 +13,7 @@ public class Restaurant {
     private final String TAB = "    ";
     private final String QUOTE = "\"";
     private final String PAYMENT_OPENING = TAB + TAB + TAB + QUOTE + "payment" + QUOTE + " : " + QUOTE;
+    private final String ATTRIBUTE_OPENING = TAB + TAB + TAB + QUOTE;
 
     /**
      * Creates a restaurant object with the restaurant name, unit number and mall it belongs to assigned.
@@ -105,23 +106,43 @@ public class Restaurant {
     /**
      * Prints the contents of this restaurant in the JSON file.
      */
-    public String getRestaurantEntry(int index, int numRest) {
+    public String getRestaurantEntry(int index, int restaurantCount) {
         StringBuilder sb = new StringBuilder();
         sb.append(TAB + TAB + QUOTE + name + QUOTE + " : {\n");
-        sb.append(TAB + TAB + TAB + QUOTE + "name" + QUOTE + " : " + QUOTE + name + QUOTE + ",\n");
-        sb.append(TAB + TAB + TAB + QUOTE + "address" + QUOTE + " : " + QUOTE + unitNumber+ QUOTE + ",\n");
+        sb.append(ATTRIBUTE_OPENING + "name" + QUOTE + " : " + QUOTE + name + QUOTE + ",\n");
+        sb.append(ATTRIBUTE_OPENING + "address" + QUOTE + " : " + QUOTE + unitNumber+ QUOTE + ",\n");
         sb.append(getPayment() + ",\n");
-        if (Icon.iconMap.containsKey(name)) {
-            sb.append(TAB + TAB + TAB + QUOTE + "image" + QUOTE + " : " + QUOTE + Icon.iconMap.get(name) + QUOTE + "\n");
-        } else {
-            sb.append(TAB + TAB + TAB + QUOTE + "image" + QUOTE + " : " + QUOTE + QUOTE + "\n");
-        }
-        if (index == numRest - 1) {
-            sb.append(TAB + TAB + "}");
-        } else {
-            sb.append(TAB + TAB + "},\n");
-        }
+        sb.append(getIconUrl() + "\n");
+        sb.append(getClose(index, restaurantCount));
         return sb.toString();
+    }
+
+    /**
+     * Retrieves the closing curly brace for this restaurant.
+     * 
+     * @param index Index of this restaurant.
+     * @param restaurantCount Number of restaurants in this restaurant's mall.
+     * @return Appropriate closing brace, depending if the restaurant is last in the list.
+     */
+    private String getClose(int index, int restaurantCount) {
+        if (index == restaurantCount - 1) {
+            return TAB + TAB + "}";
+        } else {
+            return TAB + TAB + "},\n";
+        }
+    }
+
+    /**
+     * Retrieves the icon URL for this restaurant from the TreeMap.
+     * 
+     * @return Image attribute with the icon URL, if any.
+     */
+    private String getIconUrl() {
+        if (Icon.iconMap.containsKey(name)) {
+            return ATTRIBUTE_OPENING + "image" + QUOTE + " : " + QUOTE + Icon.iconMap.get(name) + QUOTE;
+        } else {
+            return ATTRIBUTE_OPENING + "image" + QUOTE + " : " + QUOTE + QUOTE;
+        }
     }
 
 }

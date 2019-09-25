@@ -5,6 +5,9 @@ import java.util.*;
  */
 public class Icon {
 
+    /**
+     * Stores names of restaurants and icon URLs, using a custom comparator that ignores letter casing.
+     */
     public static TreeMap<String, String> iconMap = new TreeMap<>(new Comparator<String>() {
         @Override
         public int compare(String s1, String s2) {
@@ -13,7 +16,7 @@ public class Icon {
     });
 
     /**
-     * Populates the mapMap with names of restaurants as keys and URLs of icons as values.
+     * Populates the TreeMap with the names of restaurants as keys and URLs of icons as values.
      */
     public static void makeMap() {
         mapNum();
