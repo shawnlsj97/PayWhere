@@ -1227,7 +1227,7 @@
             "name" : "Dessertstory",
             "address" : "#03-17",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/DessertStory.png?alt=media&token=735e5a7f-76f8-40c3-8dbe-6ef3c4879dcd"
         },
         "Dian Xiao Er" : {
             "name" : "Dian Xiao Er",
@@ -1943,7 +1943,7 @@
             "name" : "Collin's",
             "address" : "#01-113/114 (South Wing)",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/COLLINS.png?alt=media&token=f77dd777-ba40-4014-9195-b6554e26ec98"
         },
         "Country Brot by Four Leaves" : {
             "name" : "Country Brot by Four Leaves",
@@ -2663,7 +2663,7 @@
             "name" : "The Manhattan FISH MARKET",
             "address" : "#02-07/08 (North Wing)",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Manhattan_Fish_Market.png?alt=media&token=a9b7e7af-a6d3-4fcd-8ee1-274561f60e7f"
         },
         "The Pine Garden" : {
             "name" : "The Pine Garden",
@@ -3217,7 +3217,7 @@
             "name" : "Wolf Burgers",
             "address" : "#01-05",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/WOLF_Burgers.png?alt=media&token=21c7fb30-aafc-4213-8623-d103623ea6f9"
         },
         "Wong Kee Wanton Noodles" : {
             "name" : "Wong Kee Wanton Noodles",
@@ -5217,7 +5217,7 @@
             "name" : "Café&Meal MUJI",
             "address" : "#02-20 to 22",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Cafe%26Meal_Muji.png?alt=media&token=5e85eed7-1c05-4d95-b681-e603a2448291"
         },
         "Cedele" : {
             "name" : "Cedele",
@@ -5325,7 +5325,7 @@
             "name" : "Koi Thé",
             "address" : "#B1-71",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KOI_The.png?alt=media&token=fa86ca9c-2421-4e0e-89a0-2a0612e7643b"
         },
         "Koji Sushi Bar" : {
             "name" : "Koji Sushi Bar",
@@ -5409,7 +5409,7 @@
             "name" : "NESPRESSO",
             "address" : "#01-16",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Nespresso.png?alt=media&token=85a6d07c-dd4c-47fb-992d-bac4f3b9cb34"
         },
         "O'Coffee Club" : {
             "name" : "O'Coffee Club",
@@ -7125,7 +7125,7 @@
             "name" : "Dessertstory",
             "address" : "#B1-K12",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/DessertStory.png?alt=media&token=735e5a7f-76f8-40c3-8dbe-6ef3c4879dcd"
         },
         "Dian Xiao Er" : {
             "name" : "Dian Xiao Er",
@@ -7933,7 +7933,7 @@
             "name" : "Seoul Garden HotPot",
             "address" : "#01-18/19",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Seoul_Garden_Hotpot.png?alt=media&token=7cbe49b9-76ca-45e8-a756-9ed520ea7f40"
         },
         "SF FRUITS" : {
             "name" : "SF FRUITS",
@@ -9623,7 +9623,7 @@
             "name" : "Yoshinoya",
             "address" : "#B1-11",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/YOSHINOYA.png?alt=media&token=1a5a1eec-95cd-45ed-ad7b-86ca8a57ecf1"
         }
     },
     "jcube" : {
@@ -10313,7 +10313,7 @@
             "name" : "Dessertstory",
             "address" : "#B1-140",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/DessertStory.png?alt=media&token=735e5a7f-76f8-40c3-8dbe-6ef3c4879dcd"
         },
         "Doru Doru" : {
             "name" : "Doru Doru",
@@ -11147,7 +11147,7 @@
             "name" : "The Manhattan FISH MARKET",
             "address" : "#04-10/10A",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Manhattan_Fish_Market.png?alt=media&token=a9b7e7af-a6d3-4fcd-8ee1-274561f60e7f"
         },
         "Toast Box" : {
             "name" : "Toast Box",
@@ -11613,7 +11613,7 @@
             "name" : "Cookhouse By Koufu",
             "address" : "#03-01",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Cookhouse_by_Koufu.png?alt=media&token=e5021a81-16a5-49f0-a6e3-8319c8c1dcb8"
         },
         "Cottage Pies Café" : {
             "name" : "Cottage Pies Café",
