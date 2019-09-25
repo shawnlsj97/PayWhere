@@ -26,7 +26,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="About Us!"
+                app:title="About Us"
                 app:titleTextColor="@color/white"
                 android:elevation="4dp"
                 android:background="?android:attr/colorPrimary"

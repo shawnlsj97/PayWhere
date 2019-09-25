@@ -25,7 +25,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="Send Us Your Feedback!"
+                app:title="Feedback"
                 app:titleTextColor="@color/white"
                 android:elevation="4dp"
                 android:theme="@style/ToolbarTheme"
