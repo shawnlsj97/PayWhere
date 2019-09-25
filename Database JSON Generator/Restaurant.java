@@ -79,9 +79,9 @@ public class Restaurant {
     }
 
     /**
-     * Includes the merchants this restaurant supports in the JSON file.
+     * Retrieves the merchants this restaurant supports.
      *
-     * @return All the merchatns supported by this restaurant.
+     * @return Merchants supported by this restaurant in .json format.
      */
     private String getPayment() {
         if (hasDash() && hasGrab() && hasNets()) {
@@ -104,7 +104,11 @@ public class Restaurant {
     }
 
     /**
-     * Prints the contents of this restaurant in the JSON file.
+     * Compiles the attributes of this restaurant in .json format.
+     * 
+     * @param index Index of this restaurant.
+     * @param restaurantCount Number of restaurants in this restaurant's mall.
+     * @return Entry for this restaurant in the .json file.
      */
     public String getRestaurantEntry(int index, int restaurantCount) {
         StringBuilder sb = new StringBuilder();
