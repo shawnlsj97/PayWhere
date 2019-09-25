@@ -12,7 +12,7 @@ public class Main {
      * @param args Unused.
      */
     public static void main (String[] args) {
-        Icon.makeHash();
+        Icon.makeMap();
         Reader.readMerchants();
         Reader.readMalls();
         System.out.println("{");
