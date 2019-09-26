@@ -15,8 +15,8 @@ public class GrabMerchant {
      * @param address Address of this GrabPay merchant store.
      */
     public GrabMerchant(String name, String address) {
-        this.name = name;
-        this.address = address;
+        this.name = name.toLowerCase();
+        this.address = address.toLowerCase();
     }
 
     public String getName() {

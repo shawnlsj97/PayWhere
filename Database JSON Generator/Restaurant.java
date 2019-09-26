@@ -55,8 +55,10 @@ public class Restaurant {
         Boolean containsFlag = false;
         for (GrabMerchant merchant : Reader.grabArray) {
             String merchantName = merchant.getName();
-            String merchantAddress = merchant.getAddress().toLowerCase();
-            if ((name.compareToIgnoreCase(merchantName) == 0) && (merchantAddress.contains(mall.getName()))) {
+            String restaurantName = name.toLowerCase();
+            String merchantAddress = merchant.getAddress();
+            String restaurantAddress = mall.getName().toLowerCase();
+            if ((merchantName.contains(restaurantName)) && (merchantAddress.contains(restaurantAddress))) {
                 containsFlag = true;
             }
         }
