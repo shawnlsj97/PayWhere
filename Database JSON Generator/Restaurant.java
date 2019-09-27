@@ -168,9 +168,9 @@ public class Restaurant {
     private boolean isPartialMatch() {
         for (Map.Entry<String, String> entry : Icon.iconMap.entrySet()) {
             String iconName = entry.getKey();
-            if (iconName.toLowerCase().contains(name.toLowerCase())) {
+            if (iconName.toLowerCase().replaceAll(" ", "").contains(name.toLowerCase().replaceAll(" ", ""))) {
                 return true;
-            } else if (name.toLowerCase().contains(iconName.toLowerCase())) {
+            } else if (name.toLowerCase().replaceAll(" ", "").contains(iconName.toLowerCase().replaceAll(" ", ""))) {
                 return true;
             }
         }
@@ -186,9 +186,9 @@ public class Restaurant {
         for (Map.Entry<String, String> entry : Icon.iconMap.entrySet()) {
             String iconName = entry.getKey();
             String iconUrl = entry.getValue();
-            if (iconName.toLowerCase().contains(name.toLowerCase())) {
+            if (iconName.toLowerCase().replaceAll(" ", "").contains(name.toLowerCase().replaceAll(" ", ""))) {
                 return iconUrl.toString();
-            } else if (name.toLowerCase().contains(iconName.toLowerCase())) {
+            } else if (name.toLowerCase().replaceAll(" ", "").contains(iconName.toLowerCase().replaceAll(" ", ""))) {
                 return iconUrl.toString();
             }
         }
