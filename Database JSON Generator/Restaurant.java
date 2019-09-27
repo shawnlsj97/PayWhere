@@ -12,8 +12,9 @@ public class Restaurant {
     private Mall mall;
     private final String TAB = "    ";
     private final String QUOTE = "\"";
-    private final String PAYMENT_OPENING = TAB + TAB + TAB + QUOTE + "payment" + QUOTE + " : " + QUOTE;
     private final String ATTRIBUTE_OPENING = TAB + TAB + TAB + QUOTE;
+    private final String PAYMENT_OPENING = ATTRIBUTE_OPENING + "payment" + QUOTE + " : " + QUOTE;
+    private final String IMAGE_OPENING = ATTRIBUTE_OPENING + "image" + QUOTE + " : " + QUOTE;
 
     /**
      * Creates a restaurant object with the restaurant name, unit number and mall it belongs to assigned.
@@ -144,11 +145,54 @@ public class Restaurant {
      * @return Image attribute with the icon URL, if any.
      */
     private String getIconUrl() {
-        if (Icon.iconMap.containsKey(name)) {
-            return ATTRIBUTE_OPENING + "image" + QUOTE + " : " + QUOTE + Icon.iconMap.get(name) + QUOTE;
+        if (isTotalMatch()) {
+            return IMAGE_OPENING + Icon.iconMap.get(name) + QUOTE;
+        } else if (isPartialMatch()) {
+            return IMAGE_OPENING + getPartialMatchUrl() + QUOTE;
         } else {
-            return ATTRIBUTE_OPENING + "image" + QUOTE + " : " + QUOTE + QUOTE;
+            return IMAGE_OPENING + QUOTE;
         }
+    }
+
+    /**
+     * Checks if the TreeMap of icons contains this restaurant's name.
+     */
+    private boolean isTotalMatch() {
+        return Icon.iconMap.containsKey(name);
+    }
+
+    /**
+     * Checks if any key in the TreeMap of icons is a partial match to this restaurant's name.
+     * This is only employed if no total match has been found.
+     */
+    private boolean isPartialMatch() {
+        for (Map.Entry<String, String> entry : Icon.iconMap.entrySet()) {
+            String iconName = entry.getKey();
+            if (iconName.toLowerCase().contains(name.toLowerCase())) {
+                return true;
+            } else if (name.toLowerCase().contains(iconName.toLowerCase())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Retrieves the icon URL of this restaurant, if a partial match is found.
+     * 
+     * @return Icon URL.
+     */
+    private String getPartialMatchUrl() {
+        for (Map.Entry<String, String> entry : Icon.iconMap.entrySet()) {
+            String iconName = entry.getKey();
+            String iconUrl = entry.getValue();
+            if (iconName.toLowerCase().contains(name.toLowerCase())) {
+                return iconUrl.toString();
+            } else if (name.toLowerCase().contains(iconName.toLowerCase())) {
+                return iconUrl.toString();
+            }
+        }
+        return "";
     }
 
 }

@@ -491,7 +491,7 @@
             "name" : "Hong Kong Egglet & Nam Kee Pau",
             "address" : "#B1-K17",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Egglet.png?alt=media&token=be3fe5e7-aec0-4e84-86f4-d3e7b0c49431"
         },
         "Hong Kong Sheng Kee Dessert" : {
             "name" : "Hong Kong Sheng Kee Dessert",
@@ -551,7 +551,7 @@
             "name" : "Monster Curry (Coming Soon)",
             "address" : "#01-08/09/10",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Monster_Curry.png?alt=media&token=da408e93-94f6-4627-9c12-973e568cdcfa"
         },
         "Pepper Lunch" : {
             "name" : "Pepper Lunch",
@@ -2785,7 +2785,7 @@
             "name" : "5 Senses Bistro (Opening Soon)",
             "address" : "#02-17",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/5_SENSES_BISTRO.png?alt=media&token=dc5e2789-61e2-4fe9-90f4-882095e2627c"
         },
         "A Gan Guo Kui" : {
             "name" : "A Gan Guo Kui",
@@ -2911,7 +2911,7 @@
             "name" : "Gran & Berries (Opening Soon)",
             "address" : "#B2-K15",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Gran_%26_Berries.png?alt=media&token=a8f3af6b-922b-42b7-a25a-544c7d5aba93"
         },
         "Guzman Y Gomez" : {
             "name" : "Guzman Y Gomez",
@@ -2959,7 +2959,7 @@
             "name" : "Koji-San (Opening Soon)",
             "address" : "#B1-23",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Koji-San.png?alt=media&token=d34e3179-881e-4be5-b3c2-28ce906e35cf"
         },
         "KopiTech" : {
             "name" : "KopiTech",
@@ -3145,7 +3145,7 @@
             "name" : "The Mix (Opening Soon)",
             "address" : "#01-20",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Mix.png?alt=media&token=e73ae5df-b6f7-4e1c-8e67-e0689f3c9775"
         },
         "The Oyster Bank" : {
             "name" : "The Oyster Bank",
@@ -3211,7 +3211,7 @@
             "name" : "Wok Hey (Opening Soon)",
             "address" : "#B2-K01",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Wok_Hey.png?alt=media&token=647d0c70-4b12-4349-8247-8f31080efde9"
         },
         "Wolf Burgers" : {
             "name" : "Wolf Burgers",
@@ -3241,7 +3241,7 @@
             "name" : "Yamrice Yoghurt (Opening Soon)",
             "address" : "#02-03",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Yamrice_Yoghurt.png?alt=media&token=2f573bf4-ec4a-4771-9bf3-62db97a1beff"
         },
         "Yan Ji Seafood Soup" : {
             "name" : "Yan Ji Seafood Soup",
@@ -4491,7 +4491,7 @@
             "name" : "Cubemelt (Opening Soon)",
             "address" : "#B1-165",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Cubemelt.png?alt=media&token=a0c3a50a-e481-44ee-91bb-a99ff65bf8e7"
         },
         "Delibowl" : {
             "name" : "Delibowl",
@@ -5163,7 +5163,7 @@
             "name" : "Asian Market Cafe (Under Renovation)",
             "address" : "#02-Fairmont",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Asian_Market_Cafe.png?alt=media&token=3b752033-a4ae-469f-b9af-bfbac92d9ffa"
         },
         "Awfully Chocolate" : {
             "name" : "Awfully Chocolate",
@@ -5439,7 +5439,7 @@
             "name" : "Prego (Under Renovation)",
             "address" : "#01-Fairmont",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Prego.png?alt=media&token=b250d5f3-2df9-4833-9ada-b8ff00c61eaa"
         },
         "PS CAFE" : {
             "name" : "PS CAFE",
@@ -6171,7 +6171,7 @@
             "name" : "Tonkotsu Kazan Ramen",
             "address" : "#B1-10",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tonkotsu_Kazan.png?alt=media&token=d1e10b6f-7086-48d3-8d96-031590d6e3a3"
         },
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
@@ -6293,7 +6293,7 @@
             "name" : "Masa By Black Society Cafe (Coming Soon)",
             "address" : "#01-12 to 14",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Masa_By_Black_Society_Cafe.png?alt=media&token=1cc61873-d311-44c4-ac3c-1326ad797a80"
         },
         "Noodle Place" : {
             "name" : "Noodle Place",
@@ -6691,7 +6691,7 @@
             "name" : "Mellower Coffee (Coming Soon)",
             "address" : "#04-231/232",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Mellower_Coffee.png?alt=media&token=b02c1354-9645-4cd8-9187-7f8c5f1a6725"
         },
         "MOS Cafe" : {
             "name" : "MOS Cafe",
@@ -7385,7 +7385,7 @@
             "name" : "Canton Paradise Teahouse (Closed For Renovation)",
             "address" : "#B1-45 to 46",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Canton_Paradise.png?alt=media&token=de0721e0-6589-4065-b0c1-d041fc0feb3c"
         },
         "Carl's Jr" : {
             "name" : "Carl's Jr",
@@ -9799,7 +9799,7 @@
             "name" : "Shi Li Fang",
             "address" : "#02-08A",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shi_Li_Fang.png?alt=media&token=4ce57ad8-428b-430c-9889-ca77a711f2af"
         },
         "Snackz It! 可口味" : {
             "name" : "Snackz It! 可口味",
@@ -11865,7 +11865,7 @@
             "name" : "UPOT (Coming Soon)",
             "address" : "#02-01/02/03",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/UPOT.png?alt=media&token=d506d2df-b143-4439-abf2-66530c9b2efc"
         },
         "Wok Hey" : {
             "name" : "Wok Hey",
@@ -11987,7 +11987,7 @@
             "name" : "Hong Kong Egglet & Nam Kee Pau",
             "address" : "#01-K01",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Egglet.png?alt=media&token=be3fe5e7-aec0-4e84-86f4-d3e7b0c49431"
         },
         "Hong Kong Sheng Kee Dessert" : {
             "name" : "Hong Kong Sheng Kee Dessert",

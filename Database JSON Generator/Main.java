@@ -25,6 +25,5 @@ public class Main {
             System.out.println(mall.getClose(i));
         }
         System.out.println("}");
-
     }
 }
