@@ -97,7 +97,7 @@ public class Icon {
         iconMap.put("Arnold's Fried Chicken", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Arnolds_Fried_Chicken.png?alt=media&token=063f7565-f90b-4418-b768-3bb8c77fbab5");
         iconMap.put("Arteastiq", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Arteastiq.png?alt=media&token=2ff0f8ad-c8fe-414d-89fa-0de7b4b63296");
         iconMap.put("Asian Market Cafe ", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Asian_Market_Cafe.png?alt=media&token=3b752033-a4ae-469f-b9af-bfbac92d9ffa");
-        iconMap.put("Astons Specialties", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Astons_Specialties.png?alt=media&token=c41c7670-5902-4249-88fe-f2fd24a6a671");
+        iconMap.put("ASTONS Specialities", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Astons_Specialties.png?alt=media&token=c41c7670-5902-4249-88fe-f2fd24a6a671");
         iconMap.put("Astons Steak & Salad", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Astons_Steak_%26_Salad.png?alt=media&token=c382eb77-f9db-40f4-8e73-d788baccc69c");
         iconMap.put("Auntie Anne's", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Auntie_Annes.png?alt=media&token=518399e4-3800-4320-8922-694af1825bac");
         iconMap.put("avobites", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/avobites.png?alt=media&token=c457d4d6-256d-4f97-970d-8f7a2e60723e");
@@ -107,6 +107,7 @@ public class Icon {
     }
 
     public static void mapB() {
+        iconMap.put("Bakery Cuisine & Dora Keiki", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Dora_Keiki.png?alt=media&token=393f97ca-b432-48b3-8839-ad67ce5c9d53");
         iconMap.put("Bacha Coffee", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Bacha_Coffee.png?alt=media&token=1d1275e1-a277-44b1-9d27-43b17303273b");
         iconMap.put("Bagus", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Bagus.png?alt=media&token=a6adc40a-16fc-4b03-ab73-4f3e2df9f5fe");
         iconMap.put("Bake Cheese Tart", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Bake_Cheese_Tart.png?alt=media&token=c9c4b1cc-e53f-4601-96a8-def01d839bd2");
@@ -272,6 +273,7 @@ public class Icon {
     }
 
     public static void mapF() {
+        iconMap.put("Fart Tartz", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Fart_Tartz.jpg?alt=media&token=4e5f9ae2-b728-4913-847c-37864ee6459f");
         iconMap.put("FAME @ BUGIS+", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Fame.png?alt=media&token=249ed62c-c223-4535-9e18-be8c7d8671e4");
         iconMap.put("Famous Amos", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Famous_Amos.png?alt=media&token=405094ab-f322-4479-93d8-0ab482a4c907");
         iconMap.put("Fancy Delight", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Fancy_Delight.png?alt=media&token=3eb77598-a5ba-4067-a07c-c2cb6aa78557");
@@ -395,6 +397,7 @@ public class Icon {
     }
 
     public static void mapI() {
+        iconMap.put("ISURAMUYA Japanese Restaurant & Market Place", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/ISURAMUYA.jpeg?alt=media&token=45e3da10-6922-4e62-915b-1e5370e67da3");
         iconMap.put("I Love Taimei", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d");
         iconMap.put("I Love Yoo", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Yoo.png?alt=media&token=2493fb99-ab2d-42d2-bee5-3f13d168f2e8");
         iconMap.put("Ice Fork", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ice_Fork.png?alt=media&token=5f98f856-8e0a-4cc2-a857-df3a83ac7259");
@@ -449,6 +452,7 @@ public class Icon {
     }
 
     public static void mapK() {
+        iconMap.put("Kushi Sushi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kushi_Sushi.png?alt=media&token=f5c751d0-5083-44b4-a889-37e5623169b0");
         iconMap.put("K-Market", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/K-Market.png?alt=media&token=1fe6b2c1-5fac-418c-8368-10c6bf054989");
         iconMap.put("Kabe No Ana (Shokutsu Ten)", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kabe_No_Ana.png?alt=media&token=d443b3e6-2030-4a75-81da-45d79355808b");
         iconMap.put("Kaffe & Toast Thai Noodle Bar", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kaffe_%26_Toast_Thai_Noodle_Bar.png?alt=media&token=a80b3a84-ca02-4a3e-b258-0d1c07c988f4");
@@ -531,6 +535,8 @@ public class Icon {
     }
 
     public static void mapM() {
+        iconMap.put("My Kampung", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/My_Kampung.jpg?alt=media&token=276452ef-3c22-4a50-8132-81471973317e");
+        iconMap.put("Miss Tea", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Miss_Tea.png?alt=media&token=7b66054a-af5f-46ee-9e8d-3ba5fb9e91a3");
         iconMap.put("Ma Maison", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ma_Maison.png?alt=media&token=8b090a1a-98a8-4edc-a37a-81f85dbef39a");
         iconMap.put("Ma Zi Lu (Coming Soon)", "");
         iconMap.put("Mad Jack", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Mad_Jack.png?alt=media&token=365b5b9f-429e-44a4-8f06-8833b95d9455");
@@ -624,6 +630,9 @@ public class Icon {
     }
 
     public static void mapO() {
+        iconMap.put("OPPA Korean Grill BBQ", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/OPPA_BBQ.png?alt=media&token=9a3d6697-fde8-42e2-a2dc-258bbfb69342");
+        iconMap.put("One Ice Cafe", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/One_Ice_Cafe.png?alt=media&token=9a4710fd-bb18-4fe1-9b5e-79291d51f963");
+        iconMap.put("OLDTOWN WHITE COFFEE", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/OLDTOWN_WHITE_COFFEE.png?alt=media&token=c9c6dd2c-f70a-4c5c-a71d-cadda5a9d5e9");
         iconMap.put("O Banh Mi", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/O_Banh_Mi.png?alt=media&token=c978d990-37cb-4e64-828d-d7019003d86c");
         iconMap.put("O'Coffee Club", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/OCoffee_Club.png?alt=media&token=316b1f90-9b95-433f-a247-74cbb3c09989");
         iconMap.put("O'Coffee Club Roastery", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/OCoffee_Club.png?alt=media&token=316b1f90-9b95-433f-a247-74cbb3c09989");
@@ -737,6 +746,7 @@ public class Icon {
         iconMap.put("RedTail Bar By Zouk", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/RedTail_Bar_By_Zouk.png?alt=media&token=5b859d0a-7e52-4f13-9117-90f1b728e579");
         iconMap.put("Renn Thai", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Renn_Thai.png?alt=media&token=33e6dd6a-7747-4eef-b0e0-a6c7933507ec");
         iconMap.put("Rice & Box", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Rice_%26_Box.png?alt=media&token=09af66c5-8ded-4d0d-a0b3-f6010c35daf5");
+        iconMap.put("Rice & Box by Tenderfresh", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Rice_%26_Box.png?alt=media&token=09af66c5-8ded-4d0d-a0b3-f6010c35daf5");
         iconMap.put("Ritz Apple Strudel", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ritz_Apple_Strudel.png?alt=media&token=f34a53d9-c885-4345-88a2-046941860c20");
         iconMap.put("Rive Gauche Patisserie", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Rive_Gauche_Patisserie.png?alt=media&token=ae22007c-2c89-4b55-8b71-244d777f0ffb");
         iconMap.put("Riverside Grilled Fish", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Riverside_Grilled_Fish.png?alt=media&token=a1e86f03-4e5a-430d-9392-74dc9fefbd8b");
@@ -753,6 +763,9 @@ public class Icon {
     }
 
     public static void mapS() {
+        iconMap.put("Springleaf Prata Place", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Springleaf.png?alt=media&token=5f833498-2e00-4622-929d-106b0a8e53b7");
+        iconMap.put("Soi Thai Kitchen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Soi_Thai.jpg?alt=media&token=75537fd7-ad78-4547-bb1c-de51dde17305");
+        iconMap.put("Shi Jian Hot Pot", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shi_Jian_Hot_Pot.png?alt=media&token=c237a5df-f194-442c-a038-434478566ce4");
         iconMap.put("Saap Saap Thai", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Saap_Saap_Thai.png?alt=media&token=3ca8f0b5-ba1a-4b3d-ab6e-48bdcb745ba4");
         iconMap.put("Saboten Express", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Saboten_Express.png?alt=media&token=8eb91acc-4d53-4b4e-a892-71b2c10f2f57");
         iconMap.put("Saint-Louis House", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Saint-Louis_House.png?alt=media&token=2a00e293-d1b2-43c5-8082-3628a47c1edc");
@@ -849,6 +862,10 @@ public class Icon {
     }
 
     public static void mapT() {
+        iconMap.put("The White Kitchen by Tokyo Latte", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_White_Kitchen.jpg?alt=media&token=9305db60-f590-481c-a4e5-db3e1a3cf829");
+        iconMap.put("The Laksa Leaf", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Laksa_Leaf.jpg?alt=media&token=d7d02e58-a0de-4655-ac08-24b2dae2f355");
+        iconMap.put("THE GOOD TRIO", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/THE_GOOD_TRIO.png?alt=media&token=d4c56bec-44e2-4f7d-ae58-0ada48f774e0");
+        iconMap.put("The Cake Shop", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Cake_Shop.jpg?alt=media&token=6591ec89-3635-4146-8a7e-b0d4bd38128b");
         iconMap.put("T2", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/T2.png?alt=media&token=6721dc88-62d7-4795-a813-9863956ba548");
         iconMap.put("Table Manners", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Table_Manners.png?alt=media&token=7bb02421-2c4e-4586-9e6d-2533806ee372");
         iconMap.put("Tai Chong Kok", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tai_Chong_Kok.png?alt=media&token=cb8902c8-1903-40a4-b120-b5361490430b");
@@ -1026,6 +1043,7 @@ public class Icon {
     }
 
     public static void mapY() {
+        iconMap.put("Yi Ma Xiang Guo", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Yi_Ma_Xiang_Guo.jpg?alt=media&token=107943a4-968a-42de-aefc-ca5e40c70f07");
         iconMap.put("Ya Hua Bak Kut Teh", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ya_Hua_Bak_Kut_Teh.png?alt=media&token=2a02d190-1ccd-478d-9737-c168132b51b4");
         iconMap.put("Ya Kun Family Cafe", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ya_Kun_Kaya_Toast.png?alt=media&token=92212267-9c4b-4350-ab1b-99ea6f0f2f8e");
         iconMap.put("Ya Kun Kaya Toast", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ya_Kun_Kaya_Toast.png?alt=media&token=92212267-9c4b-4350-ab1b-99ea6f0f2f8e");
