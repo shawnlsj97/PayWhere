@@ -10,14 +10,24 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -28,6 +38,7 @@ public class FavouritesAdapter extends RecyclerView.Adapter<MallViewHolder> {
     ArrayList<String> malls;
     Context context;
     Activity activity;
+    ArrayList<String> searchSuggestions;
 
     public FavouritesAdapter(ArrayList<String> malls, Context context, Activity activity) {
         this.malls = malls;
@@ -48,6 +59,7 @@ public class FavouritesAdapter extends RecyclerView.Adapter<MallViewHolder> {
         holder.setDetails(malls.get(position));
         final String name_string = malls.get(position);
         final ToggleButton fav_btn = holder.view.findViewById(R.id.favourites_btn);
+        getSearchSuggestions();
         fav_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -73,6 +85,7 @@ public class FavouritesAdapter extends RecyclerView.Adapter<MallViewHolder> {
                 if (haveNetworkConnection()) {
                     Intent intent = new Intent(context, SearchResults.class);
                     intent.putExtra("input", name_string);
+                    intent.putExtra("suggestions", searchSuggestions.toArray(new String[0]));
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                     activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -151,5 +164,26 @@ public class FavouritesAdapter extends RecyclerView.Adapter<MallViewHolder> {
         toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
         toast.setView(toastView);
         toast.show();
+    }
+
+    private void getSearchSuggestions() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("malls");
+        searchSuggestions = new ArrayList<>();
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                searchSuggestions = new ArrayList<>();
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    String mallName = ds.getKey();
+                    searchSuggestions.add(toTitleCase(mallName));
+                }
+                Collections.sort(searchSuggestions, String.CASE_INSENSITIVE_ORDER);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
     }
 }

@@ -6,8 +6,8 @@ android {
         applicationId "com.marshmallow.paywhere"
         minSdkVersion 26
         targetSdkVersion 28
-        versionCode 90010001
-        versionName "1.0.1"
+        versionCode 90010003
+        versionName "1.0.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

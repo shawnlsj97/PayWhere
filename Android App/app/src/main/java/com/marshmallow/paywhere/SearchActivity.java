@@ -120,7 +120,6 @@ public class SearchActivity extends AppCompatActivity {
                         searchView.setQuery(item, true);
                     }
                 });
-                Log.i("size of suggestions", String.valueOf(suggestions.length));
             }
 
             @Override
