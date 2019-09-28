@@ -13,7 +13,6 @@ public class Reader {
     public static final String netsFilePath = "MobileWallets/nets.txt";
     public static final String mallFilePath = "Malls";
 
-
     public static ArrayList<DashMerchant> getDashArray() {
         return dashArray;
     }

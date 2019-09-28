@@ -206,7 +206,7 @@
         "ICREPE" : {
             "name" : "ICREPE",
             "address" : "#01-17",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/ICREPE.png?alt=media&token=a0520842-635e-45b4-8ac3-73225d15c9c2"
         },
         "Ju Hao" : {
@@ -242,7 +242,7 @@
         "LiHO" : {
             "name" : "LiHO",
             "address" : "#01-21",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/LiHo.png?alt=media&token=c4dceca7-2da4-4d5e-aa90-4f9cfc88ba99"
         },
         "McDonald's" : {
@@ -308,7 +308,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#02-11",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "SUKI-YA" : {
@@ -362,7 +362,7 @@
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#02-21",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "Tysan" : {
@@ -442,19 +442,19 @@
         "Chateraise" : {
             "name" : "Chateraise",
             "address" : "#01-60",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Chateraise.png?alt=media&token=c0ecd8a6-37e4-4280-a54d-1f14ba079e36"
         },
         "Dian Xiao Er" : {
             "name" : "Dian Xiao Er",
             "address" : "#04-15",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Dian_Xiao_Er.png?alt=media&token=59ce511a-4ab7-47b2-a162-4c99c9c4aa5f"
         },
         "Eastern Rice Dumpling" : {
             "name" : "Eastern Rice Dumpling",
             "address" : "#B1-K6",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Eastern_Rice_Dumpling.png?alt=media&token=291d2afa-6e7a-46e6-a9e5-90a2b5efa67f"
         },
         "Emicakes" : {
@@ -491,7 +491,7 @@
             "name" : "Hong Kong Egglet & Nam Kee Pau",
             "address" : "#B1-K17",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Egglet.png?alt=media&token=be3fe5e7-aec0-4e84-86f4-d3e7b0c49431"
         },
         "Hong Kong Sheng Kee Dessert" : {
             "name" : "Hong Kong Sheng Kee Dessert",
@@ -551,7 +551,7 @@
             "name" : "Monster Curry (Coming Soon)",
             "address" : "#01-08/09/10",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Monster_Curry.png?alt=media&token=da408e93-94f6-4627-9c12-973e568cdcfa"
         },
         "Pepper Lunch" : {
             "name" : "Pepper Lunch",
@@ -622,7 +622,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-03",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Sushi Express" : {
@@ -664,13 +664,13 @@
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#B1-K1",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tuk Tuk Cha" : {
             "name" : "Tuk Tuk Cha",
             "address" : "#B1-K2",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tuk_Tuk_Cha.png?alt=media&token=33cdfdf1-e711-44a9-b14d-0e0fd872f89e"
         },
         "Yamazaki Boulangerie Chaude" : {
@@ -708,7 +708,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B1-15 (East Wing)",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Buddy Hoagies Café & Grill" : {
@@ -762,7 +762,7 @@
         "Dian Xiao Er" : {
             "name" : "Dian Xiao Er",
             "address" : "#01-30 (East Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Dian_Xiao_Er.png?alt=media&token=59ce511a-4ab7-47b2-a162-4c99c9c4aa5f"
         },
         "Din Tai Fung" : {
@@ -822,7 +822,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B1-K5 (West Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Ichiban Boshi" : {
@@ -930,13 +930,13 @@
         "PappaRich" : {
             "name" : "PappaRich",
             "address" : "#B1-17 (East Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/PappaRich.png?alt=media&token=3172bfa0-c3de-4813-897f-e506b5a0e42c"
         },
         "PARTEA" : {
             "name" : "PARTEA",
             "address" : "#B1-K4",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/PARTEA.png?alt=media&token=2be3db9e-6c69-4921-99b9-f17ebb7188c1"
         },
         "Pezzo" : {
@@ -1026,7 +1026,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-16 (East Wing)",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Sushi Express" : {
@@ -1056,7 +1056,7 @@
         "The Soup Spoon Union" : {
             "name" : "The Soup Spoon Union",
             "address" : "#B1-12 (West Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon_Union.png?alt=media&token=9e16a395-e839-4a0e-b3d1-607cd8c37200"
         },
         "Tim Ho Wan" : {
@@ -1068,25 +1068,25 @@
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#B1-15 (East Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B1-K12 (East Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Tuk Tuk Cha" : {
             "name" : "Tuk Tuk Cha",
             "address" : "#B1-K8 (East Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tuk_Tuk_Cha.png?alt=media&token=33cdfdf1-e711-44a9-b14d-0e0fd872f89e"
         },
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#B2-K2 (West Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "umisushi" : {
@@ -1142,7 +1142,7 @@
         "Auntie Anne's" : {
             "name" : "Auntie Anne's",
             "address" : "#03-K10",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Auntie_Annes.png?alt=media&token=518399e4-3800-4320-8922-694af1825bac"
         },
         "Ayam Penyet President" : {
@@ -1184,7 +1184,7 @@
         "Blackball" : {
             "name" : "Blackball",
             "address" : "#B1-46a",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Blackball.png?alt=media&token=adc34d70-0245-4f5e-a06b-61d561c5ef94"
         },
         "Boost Juice Bars" : {
@@ -1196,7 +1196,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B2-58/59",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "BURGER KING" : {
@@ -1232,7 +1232,7 @@
         "Dian Xiao Er" : {
             "name" : "Dian Xiao Er",
             "address" : "#02-09/10",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Dian_Xiao_Er.png?alt=media&token=59ce511a-4ab7-47b2-a162-4c99c9c4aa5f"
         },
         "Din Tai Fung" : {
@@ -1268,7 +1268,7 @@
         "Fancy Delight" : {
             "name" : "Fancy Delight",
             "address" : "#03-K21",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Fancy_Delight.png?alt=media&token=3eb77598-a5ba-4067-a07c-c2cb6aa78557"
         },
         "Food Junction" : {
@@ -1418,7 +1418,7 @@
         "LiHO" : {
             "name" : "LiHO",
             "address" : "#04-K22",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/LiHo.png?alt=media&token=c4dceca7-2da4-4d5e-aa90-4f9cfc88ba99"
         },
         "Long John Silver's" : {
@@ -1514,7 +1514,7 @@
         "PastaMania" : {
             "name" : "PastaMania",
             "address" : "#04-21/22",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pastamania.png?alt=media&token=d8196c24-6253-44dd-9f17-1a84f0687930"
         },
         "Penang Culture" : {
@@ -1646,7 +1646,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#02-11",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Sushi Express" : {
@@ -1664,7 +1664,7 @@
         "Tai Lei Loi Kei" : {
             "name" : "Tai Lei Loi Kei",
             "address" : "#B2-15",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tai_Lei_Loi_Kei.png?alt=media&token=11ddfd75-98d1-4eb2-a4b7-74a5a1133013"
         },
         "Taigai" : {
@@ -1712,7 +1712,7 @@
         "The Soup Spoon Union" : {
             "name" : "The Soup Spoon Union",
             "address" : "#02-14",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon_Union.png?alt=media&token=9e16a395-e839-4a0e-b3d1-607cd8c37200"
         },
         "Tiong Bahru Jian Bo Shui Kueh" : {
@@ -1742,7 +1742,7 @@
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B2-52",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Torigo!" : {
@@ -1754,13 +1754,13 @@
         "Tuk Tuk Cha" : {
             "name" : "Tuk Tuk Cha",
             "address" : "#02-12",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tuk_Tuk_Cha.png?alt=media&token=33cdfdf1-e711-44a9-b14d-0e0fd872f89e"
         },
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#B2-47",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "Wine Connection" : {
@@ -1882,7 +1882,7 @@
         "Blackball" : {
             "name" : "Blackball",
             "address" : "#B1-154 (South Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Blackball.png?alt=media&token=adc34d70-0245-4f5e-a06b-61d561c5ef94"
         },
         "BONCHON Chicken" : {
@@ -1900,7 +1900,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-49 (North Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Central Hong Kong Café" : {
@@ -2008,7 +2008,7 @@
         "Eastern Rice Dumpling" : {
             "name" : "Eastern Rice Dumpling",
             "address" : "#B1-14 (North Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Eastern_Rice_Dumpling.png?alt=media&token=291d2afa-6e7a-46e6-a9e5-90a2b5efa67f"
         },
         "EAT" : {
@@ -2098,7 +2098,7 @@
         "Gong Cha" : {
             "name" : "Gong Cha",
             "address" : "#01-06 (North Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Gong_Cha.png?alt=media&token=6ad09f4e-72da-4d21-9ffb-f55c3b925e8d"
         },
         "Green Signature" : {
@@ -2122,7 +2122,7 @@
         "Guzman Y Gomez" : {
             "name" : "Guzman Y Gomez",
             "address" : "#01-176/177/178 (South Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Guzman_Y_Gomez.png?alt=media&token=1bcf02e7-58f3-488d-94d1-f9cdd4eafd6f"
         },
         "Gyoza-Ya" : {
@@ -2302,7 +2302,7 @@
         "Maki-San" : {
             "name" : "Maki-San",
             "address" : "#01-172 (South Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Maki-San.png?alt=media&token=cee8afef-fb00-4898-b5ec-983ec80b35ab"
         },
         "Malaysia Chiak" : {
@@ -2422,7 +2422,7 @@
         "PastaMania" : {
             "name" : "PastaMania",
             "address" : "#03-01/02 (North Wing)",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pastamania.png?alt=media&token=d8196c24-6253-44dd-9f17-1a84f0687930"
         },
         "PatBingSoo Korean Dining House" : {
@@ -2434,7 +2434,7 @@
         "Pezzo" : {
             "name" : "Pezzo",
             "address" : "#B2-152 (South Wing)",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pezzo.png?alt=media&token=5b0b30b7-b279-4e3a-9069-1a8d12e0105c"
         },
         "Pizza Hut" : {
@@ -2500,7 +2500,7 @@
         "Sakon Thai" : {
             "name" : "Sakon Thai",
             "address" : "#01-129 (South Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Sakon_Thai.png?alt=media&token=894805f6-b2f5-4cee-96f6-8f68e14033d5"
         },
         "Sanook Kitchen" : {
@@ -2668,7 +2668,7 @@
         "The Pine Garden" : {
             "name" : "The Pine Garden",
             "address" : "#B2-01 (North Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Oyster_Bank.png?alt=media&token=9ff643e4-2381-44ea-a197-34be4002fbc2"
         },
         "The Seafood Market Place by Song Fish" : {
@@ -2686,13 +2686,13 @@
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#01-49 (North Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tonkotsu Kazan" : {
             "name" : "Tonkotsu Kazan",
             "address" : "#B1-188/189 (South Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tonkotsu_Kazan.png?alt=media&token=d1e10b6f-7086-48d3-8d96-031590d6e3a3"
         },
         "Tori-Q" : {
@@ -2710,7 +2710,7 @@
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#01-105 (South Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "umisushi Teishoku" : {
@@ -2770,7 +2770,7 @@
         "YuBa Hut" : {
             "name" : "YuBa Hut",
             "address" : "#B1-186 (South Wing)",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/YuBa_Hut.png?alt=media&token=16b90d83-f512-47e1-8b97-a66124a0e2e7"
         },
         "ZTP Herbal Tea" : {
@@ -2785,7 +2785,7 @@
             "name" : "5 Senses Bistro (Opening Soon)",
             "address" : "#02-17",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/5_SENSES_BISTRO.png?alt=media&token=dc5e2789-61e2-4fe9-90f4-882095e2627c"
         },
         "A Gan Guo Kui" : {
             "name" : "A Gan Guo Kui",
@@ -2911,7 +2911,7 @@
             "name" : "Gran & Berries (Opening Soon)",
             "address" : "#B2-K15",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Gran_%26_Berries.png?alt=media&token=a8f3af6b-922b-42b7-a25a-544c7d5aba93"
         },
         "Guzman Y Gomez" : {
             "name" : "Guzman Y Gomez",
@@ -2959,7 +2959,7 @@
             "name" : "Koji-San (Opening Soon)",
             "address" : "#B1-23",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Koji-San.png?alt=media&token=d34e3179-881e-4be5-b3c2-28ce906e35cf"
         },
         "KopiTech" : {
             "name" : "KopiTech",
@@ -3145,7 +3145,7 @@
             "name" : "The Mix (Opening Soon)",
             "address" : "#01-20",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Mix.png?alt=media&token=e73ae5df-b6f7-4e1c-8e67-e0689f3c9775"
         },
         "The Oyster Bank" : {
             "name" : "The Oyster Bank",
@@ -3211,7 +3211,7 @@
             "name" : "Wok Hey (Opening Soon)",
             "address" : "#B2-K01",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Wok_Hey.png?alt=media&token=647d0c70-4b12-4349-8247-8f31080efde9"
         },
         "Wolf Burgers" : {
             "name" : "Wolf Burgers",
@@ -3241,7 +3241,7 @@
             "name" : "Yamrice Yoghurt (Opening Soon)",
             "address" : "#02-03",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Yamrice_Yoghurt.png?alt=media&token=2f573bf4-ec4a-4771-9bf3-62db97a1beff"
         },
         "Yan Ji Seafood Soup" : {
             "name" : "Yan Ji Seafood Soup",
@@ -3290,7 +3290,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B1-K6/K7",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Choc Spot" : {
@@ -3526,7 +3526,7 @@
         "Anjappar" : {
             "name" : "Anjappar",
             "address" : "#04-08",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Anjappar.png?alt=media&token=06b14753-ff35-4c2f-a443-f613372a4ca4"
         },
         "Bowl Thai" : {
@@ -3622,7 +3622,7 @@
         "Gong Cha" : {
             "name" : "Gong Cha",
             "address" : "#02-27",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Gong_Cha.png?alt=media&token=6ad09f4e-72da-4d21-9ffb-f55c3b925e8d"
         },
         "Gong Yuan Ma La Tang" : {
@@ -3640,7 +3640,7 @@
         "Greendot" : {
             "name" : "Greendot",
             "address" : "#01-06",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Greendot.png?alt=media&token=9bc863d5-42ae-4cd7-921c-2e63a29ad4ea"
         },
         "Ha Jun" : {
@@ -3718,7 +3718,7 @@
         "Masizzim" : {
             "name" : "Masizzim",
             "address" : "#01-07",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Masizzim.png?alt=media&token=5f1fca1f-c05d-4559-8dd3-25446ffea11b"
         },
         "Men Don Tei" : {
@@ -3766,7 +3766,7 @@
         "NY NIGHT MARKET" : {
             "name" : "NY NIGHT MARKET",
             "address" : "#01-08",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/NY_NIGHT_MARKET.png?alt=media&token=8eaa1d3b-164d-4ce8-a43c-d2f19d2e70b9"
         },
         "Oh My" : {
@@ -3954,7 +3954,7 @@
         "Auntie Anne's" : {
             "name" : "Auntie Anne's",
             "address" : "#B2-37",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Auntie_Annes.png?alt=media&token=518399e4-3800-4320-8922-694af1825bac"
         },
         "Awfully Chocolate" : {
@@ -3990,7 +3990,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-23",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "BURGER KING" : {
@@ -4068,7 +4068,7 @@
         "Gong Cha" : {
             "name" : "Gong Cha",
             "address" : "#B1-K7",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Gong_Cha.png?alt=media&token=6ad09f4e-72da-4d21-9ffb-f55c3b925e8d"
         },
         "Greendot" : {
@@ -4134,7 +4134,7 @@
         "Ji De Chi" : {
             "name" : "Ji De Chi",
             "address" : "#B2-53",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ji_De_Chi.png?alt=media&token=d7af407a-b7e0-4319-8f6a-9bfaf0e72386"
         },
         "Kai sushi & Robatayaki" : {
@@ -4320,7 +4320,7 @@
         "Simply Wrapps" : {
             "name" : "Simply Wrapps",
             "address" : "#B2-26",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Simply_Wrapps.png?alt=media&token=bf71c758-d4ef-4150-ab62-8864b043f7d3"
         },
         "Slappy Cakes" : {
@@ -4374,7 +4374,7 @@
         "The Soup Spoon" : {
             "name" : "The Soup Spoon",
             "address" : "#03-21",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon.png?alt=media&token=cc906e39-1aed-4c5c-b2c7-2163d676bcfd"
         },
         "Tim Ho Wan" : {
@@ -4386,13 +4386,13 @@
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#01-23",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B2-03",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Tsukada Nojo" : {
@@ -4449,7 +4449,7 @@
             "name" : "Astons Specialities",
             "address" : "#01-115",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Astons_Specialties.png?alt=media&token=c41c7670-5902-4249-88fe-f2fd24a6a671"
         },
         "BBQ Express" : {
             "name" : "BBQ Express",
@@ -4491,7 +4491,7 @@
             "name" : "Cubemelt (Opening Soon)",
             "address" : "#B1-165",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Cubemelt.png?alt=media&token=a0c3a50a-e481-44ee-91bb-a99ff65bf8e7"
         },
         "Delibowl" : {
             "name" : "Delibowl",
@@ -4562,7 +4562,7 @@
         "Maki-San" : {
             "name" : "Maki-San",
             "address" : "#B1-166",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Maki-San.png?alt=media&token=cee8afef-fb00-4898-b5ec-983ec80b35ab"
         },
         "Malaysia Chiak" : {
@@ -4646,7 +4646,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-127",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Swee Heng 1989 Bakery Café" : {
@@ -4732,7 +4732,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-32",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "BURGER KING" : {
@@ -4756,7 +4756,7 @@
         "Delifrance" : {
             "name" : "Delifrance",
             "address" : "#01-38",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Delifrance.png?alt=media&token=9392c8c9-3914-44b4-9a85-f32c3ef870c5"
         },
         "Din Tai Fung" : {
@@ -4852,7 +4852,7 @@
         "LiHO" : {
             "name" : "LiHO",
             "address" : "#B1-K5",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/LiHo.png?alt=media&token=c4dceca7-2da4-4d5e-aa90-4f9cfc88ba99"
         },
         "Long John Silver's" : {
@@ -4906,7 +4906,7 @@
         "PastaMania" : {
             "name" : "PastaMania",
             "address" : "#04-21 to 22",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pastamania.png?alt=media&token=d8196c24-6253-44dd-9f17-1a84f0687930"
         },
         "Pizza Hut" : {
@@ -4930,7 +4930,7 @@
         "Proofer" : {
             "name" : "Proofer",
             "address" : "#B1-K7A",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Proofer_Bakery_%26_Pizzeria.png?alt=media&token=e97989b7-c3f1-4c1d-8ddb-3dff49beb0ae"
         },
         "PUTIEN" : {
@@ -5002,7 +5002,7 @@
         "The Soup Spoon" : {
             "name" : "The Soup Spoon",
             "address" : "#B1-K2",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon.png?alt=media&token=cc906e39-1aed-4c5c-b2c7-2163d676bcfd"
         },
         "Tonkichi" : {
@@ -5014,7 +5014,7 @@
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B1-K20",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Yolé" : {
@@ -5163,7 +5163,7 @@
             "name" : "Asian Market Cafe (Under Renovation)",
             "address" : "#02-Fairmont",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Asian_Market_Cafe.png?alt=media&token=3b752033-a4ae-469f-b9af-bfbac92d9ffa"
         },
         "Awfully Chocolate" : {
             "name" : "Awfully Chocolate",
@@ -5198,7 +5198,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B1-44A",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Brotzeit" : {
@@ -5439,7 +5439,7 @@
             "name" : "Prego (Under Renovation)",
             "address" : "#01-Fairmont",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Prego.png?alt=media&token=b250d5f3-2df9-4833-9ada-b8ff00c61eaa"
         },
         "PS CAFE" : {
             "name" : "PS CAFE",
@@ -5486,7 +5486,7 @@
         "Simply Wrapps" : {
             "name" : "Simply Wrapps",
             "address" : "#B1-60",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Simply_Wrapps.png?alt=media&token=bf71c758-d4ef-4150-ab62-8864b043f7d3"
         },
         "SKAI" : {
@@ -5504,7 +5504,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-36",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Sufood" : {
@@ -5570,7 +5570,7 @@
         "The Soup Spoon Union" : {
             "name" : "The Soup Spoon Union",
             "address" : "#B1-61 to 62",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon_Union.png?alt=media&token=9e16a395-e839-4a0e-b3d1-607cd8c37200"
         },
         "The Stamford Brasserie" : {
@@ -5600,7 +5600,7 @@
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#B1-44A",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tokyo Milk Cheese Factory" : {
@@ -5630,7 +5630,7 @@
         "WHEAT" : {
             "name" : "WHEAT",
             "address" : "#B1-78",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/WHEAT.png?alt=media&token=d86ecffd-0172-4ca8-b9c7-6a268b38d502"
         },
         "Ya Hua Bak Kut Teh" : {
@@ -6044,13 +6044,13 @@
         "Mahota Kitchen" : {
             "name" : "Mahota Kitchen",
             "address" : "#01-11",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Mahota_Kitchen.png?alt=media&token=5ee43537-3436-4bf1-86df-be4a8d04e3d4"
         },
         "Maki-San" : {
             "name" : "Maki-San",
             "address" : "#B1-26",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Maki-San.png?alt=media&token=cee8afef-fb00-4898-b5ec-983ec80b35ab"
         },
         "Men Men Don Don" : {
@@ -6110,13 +6110,13 @@
         "Simply Wrapps" : {
             "name" : "Simply Wrapps",
             "address" : "#B1-11",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Simply_Wrapps.png?alt=media&token=bf71c758-d4ef-4150-ab62-8864b043f7d3"
         },
         "Souperstar" : {
             "name" : "Souperstar",
             "address" : "#01-34",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Souperstar.png?alt=media&token=6e049d4e-89c3-4e2e-97cc-0ffe25f378af"
         },
         "Steeped & The Pine Garden" : {
@@ -6171,12 +6171,12 @@
             "name" : "Tonkotsu Kazan Ramen",
             "address" : "#B1-10",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tonkotsu_Kazan.png?alt=media&token=d1e10b6f-7086-48d3-8d96-031590d6e3a3"
         },
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#B1-32",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "Two Hana" : {
@@ -6274,7 +6274,7 @@
         "LiHO" : {
             "name" : "LiHO",
             "address" : "#B2-13",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/LiHo.png?alt=media&token=c4dceca7-2da4-4d5e-aa90-4f9cfc88ba99"
         },
         "Ma Zi Lu (Coming Soon)" : {
@@ -6293,7 +6293,7 @@
             "name" : "Masa By Black Society Cafe (Coming Soon)",
             "address" : "#01-12 to 14",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Masa_By_Black_Society_Cafe.png?alt=media&token=1cc61873-d311-44c4-ac3c-1326ad797a80"
         },
         "Noodle Place" : {
             "name" : "Noodle Place",
@@ -6340,7 +6340,7 @@
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B1-11",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Upin Hot Pot 優品火鍋" : {
@@ -6691,7 +6691,7 @@
             "name" : "Mellower Coffee (Coming Soon)",
             "address" : "#04-231/232",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Mellower_Coffee.png?alt=media&token=b02c1354-9645-4cd8-9187-7f8c5f1a6725"
         },
         "MOS Cafe" : {
             "name" : "MOS Cafe",
@@ -7094,7 +7094,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-35 to 36",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Canton Paradise" : {
@@ -7166,7 +7166,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B1-22",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Joe & Dough" : {
@@ -7202,7 +7202,7 @@
         "Maki-San" : {
             "name" : "Maki-San",
             "address" : "#02-27A",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Maki-San.png?alt=media&token=cee8afef-fb00-4898-b5ec-983ec80b35ab"
         },
         "McDonald's" : {
@@ -7244,7 +7244,7 @@
         "PastaMania" : {
             "name" : "PastaMania",
             "address" : "#01-37",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pastamania.png?alt=media&token=d8196c24-6253-44dd-9f17-1a84f0687930"
         },
         "Pezzo" : {
@@ -7286,13 +7286,13 @@
         "STUFF'D" : {
             "name" : "STUFF'D",
             "address" : "#B1-19A",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Stuffd.png?alt=media&token=bf4d1a7a-c7b8-4ca1-b908-a7ff7a499fae"
         },
         "Subway" : {
             "name" : "Subway",
             "address" : "#01-31",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Swensen's" : {
@@ -7310,13 +7310,13 @@
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B1-25",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Tuk Tuk Cha" : {
             "name" : "Tuk Tuk Cha",
             "address" : "#02-20A to 21",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tuk_Tuk_Cha.png?alt=media&token=33cdfdf1-e711-44a9-b14d-0e0fd872f89e"
         },
         "WATAMI Japanese Casual Restaurant" : {
@@ -7352,7 +7352,7 @@
         "YuBa Hut" : {
             "name" : "YuBa Hut",
             "address" : "#B1-K15",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/YuBa_Hut.png?alt=media&token=16b90d83-f512-47e1-8b97-a66124a0e2e7"
         }
     },
@@ -7385,7 +7385,7 @@
             "name" : "Canton Paradise Teahouse (Closed For Renovation)",
             "address" : "#B1-45 to 46",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Canton_Paradise.png?alt=media&token=de0721e0-6589-4065-b0c1-d041fc0feb3c"
         },
         "Carl's Jr" : {
             "name" : "Carl's Jr",
@@ -7450,7 +7450,7 @@
         "Friends by PONTIAN" : {
             "name" : "Friends by PONTIAN",
             "address" : "#B1-37 to 37A",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Friends_by_PONTIAN.png?alt=media&token=957b6bf3-b13a-4821-b629-fefa46f6b5d2"
         },
         "Fun Toast" : {
@@ -7522,7 +7522,7 @@
         "KOKO" : {
             "name" : "KOKO",
             "address" : "#B1-37D",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/KOKO.png?alt=media&token=1cef2202-9792-41ea-ad72-86548bc43076"
         },
         "Lao Huo Tang Restaurant" : {
@@ -7618,7 +7618,7 @@
         "Rollie Olie" : {
             "name" : "Rollie Olie",
             "address" : "#02-05",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Rollie_Olie.png?alt=media&token=3b82728f-412a-4f91-9ce6-e29cf4ef7a85"
         },
         "Saizeriya" : {
@@ -7660,7 +7660,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-34",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Texas Chicken" : {
@@ -7672,7 +7672,7 @@
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#01-47",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "WATAMI Japanese Casual Restaurant" : {
@@ -7740,7 +7740,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-12",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Cedele" : {
@@ -7956,7 +7956,7 @@
         "Soul ALife" : {
             "name" : "Soul ALife",
             "address" : "#02-40",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Soul_ALife.png?alt=media&token=213f83d0-132f-42c8-bd3e-bc7c5e90123a"
         },
         "Starbucks" : {
@@ -7974,7 +7974,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-35A",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Table Manners" : {
@@ -8016,13 +8016,13 @@
         "The Soup Spoon Union" : {
             "name" : "The Soup Spoon Union",
             "address" : "#B1-24/25",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon_Union.png?alt=media&token=9e16a395-e839-4a0e-b3d1-607cd8c37200"
         },
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#01-12",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tung Lok Signatures" : {
@@ -8034,7 +8034,7 @@
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#B1-K4",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "Wee Nam Kee Chicken Rice" : {
@@ -8132,7 +8132,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B1-23",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Chewy Junior" : {
@@ -8210,7 +8210,7 @@
         "I Love Taimei" : {
             "name" : "I Love Taimei",
             "address" : "#B1-K11 to 11A",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/I_Love_Taimei.png?alt=media&token=7eb50b3f-aeb2-4c60-b038-b0401ace1a5d"
         },
         "Itacho Sushi" : {
@@ -8324,7 +8324,7 @@
         "PastaMania" : {
             "name" : "PastaMania",
             "address" : "#B1-08",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pastamania.png?alt=media&token=d8196c24-6253-44dd-9f17-1a84f0687930"
         },
         "Pezzo" : {
@@ -8390,7 +8390,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-25A",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Sumire Yakitori House" : {
@@ -8420,25 +8420,25 @@
         "The Soup Spoon" : {
             "name" : "The Soup Spoon",
             "address" : "#B1-03C",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon.png?alt=media&token=cc906e39-1aed-4c5c-b2c7-2163d676bcfd"
         },
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B1-K1",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Tuk Tuk Cha" : {
             "name" : "Tuk Tuk Cha",
             "address" : "#M01-K1",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tuk_Tuk_Cha.png?alt=media&token=33cdfdf1-e711-44a9-b14d-0e0fd872f89e"
         },
         "Twelve Cupcakes" : {
             "name" : "Twelve Cupcakes",
             "address" : "#B1-03B",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Twelve_Cupcakes.png?alt=media&token=e2996a40-4d58-4170-9d34-366201bb013a"
         },
         "Wok Hey" : {
@@ -8530,7 +8530,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B2-73",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Chateraise" : {
@@ -8644,7 +8644,7 @@
         "Island Creamery" : {
             "name" : "Island Creamery",
             "address" : "#B3-K1",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Island_Creamery.png?alt=media&token=66a893a5-e3d1-4a18-be6f-80b001e599c9"
         },
         "Itacho Sushi" : {
@@ -8794,7 +8794,7 @@
         "Simply Wrapps" : {
             "name" : "Simply Wrapps",
             "address" : "#B4-30",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Simply_Wrapps.png?alt=media&token=bf71c758-d4ef-4150-ab62-8864b043f7d3"
         },
         "Singapore Straits Emporium" : {
@@ -8884,7 +8884,7 @@
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B4-53",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "Toss & Turn" : {
@@ -9030,7 +9030,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#01-11",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "tcc - The Connoisseur Concerto" : {
@@ -9098,13 +9098,13 @@
         "Blackball" : {
             "name" : "Blackball",
             "address" : "#01-05",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Blackball.png?alt=media&token=adc34d70-0245-4f5e-a06b-61d561c5ef94"
         },
         "Chateraise" : {
             "name" : "Chateraise",
             "address" : "#B1-15",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Chateraise.png?alt=media&token=c0ecd8a6-37e4-4280-a54d-1f14ba079e36"
         },
         "Cool Man" : {
@@ -9122,7 +9122,7 @@
         "Delifrance" : {
             "name" : "Delifrance",
             "address" : "#03-14A",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Delifrance.png?alt=media&token=9392c8c9-3914-44b4-9a85-f32c3ef870c5"
         },
         "Dian Xiao Er" : {
@@ -9206,7 +9206,7 @@
         "Maki-San" : {
             "name" : "Maki-San",
             "address" : "#B1-K31",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Maki-San.png?alt=media&token=cee8afef-fb00-4898-b5ec-983ec80b35ab"
         },
         "McDonald's" : {
@@ -9308,7 +9308,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-34 to 35",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Tan Ngan Lo Herbal Tea" : {
@@ -9376,7 +9376,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-01",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Buddy Hoagies" : {
@@ -9442,7 +9442,7 @@
         "Ji De Chi" : {
             "name" : "Ji De Chi",
             "address" : "#01-07/K3",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ji_De_Chi.png?alt=media&token=d7af407a-b7e0-4319-8f6a-9bfaf0e72386"
         },
         "Jin Shang Yi Ping Buffet Hotpot" : {
@@ -9592,19 +9592,19 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#B1-10",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#01-01",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tori-Q" : {
             "name" : "Tori-Q",
             "address" : "#B1-K2",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tori-Q.png?alt=media&token=45d1e735-c316-4f73-a524-c9e14950f91a"
         },
         "umisushi" : {
@@ -9637,7 +9637,7 @@
             "name" : "Astons Specialities",
             "address" : "#03-03 & #03-18/18A",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Astons_Specialties.png?alt=media&token=c41c7670-5902-4249-88fe-f2fd24a6a671"
         },
         "Ayam Penyet President" : {
             "name" : "Ayam Penyet President",
@@ -9649,7 +9649,7 @@
             "name" : "Bakery Cuisine & Dora Keiki",
             "address" : "#B1-K08/K08A",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Dora_Keiki.png?alt=media&token=393f97ca-b432-48b3-8839-ad67ce5c9d53"
         },
         "Big Fish Small Fish" : {
             "name" : "Big Fish Small Fish",
@@ -9685,13 +9685,13 @@
             "name" : "Fart Tartz",
             "address" : "#02-53",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Fart_Tartz.jpg?alt=media&token=4e5f9ae2-b728-4913-847c-37864ee6459f"
         },
         "ISURAMUYA Japanese Restaurant & Market Place" : {
             "name" : "ISURAMUYA Japanese Restaurant & Market Place",
             "address" : "#04-19",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/ISURAMUYA.jpeg?alt=media&token=45e3da10-6922-4e62-915b-1e5370e67da3"
         },
         "Itacho Sushi" : {
             "name" : "Itacho Sushi",
@@ -9714,8 +9714,8 @@
         "Kushi Sushi" : {
             "name" : "Kushi Sushi",
             "address" : "#B1-K06",
-            "payment" : "",
-            "image" : ""
+            "payment" : "GrabPay",
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Kushi_Sushi.png?alt=media&token=f5c751d0-5083-44b4-a889-37e5623169b0"
         },
         "LiHO TEA" : {
             "name" : "LiHO TEA",
@@ -9733,7 +9733,7 @@
             "name" : "Miss Tea",
             "address" : "#B1-K13",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Miss_Tea.png?alt=media&token=7b66054a-af5f-46ee-9e8d-3ba5fb9e91a3"
         },
         "MOS Burger" : {
             "name" : "MOS Burger",
@@ -9745,25 +9745,25 @@
             "name" : "My Kampung",
             "address" : "#B1-K04",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/My_Kampung.jpg?alt=media&token=276452ef-3c22-4a50-8132-81471973317e"
         },
         "OLDTOWN WHITE COFFEE" : {
             "name" : "OLDTOWN WHITE COFFEE",
             "address" : "#01-19",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/OLDTOWN_WHITE_COFFEE.png?alt=media&token=c9c6dd2c-f70a-4c5c-a71d-cadda5a9d5e9"
         },
         "One Ice Cafe" : {
             "name" : "One Ice Cafe",
             "address" : "#02-67",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/One_Ice_Cafe.png?alt=media&token=9a4710fd-bb18-4fe1-9b5e-79291d51f963"
         },
         "OPPA Korean Grill BBQ" : {
             "name" : "OPPA Korean Grill BBQ",
             "address" : "#03-10",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/OPPA_BBQ.png?alt=media&token=9a3d6697-fde8-42e2-a2dc-258bbfb69342"
         },
         "Potato Corner" : {
             "name" : "Potato Corner",
@@ -9775,7 +9775,7 @@
             "name" : "Rice & Box by Tenderfresh",
             "address" : "#02-K02/08",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Rice_%26_Box.png?alt=media&token=09af66c5-8ded-4d0d-a0b3-f6010c35daf5"
         },
         "Saizeriya" : {
             "name" : "Saizeriya",
@@ -9792,14 +9792,14 @@
         "Shi Jian Hot Pot" : {
             "name" : "Shi Jian Hot Pot",
             "address" : "#02-19",
-            "payment" : "",
-            "image" : ""
+            "payment" : "GrabPay",
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shi_Jian_Hot_Pot.png?alt=media&token=c237a5df-f194-442c-a038-434478566ce4"
         },
         "Shi Li Fang" : {
             "name" : "Shi Li Fang",
             "address" : "#02-08A",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shi_Li_Fang.png?alt=media&token=4ce57ad8-428b-430c-9889-ca77a711f2af"
         },
         "Snackz It! 可口味" : {
             "name" : "Snackz It! 可口味",
@@ -9811,19 +9811,19 @@
             "name" : "Soi Thai Kitchen",
             "address" : "#04-12",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Soi_Thai.jpg?alt=media&token=75537fd7-ad78-4547-bb1c-de51dde17305"
         },
         "Springleaf Prata Place" : {
             "name" : "Springleaf Prata Place",
             "address" : "#B1-11",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Springleaf.png?alt=media&token=5f833498-2e00-4622-929d-106b0a8e53b7"
         },
         "The Cake Shop" : {
             "name" : "The Cake Shop",
             "address" : "#B1-07",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Cake_Shop.jpg?alt=media&token=6591ec89-3635-4146-8a7e-b0d4bd38128b"
         },
         "The Coffee Bean & Tea Leaf" : {
             "name" : "The Coffee Bean & Tea Leaf",
@@ -9835,13 +9835,13 @@
             "name" : "THE GOOD TRIO",
             "address" : "#01-17",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/THE_GOOD_TRIO.png?alt=media&token=d4c56bec-44e2-4f7d-ae58-0ada48f774e0"
         },
         "The Laksa Leaf" : {
             "name" : "The Laksa Leaf",
             "address" : "#B1-K09",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Laksa_Leaf.jpg?alt=media&token=d7d02e58-a0de-4655-ac08-24b2dae2f355"
         },
         "The Manhattan Fish Market" : {
             "name" : "The Manhattan Fish Market",
@@ -9853,12 +9853,12 @@
             "name" : "The White Kitchen by Tokyo Latte",
             "address" : "#02-03",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_White_Kitchen.jpg?alt=media&token=9305db60-f590-481c-a4e5-db3e1a3cf829"
         },
         "WINGSTOP" : {
             "name" : "WINGSTOP",
             "address" : "#01-18",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/WINGSTOP.png?alt=media&token=ead250e0-5523-4c4d-b741-d93d5c3051b6"
         },
         "Wow Tako" : {
@@ -9877,7 +9877,7 @@
             "name" : "Yi Ma Xiang Guo",
             "address" : "#01-06",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Yi_Ma_Xiang_Guo.jpg?alt=media&token=107943a4-968a-42de-aefc-ca5e40c70f07"
         }
     },
     "clarke quay" : {
@@ -10294,7 +10294,7 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#01-110",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Bun Times" : {
@@ -10469,7 +10469,7 @@
             "name" : "Shi Li Fang Hotpot",
             "address" : "#02-112",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shi_Li_Fang.png?alt=media&token=4ce57ad8-428b-430c-9889-ca77a711f2af"
         },
         "Starbucks" : {
             "name" : "Starbucks",
@@ -10486,7 +10486,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#01-103",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Super Makan Asia" : {
@@ -10504,7 +10504,7 @@
         "Tea Valley" : {
             "name" : "Tea Valley",
             "address" : "#02-110",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Tea_Valley.png?alt=media&token=3400ba71-9a9a-440b-af63-7119089123fa"
         },
         "The Coffee Bean & Tea Leaf" : {
@@ -10516,7 +10516,7 @@
         "The Soup Spoon" : {
             "name" : "The Soup Spoon",
             "address" : "#01-104",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/The_Soup_Spoon.png?alt=media&token=cc906e39-1aed-4c5c-b2c7-2163d676bcfd"
         },
         "Tino's Pizza Cafe" : {
@@ -10528,7 +10528,7 @@
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#01-110",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "Tongue Tip Lan Zhou Beef Noodles" : {
@@ -10555,7 +10555,7 @@
             "name" : "Astons Specialities",
             "address" : "#05-08 to 08A",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Astons_Specialties.png?alt=media&token=c41c7670-5902-4249-88fe-f2fd24a6a671"
         },
         "Bangkok Jam" : {
             "name" : "Bangkok Jam",
@@ -10566,7 +10566,7 @@
         "Blackball" : {
             "name" : "Blackball",
             "address" : "#01-14",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Blackball.png?alt=media&token=adc34d70-0245-4f5e-a06b-61d561c5ef94"
         },
         "BONCHON Chicken" : {
@@ -10698,7 +10698,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#05-09",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "SUKI-YA" : {
@@ -10748,7 +10748,7 @@
         "Eastern Rice Dumpling" : {
             "name" : "Eastern Rice Dumpling",
             "address" : "#B1-45",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Eastern_Rice_Dumpling.png?alt=media&token=291d2afa-6e7a-46e6-a9e5-90a2b5efa67f"
         },
         "Eighteen Chefs" : {
@@ -11140,7 +11140,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#02-10",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "The Manhattan FISH MARKET" : {
@@ -11152,7 +11152,7 @@
         "Toast Box" : {
             "name" : "Toast Box",
             "address" : "#B1-29/K12-15/K17",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Toast_Box.png?alt=media&token=55357427-0328-4400-ab67-1685854fe430"
         },
         "umisushi" : {
@@ -11196,7 +11196,7 @@
         "Blackball" : {
             "name" : "Blackball",
             "address" : "#01-03",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Blackball.png?alt=media&token=adc34d70-0245-4f5e-a06b-61d561c5ef94"
         },
         "Boost Juice Bars" : {
@@ -11208,13 +11208,13 @@
         "BreadTalk" : {
             "name" : "BreadTalk",
             "address" : "#B2-25",
-            "payment" : "Dash",
+            "payment" : "Dash, GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/BreadTalk.png?alt=media&token=4b7943ea-4f12-471b-a0a6-19b47b81b9e7"
         },
         "Canton Paradise" : {
             "name" : "Canton Paradise",
             "address" : "#B2-11",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Canton_Paradise.png?alt=media&token=de0721e0-6589-4065-b0c1-d041fc0feb3c"
         },
         "Choc Spot" : {
@@ -11238,7 +11238,7 @@
         "Dian Xiao Er" : {
             "name" : "Dian Xiao Er",
             "address" : "#01-73 to 74",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Dian_Xiao_Er.png?alt=media&token=59ce511a-4ab7-47b2-a162-4c99c9c4aa5f"
         },
         "Din Tai Fung" : {
@@ -11370,7 +11370,7 @@
         "LiHO" : {
             "name" : "LiHO",
             "address" : "#B2-K16",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/LiHo.png?alt=media&token=c4dceca7-2da4-4d5e-aa90-4f9cfc88ba99"
         },
         "Lou Yau Taste of Malaysia" : {
@@ -11508,7 +11508,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#01-96",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Swensen's" : {
@@ -11538,7 +11538,7 @@
         "WINGSTOP" : {
             "name" : "WINGSTOP",
             "address" : "#B1-53",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/WINGSTOP.png?alt=media&token=ead250e0-5523-4c4d-b741-d93d5c3051b6"
         },
         "Ximenjie Tastes of Taiwan" : {
@@ -11768,7 +11768,7 @@
         "Pezzo" : {
             "name" : "Pezzo",
             "address" : "#01-45",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Pezzo.png?alt=media&token=5b0b30b7-b279-4e3a-9069-1a8d12e0105c"
         },
         "Polar Puffs & Cakes" : {
@@ -11846,7 +11846,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#03-03",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Sushi Express" : {
@@ -11865,7 +11865,7 @@
             "name" : "UPOT (Coming Soon)",
             "address" : "#02-01/02/03",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/UPOT.png?alt=media&token=d506d2df-b143-4439-abf2-66530c9b2efc"
         },
         "Wok Hey" : {
             "name" : "Wok Hey",
@@ -11944,7 +11944,7 @@
         "Fancy Delight" : {
             "name" : "Fancy Delight",
             "address" : "#01-K05",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Fancy_Delight.png?alt=media&token=3eb77598-a5ba-4067-a07c-c2cb6aa78557"
         },
         "Four Leaves" : {
@@ -11987,7 +11987,7 @@
             "name" : "Hong Kong Egglet & Nam Kee Pau",
             "address" : "#01-K01",
             "payment" : "",
-            "image" : ""
+            "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Hong_Kong_Egglet.png?alt=media&token=be3fe5e7-aec0-4e84-86f4-d3e7b0c49431"
         },
         "Hong Kong Sheng Kee Dessert" : {
             "name" : "Hong Kong Sheng Kee Dessert",
@@ -12034,7 +12034,7 @@
         "LiHO" : {
             "name" : "LiHO",
             "address" : "#01-K12",
-            "payment" : "",
+            "payment" : "GrabPay",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/LiHo.png?alt=media&token=c4dceca7-2da4-4d5e-aa90-4f9cfc88ba99"
         },
         "Long Beach Seafood Restaurant" : {
@@ -12160,7 +12160,7 @@
         "Subway" : {
             "name" : "Subway",
             "address" : "#01-114",
-            "payment" : "NetsQR",
+            "payment" : "GrabPay, NetsQR",
             "image" : "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Subway.png?alt=media&token=a7a0eea0-a73e-45c1-87f1-1dd484f19add"
         },
         "Sushi Express" : {
