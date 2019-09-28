@@ -538,7 +538,7 @@ public class Icon {
         iconMap.put("My Kampung", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/My_Kampung.jpg?alt=media&token=276452ef-3c22-4a50-8132-81471973317e");
         iconMap.put("Miss Tea", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Miss_Tea.png?alt=media&token=7b66054a-af5f-46ee-9e8d-3ba5fb9e91a3");
         iconMap.put("Ma Maison", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ma_Maison.png?alt=media&token=8b090a1a-98a8-4edc-a37a-81f85dbef39a");
-        iconMap.put("Ma Zi Lu (Coming Soon)", "");
+        iconMap.put("Ma Zi Lu", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Ma_Zi_Lu.png?alt=media&token=bd1bc646-d35c-4f12-b30c-b7bc067f6875");
         iconMap.put("Mad Jack", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Mad_Jack.png?alt=media&token=365b5b9f-429e-44a4-8f06-8833b95d9455");
         iconMap.put("Magosaburo", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Magosaburo.png?alt=media&token=7f7389ba-d93e-4023-b75d-53a127f67b2d");
         iconMap.put("Mahota Kitchen", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Mahota_Kitchen.png?alt=media&token=5ee43537-3436-4bf1-86df-be4a8d04e3d4");
@@ -798,7 +798,7 @@ public class Icon {
         iconMap.put("Shahi Maharani North Indian Restaurant", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shahi_Maharani_North_Indian_Restaurant.png?alt=media&token=bfb99895-953b-4d5d-890f-456d434ee9ae");
         iconMap.put("Shake Shack", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shake_Shack.png?alt=media&token=97a89067-6f96-4afb-9d02-e964f1dbdaa8");
         iconMap.put("Shan Cheng", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shan_Cheng.png?alt=media&token=4db44dd1-9cba-4fb5-aa02-ffc14e930e2f");
-        iconMap.put("Shang Social", "");
+        iconMap.put("Shang Social", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shang_Social.png?alt=media&token=b437bac3-bf6c-4781-a908-4e07467a2665");
         iconMap.put("Sharetea", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Sharetea.png?alt=media&token=77d65d3d-85b9-4fa5-bb79-4178a5d95f6e");
         iconMap.put("Sharetea Premium", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Sharetea_Premium.png?alt=media&token=4098acf4-41bb-4702-9908-9fd61059e6e4");
         iconMap.put("Shen Xi Lao Huo Tang", "https://firebasestorage.googleapis.com/v0/b/paywhere2019.appspot.com/o/Shen_Xi_Lao_Huo_Tang.png?alt=media&token=0011ad15-5588-46e1-9935-52358dc4e8b7");
