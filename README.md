@@ -1,13 +1,18 @@
+- [PayWhere](#paywhere)
+  - [Compatibility](#compatibility)
+  - [Using PayWhere](#using-paywhere)
+    - [Installing via Google Play Store](#installing-via-google-play-store)
+    - [Installing via Android Studio](#installing-via-android-studio)
+  - [Contributing](#contributing)
+  - [Thanks](#thanks)
+  - [Authors](#authors)
+  - [License](#license)
+
 # PayWhere
 
-PayWhere is an Android application that helps mobile payment users to
-find suitable dining outlets in shopping centres by displaying those
-that accept their preferred mobile payment platforms.
+PayWhere is an Android application that helps mobile payment users to find suitable dining outlets in shopping centres by displaying those tthat accept their preferred mobile payment platforms.
 
-PayWhere contains all the information you need to dine and make payment
-easily, so you don't have to trawl through multiple websites. We have
-included the F&B outlet name, unit number and mobile payment platforms
-accepted in an easy-to-use and elegant interface.
+PayWhere contains all the information you need to dine and make payment easily, so you don't have to trawl through multiple websites. We have included the F&B outlet name, unit number and mobile payment platforms accepted in an easy-to-use and elegant interface.
 
 <img src="./READMEMedia/media/image2.png" width="700" height="393" />
 
@@ -39,7 +44,13 @@ PayWhere currently supports:
 
 PayWhere supports Android 8.0 (Oreo) (SDK 26) and later.
 
-## How do I use PayWhere?
+## Using PayWhere
+
+### Installing via Google Play Store
+
+Paywhere is available for free on the Google Play Store [here](https://play.google.com/store/apps/details?id=com.marshmallow.paywhere).
+
+### Installing via Android Studio
 
 Currently, you may install PayWhere on your Android device via Android
 Studio. These are the steps in order to do so:
@@ -52,9 +63,6 @@ Studio. These are the steps in order to do so:
     near the top of Android Studio.
 5.  Enjoy using PayWhere on your Android Device!
 
-We have made plans to publish PayWhere for free on the Google Play Store
-in the future for users to download easily.
-
 When you open PayWhere for the first time after installation, we will
 provide you with an introduction and how to use our app. Our user
 onboarding has 3 steps that describe the purpose of PayWhere in a clear
@@ -62,29 +70,23 @@ and concise manner.
 
 <img src="./READMEMedia/media/image3.png" width="130" height="232" /> <img src="./READMEMedia/media/image4.png" width="130" height="232" /> <img src="./READMEMedia/media/image5.png" width="130" height="232" /> <img src="./READMEMedia/media/image6.png" width="130" height="232" />
 
-On subsequent app launches, you will be directed to the home page
-immediately.
+On subsequent app launches, you will be directed to the home page immediately.
 
 ## Contributing
 
-You may get in touch with us at
-[teammarshmallow2019\@gmail.com](mailto:teammarshmallow2019@gmail.com).
+You may get in touch with us at [teammarshmallow2019\@gmail.com](mailto:teammarshmallow2019@gmail.com).
 
-Alternatively, before submitting pull requests on GitHub, contributors
-must sign Google\'s [individual contributor license
-agreement](https://cla.developers.google.com/about/google-individual).
+Alternatively, before submitting pull requests on GitHub, contributors must sign Google\'s [individual contributor license agreement](https://cla.developers.google.com/about/google-individual).
 
 ## Thanks
 
-We would like to thank Freepik from
-[https://www.flaticon.com](https://www.flaticon.com) for
-the icons used.
+We would like to thank Freepik from [https://www.flaticon.com](https://www.flaticon.com) for the icons used.
 
 ## Authors
 
-Dominique Ng - \@hellodommy on GitHub
+Dominique Ng - [@hellodommy](https://github.com/hellodommy) on GitHub
 
-Shawn Lee - \@shawnlsj97 on GitHub
+Shawn Lee - [@shawnlsj97](https://github.com/shawnlsj97) on GitHub
 
 ## License
 
